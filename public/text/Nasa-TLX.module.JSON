@@ -1,0 +1,10 @@
+{
+    "introduction" : "Geben Sie jetzt für jede der unten stehenden Dimensionen an, wie hoch die Beanspruchung war. Markieren Sie dazu bitte auf den folgenden Skalen, in welchem Maße Sie sich in den sechs genannten Dimensionen von der Aufgabe beansprucht oder gefordert gesehen haben:",
+    "mentalText" : "Wie viel geistige Anstrengung war bei der Informationsaufnahme und -verarbeitung erforderlich (z.B. Denken, Entscheiden, Rechnen, Erinnern, Hinsehen, Suchen...)? War die Aufgabe leicht oder anspruchsvoll, einfach oder komplex, erforderte sie hohe Genauigkeit oder war sie fehlertolerant? ",
+    "physicalText" : "Wie viel körperliche Aktivität war erforderlich (z.B. Ziehen, Drücken, Drehen, Streuern, Aktivieren, ...)? War die Aufgabe leicht oder schwer, einfach oder anstrengend, erholsam oder mühselig?",
+    "temporalText" : "Wie viel Zeitdruck empfanden Sie hinsichtlich der Häufigkeit oder dem Takt, mit dem Aufgaben oder Aufgabenelemente auftraten? War die Abfolge langsam und gerusam oder schnell und hektisch?",   
+    "performance" : "Wie erfolgreich haben Sie Ihrer Meinung nach die vom Versuchsleiter (oder Ihnen selbst) gesetzten Ziele erreicht? Wie zufrrieden waren Sie mit Ihrer Leistung bei der Verfolgung dieser Ziele?",
+    "effort" : "Wie hart mussten sie arbeiten, um Ihren Grad an Aufgabenerfüllung zu erreichen?",
+    "frustration": "Wie unsicher, entmutigt, irritiert, gestresst und verärgert (versus sicher, bestätigt, zufrieden entspannt und zufrieden mit sich selbst) fühlten Sie sich während der Aufgabe?",
+    "annotation" : "Kontrollieren sie bitte, ob Sie zu allen Fragen Angaben gemacht haben. \n Bei Unklarheiten wenden Sie sich bitte an die Versuchsleiterin den Versuchsleiter. "
+}

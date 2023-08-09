@@ -1,0 +1,9 @@
+.H2{
+    padding: 0 5%;
+}
+.Paragraph{
+    text-align: center;
+    align-content: center;
+    display: block;
+    white-space: pre-line;
+}

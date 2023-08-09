@@ -1,0 +1,19 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100vw;
+    text-align: center;
+    height: 8vh;
+}
+
+.NavText{
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+.NavText:hover{
+    color: blueviolet;
+}

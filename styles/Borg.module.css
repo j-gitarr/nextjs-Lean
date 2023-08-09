@@ -1,0 +1,15 @@
+.gradientDiv{
+    background: linear-gradient(to bottom,  rgba(0, 128, 0, 0.5), rgba(255, 0, 0, 0.5)); 
+    border-radius: 10px;
+}
+
+.indentedDiv{
+    transform: translate(50%, 2%);
+    padding-top: 2%;
+    padding-left: 2%;
+    width: 50%;
+}
+
+.centerAlignedText{
+    text-align: center;
+}
