@@ -1,19 +1,64 @@
 .Navbar{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: black;
     width: 100vw;
     text-align: center;
     height: 8vh;
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.4)); /* Static gradient background */
+
 }
 
 .NavText{
     text-align: center;
     color: white;
-    padding: 15px;
+    text-decoration: none;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    flex-grow: 1; /* Damit der Text die maximal verfügbare breite einnimmt */
+
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.4)); /* Faded background */
+    transition: background 0s; /* Smooth transition */
 }
 
 .NavText:hover{
-    color: blueviolet;
+    /* color: goldenrod; */
+
+    background: linear-gradient(to right, goldenrod, rgba(218, 165, 32, 0.4)); /* Faded background on hover */
+    color: white;
+}
+
+.Logo{
+    background: white;
+    height: 100%;
+    width: auto;
+    margin-right: 20px;
+}
+
+.sidePanel{
+    flex: none;
+    top: 0;
+    background-color: black;
+    width: max-content;
+    height: 92vh;
+    max-height: 100%;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;/* mew */
+    align-items: center;
+    justify-content: center;
+}
+
+.link{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin: 0 5px 5px 0;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: goldenrod;
 }

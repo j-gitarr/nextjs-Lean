@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navigation/Navbar";
 import PageContainer from "../components/PageContainer";
 
 export default function About(){

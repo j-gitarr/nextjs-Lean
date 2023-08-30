@@ -1,6 +1,5 @@
 import PageContainer from "../../components/PageContainer";
 import content from "../../public/text/Nasa-TLX.module.JSON"
-import logo from "../../public/images/LOGO_Moutain_Croped.png"
 import SideBySide from "../../components/SideBySide";
 import Scale from "../../components/Scale";
 import style from "../../styles/NASA-TLX.module.css"

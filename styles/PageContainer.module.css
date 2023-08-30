@@ -14,37 +14,3 @@
 }
 
 
-.sidePanel{
-  flex: 1;
-  top: 0;
-  background-color: black;
-  width: max-content;
-  height: 92vh;
-  max-height: 100%;
-  padding-top: 10vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.sidePanel a{
-  margin: 0;
-  padding-top: 10px;
-  color: white;
-  text-decoration: none;
-  font-size: larger;
-  
-}
-.sidePanel a:hover{
-  color:darkcyan;
-}
-
-.LinkText{
-  margin-top: 30px;
-}
-
-
-.test{
-  color: red;
-  text-align: center;
-  padding: 10px;
-}
