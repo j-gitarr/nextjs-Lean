@@ -2,12 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
+    background-color:  #112432;
     width: 100vw;
     text-align: center;
     height: 8vh;
-    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.4)); /* Static gradient background */
-
 }
 
 .NavText{
@@ -17,37 +15,48 @@
     padding-top: 4vh;
     padding-bottom: 4vh;
     flex-grow: 1; /* Damit der Text die maximal verfügbare breite einnimmt */
+    font-weight: bold;
+    
+}
 
-    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.4)); /* Faded background */
-    transition: background 0s; /* Smooth transition */
+.NavTextCurrent{
+    background: linear-gradient(to bottom, #617784, #748f9a); /* Faded background on hover */
+}
+
+.borderRight{
+    border-right: solid 1px;
+    border-color: white;
+}
+
+.borderBot{
+    border-bottom: 1px solid;
 }
 
 .NavText:hover{
-    /* color: goldenrod; */
-
-    background: linear-gradient(to right, goldenrod, rgba(218, 165, 32, 0.4)); /* Faded background on hover */
+    background: linear-gradient(to right, #617784, #748f9a); /* Faded background on hover */
     color: white;
 }
 
 .Logo{
-    background: white;
-    height: 100%;
     width: auto;
-    margin-right: 20px;
+    height: 8vh;
+    padding-left: 10px;
 }
 
 .sidePanel{
-    flex: none;
+    display: flex;
     top: 0;
-    background-color: black;
-    width: max-content;
+    background-color:  #112432;
     height: 92vh;
     max-height: 100%;
-    padding-top: 10vh;
+    /* padding-top: 10vh; */
     display: flex;
-    flex-direction: column;/* mew */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    
+
 }
 
 .link{
@@ -55,10 +64,20 @@
     width: 100%;
     text-align: center;
     color: white;
-    margin: 0 5px 5px 0;
+    padding-left: 5px;
+    padding-right: 5px;
     text-decoration: none;
+    flex-grow: 1;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10vh;
+    padding-bottom: 0px;
+
+    font-weight: bold;
 }
 
 .link:hover{
-    color: goldenrod;
+    background: linear-gradient(to bottom, #617784, #748f9a); /* Faded background on hover */
+    color: white;
 }

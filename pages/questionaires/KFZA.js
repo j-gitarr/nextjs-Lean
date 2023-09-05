@@ -1,5 +1,5 @@
-import PageContainer from "../../components/PageContainer";
-import SideBySide from "../../components/SideBySide";
+import PageContainer from "../../components/style/PageContainerApp";
+import SideBySide from "../../components/style/SideBySide";
 import content from "../../public/text/KFZA.module.JSON"
 import style from "../../styles/KFZA.module.css"
 import Radio from "../../components/Radio";

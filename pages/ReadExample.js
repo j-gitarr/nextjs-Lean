@@ -1,6 +1,6 @@
 import clientPromise from "../lib/mongodb";
 import React from "react";
-import CSVDownload from "@components/CSVDownload";
+import CSVDownload from "@components/utility/CSVDownload";
 
 export default function ShowData({ data }) {
     return (

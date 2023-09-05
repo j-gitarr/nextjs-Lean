@@ -1,0 +1,16 @@
+.formCheckContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .formCheckLabel {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .fullWidth {
+    width: 100%;
+  }
+  

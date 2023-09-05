@@ -8,13 +8,16 @@
   "dependencies": {
     "bootstrap": "^5.3.1",
     "express": "^4.18.2",
+    "jquery": "^3.7.1",
     "json2csv": "^6.0.0-alpha.2",
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.5",
     "next": "latest",
+    "popper.js": "^1.16.1",
     "react": "18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "18.2.0",
-    "react-svg": "^16.1.22"
+    "react-svg": "^16.1.22",
+    "react-toastify": "^9.1.3"
   }
 }

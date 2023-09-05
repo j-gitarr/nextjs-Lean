@@ -27,25 +27,99 @@ img {
 }
 
 h1{
+  text-align: center;
   padding-top: 20px;
   padding-bottom: 30px;
+  
+
 }
 h2{
   padding-bottom: 20px;
+  text-align: center;
 }
 
 p{
   white-space: pre-line;
   padding: 5px 2%;
   text-align: justify;
+  max-width: 800px;
 }
 
 
 
+.PageTitel{
+  margin-top: 10vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: #1c2939;
+}
+
+.UnderTitel{
+  text-align: center;
+  width: auto;
+  max-width: 100%;
+}
+
+.TitelLine{
+  width: 20vw;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  border-top: 20px dotted #617784;
+  overflow: hidden;
+  
+}
 
 
+main{
+  display: grid;
+  place-items: center;
+}
+
+.Footer{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #748f9a;
+  padding-top: 10px;
+}
+.Footer{
+  color: white;
+}
 
 
+/* Positioning */
+.center{
+  margin: 0 auto;
+}
 
+.centeredMax1000{
+  max-width: 1000px;
+  margin: auto;
+}
 
-/* For Sliders */
+/* TEXTColors */
+.tcw{
+  color: white;
+}
+
+/* BACKGROUNDS: */
+.backgroundStorm{
+  background-color: #112432;
+}
+
+.backgroundJean{
+  background-color: #5e7783;
+}
+
+.backgroundRoyalty{
+  background-color: #4d1635;
+}
+
+.backgroundLavender{
+  background-color: #9e9199;
+}
+
+backgroundSoftGrey{
+  background-color: #d0d1d3;
+}

@@ -3,7 +3,7 @@ import style from "../styles/PageContainer.module.css"
 export default function Content({children}){
     return(
         <>
-            <div class={style.content}>
+            <div className={style.content}>
                 {children}
             </div> 
 

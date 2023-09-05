@@ -1,16 +1,40 @@
-export default function FormCheck({children}){
-    return(
+import styles from "@styles/FormCheck.module.css"
+import React from "react";
 
-        // Set padding left and right to 4 --> See Bootstrap Doc
-        <>
-                <input className="form-check-input" type="radio" name="borgChoice" id="borgChoice"
-                    style={{width: 60, height: 60, paddingTop: 50}}
-                />
-                <label className="form-check-label" for="borgChoice" style={{paddingTop: 20, paddingLeft: 20}}>
-                    {children}
-                </label>
-                <br/>
-                <hr/>
-        </>
+export default function FormCheck({children, id, value, onChange, selectedValue}){
+    
+    const handleInputChange = (e) => {
+        const newValue = e.target.value;
+        onChange(newValue);
+    }
+    
+    return(
+        <label
+            className="form-check-label"
+            htmlFor={id}
+            style={{
+                display: "flex", // Make the container a flex container
+                alignItems: "center", // Vertically center the input and label
+                cursor: "pointer", // Change cursor to pointer for clickable effect
+                paddingLeft: 20, // Adjust padding as needed
+                paddingRight: 20, // Adjust padding as needed
+                paddingBottom: 10,
+                paddingTop: 10,
+                width: "100%"
+        }}>
+            <input
+                className=""
+                type="radio"
+                name="borgChoice"
+                id={id}
+                value={value}
+                checked={selectedValue === value}
+                onChange={handleInputChange}
+                style={{ width: "5vw", height: "5vw", paddingTop: 50 }}
+            />
+            <span style={{ flex: 1, paddingLeft: 20 }}>{children}</span>
+        </label>
     );
+
 }
+

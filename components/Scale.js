@@ -7,7 +7,14 @@ import PropTypes from "prop-types"
 export default function(props){
     return(
         <>
-            <input  type="range" list="markers" className={style.input} step={props.step}/>
+            <input  
+                type="range" 
+                ist="markers" 
+                className={style.input} 
+                step={props.step}
+                value={props.value}
+                onChange={(e) => props.onChange(e.target.value)}
+            />
 
             <datalist id="markers" className={style.datalist}>
                 <option value="0" label={!props.lower ? "gering" : `${props.lower}`}/>
