@@ -1,19 +1,20 @@
+import React, {useState} from "react";
 import style from "../styles/Scale.module.css"
-import PropTypes from "prop-types"
 
 
 
 
-export default function(props){
+export default function Scale(props){
     return(
         <>
             <input  
+                id={props.id}
                 type="range" 
-                ist="markers" 
-                className={style.input} 
+                list="markers" 
+                className={style.customRange} 
                 step={props.step}
                 value={props.value}
-                onChange={(e) => props.onChange(e.target.value)}
+                onChange={props.onChange}
             />
 
             <datalist id="markers" className={style.datalist}>
@@ -27,7 +28,7 @@ export default function(props){
                 <option value="35"/>
                 <option value="40"/>
                 <option value="45"/>
-                <option value="50"/>
+                <option value="50" label="------"/>
                 <option value="55"/>
                 <option value="60"/>
                 <option value="65"/>
@@ -39,8 +40,6 @@ export default function(props){
                 <option value="95"/>
                 <option value="100" label={!props.upper ? "Hoch" : `${props.upper}`}/>
             </datalist>
-
-
         </>
     );
 }

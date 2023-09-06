@@ -110,6 +110,7 @@ main{
 
 .backgroundJean{
   background-color: #5e7783;
+  color: white;
 }
 
 .backgroundRoyalty{
@@ -122,4 +123,7 @@ main{
 
 backgroundSoftGrey{
   background-color: #d0d1d3;
+}
+.backgroundWhite{
+  background-color: white;
 }

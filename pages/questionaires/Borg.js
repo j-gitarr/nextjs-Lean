@@ -3,6 +3,7 @@ import PageContainer from "../../components/style/PageContainerApp";
 import FormCheck from "../../components/FormCheck";
 import style from "../../styles/Borg.module.css"
 import Space from "@components/style/Space";
+import ShortTextInput from "@components/utility/ShortTextInput";
 
 
 export default function Borg(){
@@ -46,8 +47,28 @@ export default function Borg(){
     
     return(
         <PageContainer>
-        <Space height="10vh"/>
         <form onSubmit={handleFormSubmit}>   
+
+        <Space height="10vh"/>
+                <h1>BORG</h1>
+            <Space height="10vh"/>
+
+            <div className="backgroundJean">
+                    <Space height="20px"/>
+                    <p className="center tcw">TODO INTRODUCTION</p>
+                    <Space height="20px"/>
+                </div>
+
+            <ShortTextInput 
+                    value={name} 
+                    onChange={(event)=>setName(event.target.value)}
+                    placeholder="Geben Sie hier bitte ihre identifikationsnummer ein..."
+                    height="5px"
+                    maxWidth="750px"        
+            />
+            
+            <Space height="10vh"/>
+
             <div className={` ${style.gradientDiv}`} style={{margin:"auto", maxWidth:"1000px"}}>
                 <FormCheck id="b6" value="6" onChange={(value) => setSelectedValue(value)} selectedValue={selectedValue}>
                     06 überhaupt keine Anstrengung</FormCheck>
@@ -83,19 +104,7 @@ export default function Borg(){
             
 
                 <Space height="10vh"/>
-                <div className="backgroundJean">
-                    <Space height="10vh"/>
-                    <h3 className="text-center text-white centeredMax1000">Geben Sie hier bitte Ihren Namen ein:</h3>
-                    <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="form-control from-control-lg centeredMax1000"
-                    />
-                    <Space height="10vh"/>
-                </div>
+                
                 <Space height="10vh"/>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                     <button 

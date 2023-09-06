@@ -6,3 +6,30 @@
 .Paragraph{
     text-align: center;
 }
+
+
+.customLabel{
+    font-size: small;
+    color: red;
+}
+
+.customContainer{
+    max-width: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (max-width: 1000px) { 
+    .customContainer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the start of the container */
+    }
+    .item {
+      flex: 1; /* Both items take up full width */
+      padding: 0;
+      width: 100%;
+      
+    }
+  }

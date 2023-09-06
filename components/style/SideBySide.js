@@ -1,55 +1,21 @@
-// export default function(props){
-//     function space(){
-//         if(props.flex === undefined){
-//             return 1;
-//         }else{
-//             return props.flex;
-//         }
-//     }
-
 import Space from "./Space";
 
-    
-//     return(
-//         <div style={{display: "flex", alignItems: "center"}}>
-//                     <div style={{flex: space(), padding: "0 2% 0 5%"}}>
-//                         {props.firstItem}
-//                     </div>
-//                     <div style={{flex: 2-space(), 
-//                                     justifyContent: "center", 
-//                                     alignItems: "center", 
-//                                     padding: "0 5%"}}>
-//                         {props.secondItem}
-//                     </div>
-//                 </div>
-//     );
-// }
-
 export default function(props) {
-    function space() {
-      if (props.flex === undefined) {
-        return 1;
-      } else {
-        return props.flex;
-      }
-    }
-  
     const containerStyle = {
       display: "flex",
       alignItems: "center",
     };
   
     const firstItemStyle = {
-      flex: space(),
+      flex: `${props.flex1 || 1}`,
       padding: "0 2% 0 5%",
-      
     };
   
     const secondItemStyle = {
-      flex: space(), // Both items take up full width
+      flex: `${props.flex2 || 1}`,
       justifyContent: "center",
       alignItems: "center",
-      padding: "0 5%",
+      padding: "0",
     };
   
     // Define a media query for screens with a maximum width of 768px
@@ -60,19 +26,18 @@ export default function(props) {
       }
       .item {
         flex: 1; /* Both items take up full width */
-        padding: 0 5%;
+        padding: 0;
         width: 100%;
-        
+        margin-bottom: 20px
       }
     }`;
   
     return (
-      <div className="container" style={containerStyle}>
-        <div className="item" style={firstItemStyle}>
+      <div className={props.className || "container"} style={containerStyle}>
+        <div className="item" style={props.firstItemStyle || firstItemStyle}>
           {props.firstItem}
-          <Space height="10vh"/>
         </div>
-        <div className="item" style={secondItemStyle}>
+        <div className="item" style={props.secondItemStyle || secondItemStyle}>
           {props.secondItem}
         </div>
   

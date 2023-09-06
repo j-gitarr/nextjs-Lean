@@ -51,10 +51,19 @@ export default function EAWS() {
 //LAYOUT
     return (
         <PageContainer>
+            <Space height="10vh"/>
+                <h1>EAWS</h1>
+            <Space height="10vh"/>
+
+            <div className="backgroundJean">
+                <Space height="20px"/>
+                <p className="center tcw">Beschreibung</p>
+                <Space height="20px"/>
+            </div>
+            
+            <Space height="10vh"/>
+
             <main>
-
-            <Space height="30vh"/>
-
             <p className="text-center">Bitte tragen Sie hier den ermittelten EAWS Score ein:</p>
             <div className="d-flex justify-content-center input-group input-group-lg">
                 <form onSubmit={handleFormSubmit}>
