@@ -11,7 +11,7 @@ export default function SidePanel(){
         <div className={styles.sidePanel}>
             <Link href="/App/Erhebung" className={`
                 ${styles.linkVerticalApp} 
-                ${styles.borderTop} 
+                ${styles.borderBot} 
                 ${router.pathname ==="/App/Erhebung"? styles.NavTextCurrent:""}
             `}>
                 <div className={styles.textVertical}>Erheben</div>
@@ -19,7 +19,7 @@ export default function SidePanel(){
             
             <Link href="/App/Check" className={`
                 ${styles.linkVerticalApp} 
-                ${styles.borderTop} 
+                ${styles.borderBot} 
                 ${router.pathname ==="/App/Check"? styles.NavTextCurrent:""}
             `}>
                 <div className={styles.textVertical}>Prüfen</div>
