@@ -10,22 +10,22 @@ export default function SidePanel(){
     return(
         <div className={styles.sidePanel}>
             <Link href="/App/Erhebung" className={`
-                ${styles.link} 
-                ${styles.borderBot} 
+                ${styles.linkVerticalApp} 
+                ${styles.borderTop} 
                 ${router.pathname ==="/App/Erhebung"? styles.NavTextCurrent:""}
             `}>
                 Erheben
             </Link>
             
             <Link href="/App/Check" className={`
-                ${styles.link} 
-                ${styles.borderBot} 
+                ${styles.linkVerticalApp} 
+                ${styles.borderTop} 
                 ${router.pathname ==="/App/Check"? styles.NavTextCurrent:""}
             `}>
                 Prüfen
             </Link>
             <Link href="/App/Analysieren" className={`
-                ${styles.link} 
+                ${styles.linkVerticalApp} 
                 ${router.pathname ==="/App/Analysieren"? styles.NavTextCurrent:""}`}>
                 Analysieren
             </Link>

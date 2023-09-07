@@ -47,9 +47,9 @@ const ToggleFullscreen = ({ children }) => {
   };
 
   return (
-    <div className={isFullscreen ? 'fullscreen' : ''}>
+    <div style={{height:"100%", width:"100%", display:"flex"}}
+      className={isFullscreen ? 'fullscreen' : ''} onClick={toggleFullscreen}>
       {children}
-      <button onClick={toggleFullscreen}>Toggle Fullscreen</button>
     </div>
   );
 };

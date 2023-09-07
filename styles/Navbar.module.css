@@ -30,6 +30,10 @@
 
 .borderBot{
     border-bottom: 1px solid;
+    border-color: white;
+}
+.borderTop{
+    border-top: 1px solid white;
 }
 
 .NavText:hover{
@@ -78,6 +82,72 @@
 }
 
 .link:hover{
+    background: linear-gradient(to bottom, #617784, #748f9a); /* Faded background on hover */
+    color: white;
+}
+
+
+.sidePanelVertical{
+    display: flex;
+    top: 0;
+    background-color:  #112432;
+    height: 92vh;
+    max-height: 100%;
+    width: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.sideContentVertical{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+.linkVertical{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin: auto auto;
+
+    padding-right: 2vh;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.linkVerticalApp{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: block;
+    color: white;
+    font-weight: bold;
+
+    text-decoration: none;
+    
+    padding-right: 2vh;
+
+    height: 100%;
+    width: 9vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.linkVerticalApp:hover{
     background: linear-gradient(to bottom, #617784, #748f9a); /* Faded background on hover */
     color: white;
 }

@@ -1,5 +1,5 @@
 import Navbar from "../navigation/Navbar";
-import SidePanel from "../navigation/SidePanelApp";
+import SidePanel from "../navigation/SidePanel";
 import Content from "../Content";
 import style from "@styles/PageContainer.module.css"
 

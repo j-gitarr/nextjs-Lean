@@ -44,7 +44,7 @@ export default function Home() {
 
           {/* TODO Link auf den Start der Anwendung */}
           <Link href="/App/Erhebung">
-            <h2 className='btn btn-primary btn-lg'>Starten Sie jetzt!</h2>
+            <h2 className='btn btn-secondary btn-lg'>Starten Sie jetzt!</h2>
           </Link>
           
           <Space height="10vh"/>
