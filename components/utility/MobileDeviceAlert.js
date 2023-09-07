@@ -8,10 +8,7 @@ export default function MobileDeviceAlert() {
 
     if (isMobileDevice()) {
       // This is a mobile device
-      alert("Mobile device detected");
-    } else {
-      // This is not a mobile device (e.g., desktop)
-      alert("Not a mobile device");
+      alert("Verwenden Sie Ihr Smartphone bitte im Querformat. Das Erleichtert die Bedienung und macht das Layout übersichtlicher.");
     }
   }, []); // Empty dependency array to ensure it runs only once
 
