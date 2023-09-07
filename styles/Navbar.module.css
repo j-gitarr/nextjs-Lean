@@ -53,101 +53,31 @@
     background-color:  #112432;
     height: 92vh;
     max-height: 100%;
-    /* padding-top: 10vh; */
+    width: 9vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    
-
 }
-
-.link{
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: white;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-decoration: none;
-    flex-grow: 1;
-
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 10vh;
-    padding-bottom: 0px;
-
-    font-weight: bold;
-}
-
-.link:hover{
-    background: linear-gradient(to bottom, #617784, #748f9a); /* Faded background on hover */
-    color: white;
-}
-
-
-.sidePanelVertical{
-    display: flex;
-    top: 0;
-    background-color:  #112432;
-    height: 92vh;
-    max-height: 100%;
-    width: 9vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-}
-
-.sideContentVertical{
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    
-}
-
-
-.linkVertical{
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    display: block;
-    color: white;
-    font-weight: bold;
-    margin: auto auto;
-
-    padding-right: 2vh;
-
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
 
 .linkVerticalApp{
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    display: block;
-    color: white;
-    font-weight: bold;
-
-    text-decoration: none;
-    
-    padding-right: 2vh;
-
     height: 100%;
-    width: 9vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
+    text-decoration: none;
 }
 
 .linkVerticalApp:hover{
     background: linear-gradient(to bottom, #617784, #748f9a); /* Faded background on hover */
     color: white;
+}
+
+.textVertical{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
 }

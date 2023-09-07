@@ -10,13 +10,13 @@ export default function SidePanel(){
     const router = useRouter();
     
     return(
-        <div className={styles.sidePanelVertical}>
+        <div className={styles.sidePanel}>
             <ToggleFullscreen>
                 <Link
                     href="/App/Erhebung"
-                    className={styles.link}
+                    className={styles.linkVerticalApp}
                 >
-                    <div className={styles.linkVertical}>
+                    <div className={styles.textVertical}>
                         Starten Sie jetzt mit LEA
                     </div>
                 </Link>
