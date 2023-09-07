@@ -1,5 +1,6 @@
 import React from "react";
 import { useCompany } from "@components/context/CompanyContext";
+import ToggleFullscreen from "@components/utility/ToggleFullscreen";
 
 export default function test(){
     
@@ -9,6 +10,9 @@ export default function test(){
         <div>
             this is a test!
             current company Name: {companyName}
+            <ToggleFullscreen></ToggleFullscreen>
         </div>
+
+
     );
 }
