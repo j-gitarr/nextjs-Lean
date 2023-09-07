@@ -3,6 +3,7 @@ import PageContainer from "../../components/style/PageContainerApp";
 import {toast } from 'react-toastify';
 import GlobalToast from '@components/GlobalToast';
 import Space from '@components/style/Space';
+import Link from 'next/link';
 
 export default function EAWS() {
     const [eawsScore, setEawsScore] = useState(""); // State to store the EAWS Score
@@ -77,11 +78,19 @@ export default function EAWS() {
                     <div className='d-flex justify-content-center'>
                         <button 
                             type="submit"
-                            className='btn btn-secondary'
+                            className='btn btn-primary'
                             onClick={handleFormSubmit}
                             >
                             Bestätigen
-                        </button>    
+                        </button>
+                        <Link href="/questionaires/Borg">
+                            <button 
+                                className='btn btn-secondary'
+                                style={{marginLeft:"10px"}}
+                            >
+                                überspringen
+                            </button>
+                        </Link>
                     </div>
                 </form>
                 </div>

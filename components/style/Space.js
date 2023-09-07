@@ -6,8 +6,10 @@ export default function Space(props){
             style={{
                 height:props.height,
                 backgroundColor:props.color,
-                margin:"0",
-                width:props.width}}
+                margin:props.margin,
+                width:props.width
+            }}
+            className={props.className}
         />
     );
 }
