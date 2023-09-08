@@ -31,7 +31,7 @@ function Navbar(){
                 BORG
             </Link>
             <Link 
-                href="/questionaires/NASA-TLX" 
+                href="/App/insert/questionaires/NASA-TLX" 
                 className={
                     `${styles.NavText} 
                     ${styles.borderRight} 
