@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PageContainer from "../../../../components/style/PageContainerApp";
+import PageContainer from '@components/navigation/insert/PageContainerInsert';
 import {toast } from 'react-toastify';
 import GlobalToast from '@components/GlobalToast';
 import Space from '@components/style/Space';

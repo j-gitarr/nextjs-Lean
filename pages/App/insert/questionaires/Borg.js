@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import PageContainer from "../../../../components/style/PageContainerApp";
-import FormCheck from "../../../../components/FormCheck";
-import style from "../../styles/Borg.module.css"
+import PageContainer from "@components/navigation/insert/PageContainerInsert";
+import FormCheck from "@components/FormCheck";
+import style from "@styles/Borg.module.css"
 import Space from "@components/style/Space";
 import ShortTextInput from "@components/utility/ShortTextInput";
 
