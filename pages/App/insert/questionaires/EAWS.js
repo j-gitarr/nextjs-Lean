@@ -95,6 +95,7 @@ export default function EAWS() {
                 </form>
                 </div>
             </main>
+            <Space height="10vh"/>
             <GlobalToast/> 
         </PageContainer>
     );

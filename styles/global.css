@@ -71,7 +71,6 @@ p{
   padding-bottom: 100px;
   border-top: 20px dotted #617784;
   overflow: hidden;
-  
 }
 
 
@@ -87,8 +86,16 @@ main{
   background-color: #748f9a;
   padding-top: 10px;
 }
+
 .Footer{
   color: white;
+}
+
+.bold{
+  font-weight: bold;
+}
+.normal{
+  font-weight: normal;
 }
 
 
@@ -110,6 +117,7 @@ main{
 /* BACKGROUNDS: */
 .backgroundStorm{
   background-color: #112432;
+  color: white;
 }
 
 .backgroundJean{
@@ -119,14 +127,17 @@ main{
 
 .backgroundRoyalty{
   background-color: #4d1635;
+  color: white;
 }
 
 .backgroundLavender{
   background-color: #9e9199;
+  color: white;
 }
 
-backgroundSoftGrey{
+.backgroundSoftGrey{
   background-color: #d0d1d3;
+  color: #4d1635;
 }
 .backgroundWhite{
   background-color: white;

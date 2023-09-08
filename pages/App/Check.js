@@ -16,7 +16,13 @@ export default function Check(){
                     Wenn Sie bereits Daten erhoben haben, können Sie hier Ihre Eingaben <b>Prüfen</b>, <b>Korrigieren</b> oder <b>Exportieren</b>. 
                     
                 </p>
+                <Space height="40px"/>
+                <button className="btn btn-primary">
+                    Mit der Überprüfung starten
+                </button>
             </main>
+
+
 
             <Build/>
         </PageContainer>

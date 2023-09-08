@@ -1,0 +1,95 @@
+  .flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .flexContainerInner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+  }
+  
+  .flexItems:nth-child(1) {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+  
+  .flexItems:nth-child(2) {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+  
+  .flexItems:nth-child(3) {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+  
+.customCenter{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.verticallyCenter{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure the inner div takes up the full height of the outer div */
+}
+
+.customLink{
+    color: #4d1635;
+    font-weight: normal;
+    text-decoration: none;
+}
+.customLink:hover{
+    color: #5e7783;
+}
+.singleIndent{
+    margin-left: 5px;
+    font-weight: bold;
+}
+.doubleIndent{
+    margin-left: 15px;
+}
+
+ 
+@media screen and (max-width: 800px) {
+    .flexContainer{
+        flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: left;
+
+    }
+
+    .flexContainerInner{
+        flex-direction: column;
+        
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .customCenter{
+        margin: 0;
+        width:auto;
+    }
+}

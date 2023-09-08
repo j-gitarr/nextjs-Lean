@@ -7,14 +7,24 @@ export default function({id, value, onChange, label, key, selectedValue}){
     };
     
     return(
-    <div style={{display:"flex", flex:"1" , flexDirection:"column"}}>
-        <label htmlFor={id}  style={{alignContent:"justify", textAlign:"center", padding:"0 0"}}>
+    <div style={{display:"flex", flex:"1" , flexDirection:"column", cursor:"pointer"}}
+    >
+        <label 
+            htmlFor={id}  
+            style={{
+                alignContent:"justify", 
+                textAlign:"center", 
+                padding:"0 0"
+            }}
+            onClick={handleChange}    
+        >
             {label}
             <input 
-                type="radio" 
+                type="radio"
+                id={id}
                 name="input" 
                 value={value} 
-                onChange={handleChange}
+                onClick={handleChange}
                 key={key}
                 checked={value === selectedValue}
                 style={{
@@ -24,7 +34,7 @@ export default function({id, value, onChange, label, key, selectedValue}){
                     textAlign: "center", 
                     justifyContent:"center",
                 }}
-            />  
+            />
         </label>
         <Space height="10px"/>
     </div>);
