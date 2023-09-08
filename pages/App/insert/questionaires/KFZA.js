@@ -9,6 +9,7 @@ import Space from "@components/style/Space";
 import ShortTextInput from "@components/utility/ShortTextInput";
 import { toast } from "react-toastify";
 import GlobalToast from "@components/GlobalToast";
+import Link from "next/link";
 
 
 export default function(){ 
@@ -131,10 +132,16 @@ export default function(){
                 </div>
             ))}
             
-            <SubmitButton onSubmit={handleSubmit}>
-                Bestätigen
-            </SubmitButton>
             <Space height="10vh"/>
+
+            <div className="backgroundJean" style={{ display: "flex", flex:"1", justifyContent: "center", flexDirection:"column"}}>
+                <Space height="40px"/>
+                <SubmitButton onSubmit={handleSubmit}>
+                    Bestätigen
+                </SubmitButton><br/>
+                <Space height="40px"/>
+            </div>
+            <Space height="20vh"/>
         <GlobalToast/>
         </PageContainer>
     );
