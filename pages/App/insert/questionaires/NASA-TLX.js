@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
-import PageContainer from "../../components/style/PageContainerApp";
+import PageContainer from "../../../../components/style/PageContainerApp";
 import content from "../../public/text/Nasa-TLX.module.JSON"
-import SideBySide from "../../components/style/SideBySide";
-import Scale from "../../components/Scale";
+import SideBySide from "../../../../components/style/SideBySide";
+import Scale from "../../../../components/Scale";
 import style from "../../styles/NASA-TLX.module.css"
 import Space from "@components/style/Space";
 import ShortTextInput from "@components/utility/ShortTextInput";

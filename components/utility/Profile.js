@@ -6,6 +6,7 @@ import GlobalToast from "@components/GlobalToast";
 import Space from "@components/style/Space";
 import { redirectTo } from "./redirectTo";
 import Link from "next/link";
+import SideBySide from "@components/style/SideBySide";
 
 export default function Profile(props){
     
@@ -60,24 +61,36 @@ export default function Profile(props){
                   value={value} 
                   onChange={(e)=>setValue(e.target.value)}
               />
-              <button type="submit">
+              <button 
+                type="submit"
+                className="btn btn-secondary"
+                style={{margin:"0 10px"}}
+              >
                   Bestätigen
               </button>
           </form>
 
           <Space height="5vh"/>
 
-          <div style={{display:`${weiter? "" : "none"}`}}>
-            <p>Ihre aktuell gewählte ID lautet: <b>{companyName}</b></p>
-
-            <Space height="10vh"/>
-
-            <Link href="/questionaires/EAWS">
-              <button className="btn btn-primary btn-lg">
-                Datensammlung beginnen
-              </button>
-            </Link>
-
+          <div style={{display:`${weiter? "" : "none"}`, maxWidth:"830px", width:"100%", padding:"0"}}>
+            <SideBySide 
+              className="blank"
+              firstItem={
+                <p>
+                  Ihre aktuell gewählte ID lautet: <b>{companyName}</b>
+                </p>
+              }
+              secondItem={
+                <Link href="/questionaires/EAWS">
+                <button className="btn btn-primary">
+                  Erhebung starten
+                </button>
+                <br/>
+                <br/>
+                </Link>
+              }
+              secondItemStyle={{margin:"0 0 0 20px"}}
+            />
           </div>
       <GlobalToast/>
       </main>

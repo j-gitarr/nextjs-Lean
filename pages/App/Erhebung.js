@@ -1,4 +1,4 @@
-import PageContainer from "@components/style/PageContainerApp";
+import PageContainer from "@components/navigation/insert/PageContainerInsert";
 import Space from "@components/style/Space";
 import Profile from "@components/utility/Profile";
 import React from "react";
@@ -9,8 +9,7 @@ export default function Erhebung(){
         <PageContainer>
             <Space height="10vh"/>
                 <h1>Erheben</h1>
-            <Space height="10vh"/>
-            <Space className="backgroundJean" height="10px" margin="0 0 10vh 0"/>
+            <Space Separator="true"/>
 
             <main>
                 <p>
@@ -66,9 +65,8 @@ export default function Erhebung(){
             <main>
                 <Space height="10vh"/>
                 <p>Um direkt loszulegen, tragen Sie hier bitte den eindeutigen Identifizierungscode für Ihr Unternhemen ein:</p>
-                <Profile/>
-
             </main>
+                <Profile/>
             
             <Space height="10vh"/>
             <Space height="10vh"/>

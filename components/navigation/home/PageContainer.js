@@ -1,6 +1,6 @@
-import Navbar from "../navigation/check/NavbarAppCheck";
-import SidePanel from "@components/navigation/SidePanelApp";
-import Content from "../Content";
+import Navbar from "./Navbar";
+import SidePanel from "@components/navigation/home/SidePanel";
+import Content from "../../Content";
 import style from "@styles/PageContainer.module.css"
 
 

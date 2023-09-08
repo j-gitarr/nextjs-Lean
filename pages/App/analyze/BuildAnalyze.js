@@ -1,11 +1,11 @@
+import React from "react";
 import PageContainer from "@components/navigation/analyze/PageContainerAnalyze";
 import Build from "@components/utility/UnderConstruction";
-import React from "react";
 
-export default function Analyze(){
+export default function BuildAnalyze(){
     return(
         <PageContainer>
             <Build/>
         </PageContainer>
-    )
+    );
 }

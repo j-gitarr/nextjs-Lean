@@ -1,10 +1,7 @@
-import Navbar from "../navigation/check/NavbarAppCheck";
+import Navbar from "@components/navigation/check/NavbarAppCheck"
 import SidePanel from "@components/navigation/SidePanelApp";
-import Content from "../Content";
+import Content from "@components/Content"
 import style from "@styles/PageContainer.module.css"
-
-
-
 
 export default function PageContainer({children}){
     return(

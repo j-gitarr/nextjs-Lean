@@ -1,5 +1,5 @@
 import Space from '@components/style/Space';
-import PageContainer from '../components/style/PageContainer';
+import PageContainer from '../components/navigation/home/PageContainer';
 import "bootstrap/dist/css/bootstrap.min.css"
 import 'jquery'
 import 'popper.js'

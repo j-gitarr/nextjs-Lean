@@ -1,4 +1,4 @@
-import PageContainer from "../components/style/PageContainer";
+import PageContainer from "../components/navigation/home/PageContainer";
 
 export default function Services(){
     return(

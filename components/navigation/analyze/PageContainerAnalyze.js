@@ -1,10 +1,7 @@
-import Navbar from "../navigation/Navbar";
-import SidePanel from "../navigation/SidePanel";
-import Content from "../Content";
+import Navbar from "@components/navigation/analyze/NavbarAppAnalyze"
+import SidePanel from "@components/navigation/SidePanelApp";
+import Content from "@components/Content";
 import style from "@styles/PageContainer.module.css"
-
-
-
 
 export default function PageContainer({children}){
     return(
@@ -13,7 +10,6 @@ export default function PageContainer({children}){
             <div className={style.VerticalNextToContent}>
                 <SidePanel/>
                 <Content>{children}</Content>
-                
             </div>
         </>
     );

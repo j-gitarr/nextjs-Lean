@@ -1,6 +1,6 @@
 import Space from "@components/style/Space";
-import Navbar from "../components/navigation/Navbar";
-import PageContainer from "../components/style/PageContainer";
+import Navbar from "../components/navigation/home/Navbar";
+import PageContainer from "../components/navigation/home/PageContainer";
 
 export default function About(){
     return(
