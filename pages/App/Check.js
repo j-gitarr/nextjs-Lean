@@ -3,10 +3,9 @@ import PageContainer from "@components/navigation/check/PageContainerCheck"
 import Build from "@components/utility/UnderConstruction";
 import Space from "@components/style/Space";
 import Link from "next/link";
-import BarrierTape from "@components/utility/BarrierTape";
+
 
 export default function Check(){
-
     return(
         <PageContainer>
             <Space height="10vh"/>
@@ -17,13 +16,16 @@ export default function Check(){
                     Wenn Sie bereits Daten erhoben haben, können Sie hier Ihre Eingaben <b>Prüfen</b>, <b>Korrigieren</b> oder <b>Exportieren</b>. 
                 </p>
                 <Space height="40px"/>
-                <Link href="/App/check/BuildCheck">
+                <Link href="/App/check/ShowData">
                     <button className="btn btn-primary">
                         Mit der Überprüfung starten
                     </button>
                 </Link>
             </main>
-            <Build BarrierTape="jawohl"/>
+
+            <Space height="10vh"/>
+
+            <Build BarrierTape="enabled"/>
         </PageContainer>
     )
 }
