@@ -37,6 +37,7 @@ export default function(){
 
         if(name === ""){
             toast.warn("Bitte geben Sie noch Ihre Identifikationsnummer ein!")
+            return;
         }
         if (!isEveryValueSet) {
             toast.warn("Bitte beantworten Sie alle Fragen!");
@@ -142,7 +143,6 @@ export default function(){
                 <Space height="40px"/>
             </div>
             <Space height="20vh"/>
-        <GlobalToast/>
         </PageContainer>
     );
 }

@@ -183,8 +183,6 @@ export default function(){
             </main>
 
             <Space height="30vh"/>
-
-        <GlobalToast/>
         </PageContainer>
     );
 }

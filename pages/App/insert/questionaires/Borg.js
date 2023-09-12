@@ -4,22 +4,23 @@ import FormCheck from "@components/FormCheck";
 import style from "@styles/Borg.module.css"
 import Space from "@components/style/Space";
 import ShortTextInput from "@components/utility/ShortTextInput";
+import { toast } from "react-toastify";
 
 
 export default function Borg(){
-    const [selectedValue, setSelectedValue] = useState("13"); // State to store the selected value
+    const [selectedValue, setSelectedValue] = useState(); // State to store the selected value
     const [name, setName] = useState(""); // State to store the name
 
     const handleFormSubmit = async (e) => {
       e.preventDefault();
   
       // Check if a value has been selected
-      if (selectedValue === null) {
-        alert("Please select a value before submitting.");
+      if (selectedValue === null || selectedValue === "" || selectedValue === undefined) {
+        toast.warn("Bitte wählen Sie einen Wert aus");
         return;
       }
       if (!name) {
-        alert("Please enter your name before submitting.");
+        toast.warn("Bitte geben Sie Ihre ID an.")
         return;
       }
   

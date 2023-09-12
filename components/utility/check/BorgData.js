@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import DataField from "./DataField";
+import ConvertTime from "../ConvertTime";
 
 export default function ShowData() {
   const [borgData, setBorgData] = useState([]); // State to hold the fetched data
@@ -35,16 +37,40 @@ export default function ShowData() {
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   return (
-    <div>
-        {borgData ? (
-            <ul>
-              {borgData.map((item) => (
-                <li key={item._id}>Score: {item.value}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>Loading...</p>
-          )}
-    </div>
+    <div className="centeredMax1000">
+            <table className="table">
+                <thead className="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Personen ID</th>
+                        <th scope="col">Wert</th>
+                        <th scope="col">Aufgezeichnet am</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {borgData?(
+                        borgData.map((item, index)=> (
+                            <DataField 
+                                key={index} 
+                                index={index+1} 
+                                value={item.value}
+                                date={ConvertTime(item.timestamp)} 
+                                id={item._id}
+                                persID={item.name}
+                                // onDelete={handleDelete}
+                                // onEdit={handleEdit}
+                                BORG="true"
+                            />
+                        ))
+                        ):(
+                        <tr className="table-warning">
+                            <td colSpan="3">Fügen Sie Einträge hinzu</td>
+                        </tr>
+                        )   
+                    }
+                </tbody>
+            </table>
+        </div>
+
   );
 }

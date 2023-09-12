@@ -96,7 +96,6 @@ export default function EAWS() {
                 </div>
             </main>
             <Space height="10vh"/>
-            <GlobalToast/> 
         </PageContainer>
     );
 }

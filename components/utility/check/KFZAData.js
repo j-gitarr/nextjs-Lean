@@ -39,7 +39,15 @@ export default function ShowData() {
         {kfzaData ? (
             <ul>
               {kfzaData.map((item) => (
-                <li key={item._id}>Score: {item.value}</li>
+                <li key={item._id}>
+                    <ul>
+                        {item.questionValues.map((question)=>(
+                            <li>
+                                {question.index}: {question.value}
+                            </li>
+                        ))}       
+                    </ul>
+                </li>
               ))}
             </ul>
           ) : (

@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
       // Insert the document into the MongoDB collection
       await db.collection('EAWS_Score').insertOne({ 
-        value,
+        value: parseInt(value),
         companyName,
         timestamp: new Date()
     });
