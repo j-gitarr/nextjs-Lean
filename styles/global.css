@@ -110,6 +110,15 @@ main{
   margin: auto;
 }
 
+
+/* SPACING */
+.spaceRightSM{
+  margin-right: 5px;
+}
+.spaceLeftSM{
+  margin-left: 5px;
+}
+
 /* TEXTColors */
 .tcw{
   color: white;

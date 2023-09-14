@@ -3,9 +3,14 @@ import DataField from "./DataField";
 import ConvertTime from "../ConvertTime";
 import { toast } from "react-toastify";
 import isInt from "../IsInt";
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function EawsData(){
     const [eawsData, setEawsData] = useState([]); // State to hold the fetched data
+    const [currentPage, setCurrentPage] = useState(0);
+    const [numPages, setNumPages] = useState(0);
+    const displayedPages = 5;
     
       useEffect(() => {
         // Fetch data when the component mounts
@@ -37,7 +42,18 @@ export default function EawsData(){
     
         fetchData();
       }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+
+      useEffect(() => {
+        setNumPages(Math.ceil(eawsData.length / displayedPages));
+      }, [eawsData]);
+
+      const nextPage = ()=>{
+        currentPage+1 < numPages? setCurrentPage(currentPage+1) : console.log("already at last page")
+      }
     
+      const prevPage = ()=>{
+        currentPage > 0? setCurrentPage(currentPage-1) : console.log("already at first page")
+      }
 
       // Function to handle the delete operation
     const handleDelete = async (id, index) => {    
@@ -94,19 +110,20 @@ export default function EawsData(){
     return (
         <div className="centeredMax1000">
             <table className="table">
-                <thead className="thead-dark">
+                <thead className="table-light">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Wert</th>
-                        <th scope="col">Aufgezeichnet am</th>
+                        <th scope="col">Datum</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     {eawsData?(
-                        eawsData.map((item, index)=> (
+                        eawsData.slice(currentPage*displayedPages, currentPage*displayedPages+displayedPages).map((item, index)=> (
                             <DataField 
                                 key={index} 
-                                index={index+1} 
+                                index={index+1 +(currentPage*displayedPages)} 
                                 value={item.value}
                                 date={ConvertTime(item.timestamp)} 
                                 id={item._id}
@@ -121,6 +138,18 @@ export default function EawsData(){
                         </tr>
                         )   
                     }
+                    <tr>
+                        <td colSpan="5" className="text-center">
+                        {eawsData ? (
+                            <>
+                            <FontAwesomeIcon icon={faArrowLeft} onClick={prevPage} className="spaceRightSM" size="2xl"/>
+                            <FontAwesomeIcon icon="fa-solid fa-square-arrow-right" size="2xl" />
+                            Seite {currentPage + 1} von {numPages} 
+                            <FontAwesomeIcon icon={faArrowRight} onClick={nextPage} className="spaceLeftSM" size="2xl"/>     
+                            </>  
+                        ):('')}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

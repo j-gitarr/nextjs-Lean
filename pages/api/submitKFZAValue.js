@@ -2,7 +2,7 @@ import clientPromise from "@lib/mongodb";
 
 export default async (req, res) =>{
     if(req.method === "POST"){
-        const { questionValues, name, companyName} = req.body;
+        const { name, companyName, ...questionValues} = req.body;
         try{
             //connet to DB
             const client = await clientPromise;
@@ -10,7 +10,7 @@ export default async (req, res) =>{
 
             //Insert the KFZA values into the Database
             await db.collection("KFZA").insertOne({
-                questionValues,
+                ...questionValues,
                 name,
                 companyName,
                 timestamp: new Date(),

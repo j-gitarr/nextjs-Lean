@@ -1,8 +1,14 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export default function DataField(props) {
   // Destructure the props to get 'key' and 'value'
-  const { index, value, date, id, onDelete, onEdit, EAWS, BORG, persID, NASA, mental, physical, temporal, performance, effort, frustration} = props;
+  const { index, value, date, id, onDelete, onEdit, persID,
+          EAWS, 
+          BORG,
+          NASA, mental, physical, temporal, performance, effort, frustration, 
+          KFZA, kfzaValues } = props;
 
   // Use a separate variable to check if an entry exists
   const entryExists = index !== undefined && value !== undefined;
@@ -14,93 +20,117 @@ export default function DataField(props) {
     onDelete(id, index);
   };
 
-  const handleEdit = ()=>{
+  const handleEdit = () => {
     onEdit(id, index);
   }
 
-
   return (
     <>
-    
-    {EAWS? (
+      {EAWS ? (
         entryExists ? (
-            <tr>
-                <th scope="row">{index}</th>
-                <td>{value}</td>
-                <td>{date}</td>
-                <button className="btn btn-primary" onClick={handleEdit}>
-                    <i className="fas fa-edit"></i> Edit
-                </button>
-                <button className="btn btn-danger" onClick={handleDelete}>
-                    <i className="fas fa-trash" ></i> Delete
-                </button>
-                
-            </tr>
+          <tr>
+            <th scope="row">{index}</th>
+            <td>{value}</td>
+            <td>{date}</td>
+            <td className="text-end">
+              <button className="btn btn-primary spaceRightSM" onClick={handleEdit}>
+                Edit <FontAwesomeIcon icon={faEdit} />
+              </button>
+              <button className="btn btn-danger" onClick={handleDelete}>
+                Delete <FontAwesomeIcon icon={faTrash} />
+              </button>
+            </td>
+          </tr>
         ) : (
-            <tr><td>Error</td></tr>
+          <tr><td>Error</td></tr>
         )
-    ): null}
+      ) : null}
 
-    {BORG? (
+      {BORG ? (
         entryExists ? (
-            <tr>
-                <th scope="row">{index}</th>
-                <td>{persID}</td>
-                <td>{value}</td>
-                <td>{date}</td>
-                <button className="btn btn-primary" onClick={handleEdit}>
-                    <i className="fas fa-edit"></i> Edit
-                </button>
-                <button className="btn btn-danger" onClick={handleDelete}>
-                    <i className="fas fa-trash" ></i> Delete
-                </button>
-                
-            </tr>
+          <tr>
+            <th scope="row">{index}</th>
+            <td>{persID}</td>
+            <td>{value}</td>
+            <td>{date}</td>
+            <td className="text-end">
+              <button className="btn btn-primary spaceRightSM" onClick={handleEdit}>
+                Edit <FontAwesomeIcon icon={faEdit} />
+              </button>
+              <button className="btn btn-danger" onClick={handleDelete}>
+                Delete <FontAwesomeIcon icon={faTrash} />
+              </button>
+            </td>
+          </tr>
         ) : (
-            <tr><td>Error</td></tr>
+          <tr><td>Error</td></tr>
         )
-    ): null}
+      ) : null}
 
-    {NASA? (
+      {NASA ? (
         nasaExists ? (
-            <><tr>
-                <th scope="row">{index}</th>
-                <td>{persID}</td>
-                <td>{date}</td>
-            </tr><tr>
-                <td colSpan="4">
-                <table className="table">
-                    <thead>
-                    <tr>
-                        <th>Geistig</th>
-                        <th>Körperlich</th>
-                        <th>Zeitlich</th>
-                        <th>Leistung</th>
-                        <th>Anstrengung</th>
-                        <th>Frustration</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>{mental}</td>
-                        <td>{physical}</td>
-                        <td>{temporal}</td>
-                        <td>{performance}</td>
-                        <td>{effort}</td>
-                        <td>{frustration}</td>
-                        <button className="btn btn-danger" onClick={handleDelete}>
-                            <i className="fas fa-trash" ></i> Delete
-                        </button>
-                    </tr>
-                    </tbody>
-                </table>
-                </td>
-            </tr></>
+          <tr>
+            <th scope="row">{index}</th>
+            <td>{persID}</td>
+            <td>
+              <table className="table table-sm table-borderless">
+                <thead>
+                  <tr>
+                    <th>Geistig</th>
+                    <th>Körperlich</th>
+                    <th>Zeitlich</th>
+                    <th>Leistung</th>
+                    <th>Anstrengung</th>
+                    <th>Frustration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{mental}</td>
+                    <td>{physical}</td>
+                    <td>{temporal}</td>
+                    <td>{performance}</td>
+                    <td>{effort}</td>
+                    <td>{frustration}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+            <td>{date}</td>
+            <td>
+              <button className="btn btn-danger" onClick={handleDelete}>
+                Delete <FontAwesomeIcon icon={faTrash} />
+              </button>
+            </td>
+          </tr>
         ) : (
-            <tr><td>Error</td></tr>
+          <tr><td>Error</td></tr>
         )
-    ): null}
+      ) : null}
 
-    </>  
+      {KFZA ? (
+        (
+          <tr>
+            <th scope="row">{index}</th>
+            <td>{persID}</td>
+            <td>
+                  <tr>
+                    {kfzaValues.map((item) => (
+                      <><td key={item.index}>{item.value}</td> <td></td></>
+                    ))}
+
+                  </tr>
+            </td>
+            <td>{date}</td>
+            <td>
+              <button className="btn btn-danger" onClick={handleDelete}>
+                Delete <FontAwesomeIcon icon={faTrash} />
+              </button>
+            </td>
+          </tr>
+        )
+      ) : null}
+
+    </>
   );
 }

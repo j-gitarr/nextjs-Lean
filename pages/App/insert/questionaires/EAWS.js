@@ -83,7 +83,7 @@ export default function EAWS() {
                             >
                             Bestätigen
                         </button>
-                        <Link href="/questionaires/Borg">
+                        <Link href="Borg">
                             <button 
                                 className='btn btn-secondary'
                                 style={{marginLeft:"10px"}}

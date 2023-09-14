@@ -13,7 +13,7 @@ const StylishLink = ({href, children, className}) =>(
 
 export default function Footer(){
     return(
-        <div className="backgroundSoftGrey">
+        <div className="backgroundSoftGrey" style={{position:"sticky"}}>
             <Space height="20px"/>
             <div class={`${style.flexContainer}`}>
 

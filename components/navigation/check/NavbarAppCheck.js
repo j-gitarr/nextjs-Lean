@@ -13,11 +13,11 @@ function Navbar(){
                 <img src="/images/LEA_Logo_white.png" className={styles.Logo} href="/"/>
             </Link>
             <Link 
-                href="/App/check/BuildCheck" 
+                href="/App/check/ShowData" 
                 className={
                     `${styles.NavText} 
                     ${styles.borderRight} 
-                    ${router.pathname ==="/App/check/BuildCheck"? styles.NavTextCurrent:""}`
+                    ${router.pathname ==="/App/check/ShowData"? styles.NavTextCurrent:""}`
             }>
                 Überprüfen
             </Link>

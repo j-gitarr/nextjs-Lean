@@ -81,7 +81,7 @@ export default function Profile(props){
                 </p>
               }
               secondItem={
-                <Link href="/questionaires/EAWS">
+                <Link href="/App/insert/questionaires/EAWS">
                 <button className="btn btn-primary">
                   Erhebung starten
                 </button>

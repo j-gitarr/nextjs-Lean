@@ -46,27 +46,46 @@ export default function(){
 
         try {
 
-            // Create an array of objects with question index and value
-            const dataToSend = questionValues.map((question, index) => ({
-                index,
-                value: parseInt(question.value),
-            }));
+            // // Create an array of objects with question index and value
+            // const dataToSend = questionValues.map((question, index) => ({
+            //     index,
+            //     value: parseInt(question.value),
+            // }));
 
-            console.log("values are:" + questionValues.map((question, index)=>({
-                index, 
-                value: parseInt(question.value),
-            }).value))
+            // console.log("values are:" + questionValues.map((question, index)=>({
+            //     index, 
+            //     value: parseInt(question.value),
+            // }).value))
 
-            // Send the selected value to your MongoDB database via your API endpoint
+            // // Send the selected value to your MongoDB database via your API endpoint
+            // const response = await fetch("/api/submitKFZAValue", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({
+            //         questionValues: dataToSend, 
+            //         name:name, 
+            //         companyName:localStorage.getItem("companyName")}),
+            // });
+
+            // Create an object with key-value pairs
+            const dataToSend = {};
+            questionValues.forEach((question, index) => {
+                dataToSend[`question${index}`] = parseInt(question.value);
+            });
+
+            // Send the selected values to your MongoDB database via your API endpoint
             const response = await fetch("/api/submitKFZAValue", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    questionValues: dataToSend, 
-                    name:name, 
-                    companyName:localStorage.getItem("companyName")}),
+                    ...dataToSend, // Spread the key-value pairs directly in the body
+                    name: name,
+                    companyName: localStorage.getItem("companyName"),
+                }),
             });
       
             if (response.ok) {

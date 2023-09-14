@@ -21,6 +21,7 @@ export default function Borg(){
       }
       if (!name) {
         toast.warn("Bitte geben Sie Ihre ID an.")
+        window.location.href="#top";
         return;
       }
   
@@ -35,9 +36,11 @@ export default function Borg(){
         });
   
         if (response.ok) {
-          alert("Value successfully submitted!");
+          toast.success("Wert erfolgreich übermittelt");
           // Clear the selected value after submission
           setSelectedValue("");
+          setName("");
+          window.location.href="#top";
         } else {
           console.error("Failed to submit value.");
         }
@@ -50,6 +53,7 @@ export default function Borg(){
         <PageContainer>
         <form onSubmit={handleFormSubmit}>   
 
+        <a id="top"></a>
         <Space height="10vh"/>
                 <h1>BORG</h1>
             <Space height="10vh"/>
@@ -59,7 +63,6 @@ export default function Borg(){
                     <p className="center tcw">TODO INTRODUCTION</p>
                     <Space height="20px"/>
                 </div>
-
             <ShortTextInput 
                     value={name} 
                     onChange={(event)=>setName(event.target.value)}
