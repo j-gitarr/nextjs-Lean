@@ -41,7 +41,8 @@ export default function ShowData() {
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   useEffect(() => {
-    setNumPages(Math.ceil(kfzaData.length / displayedPages));
+    const temp = Math.ceil(kfzaData.length / displayedPages);
+        temp === 0? setNumPages(1):setNumPages(temp);
   }, [kfzaData]);
 
   const nextPage = () => {
@@ -87,33 +88,38 @@ export default function ShowData() {
               </tr>
           </thead>
           <tbody>
-              {
-                kfzaData.map((item, index) => {
-                // Initialize an empty array for questionValues
-                const questionValues = [];
+              {kfzaData.length !== 0?
+              (
+                
+                  kfzaData.map((item, index) => {
+                  // Initialize an empty array for questionValues
+                  const questionValues = [];
 
-                // Loop through the keys "question0", "question1", etc., and collect their values
-                for (let i = 0; i <= 26; i++) {
-                  const key = `question${i}`;
-                  questionValues.push({index: i, value: item[key]})
-                }
-                return (
-                  <DataField
-                    key={index}
-                    index={index + 1 + currentPage * displayedPages}
-                    kfzaValues={questionValues}
-                    date={ConvertTime(item.timestamp)}
-                    id={item._id}
-                    persID={item.name}
-                    onDelete={handleDelete}
-                    KFZA="true"
-                  />
-                );
-              })
-              }
+                  // Loop through the keys "question0", "question1", etc., and collect their values
+                  for (let i = 0; i <= 26; i++) {
+                    const key = `question${i}`;
+                    questionValues.push({index: i, value: item[key]})
+                  }
+                  return (
+                    <DataField
+                      key={index}
+                      index={index + 1 + currentPage * displayedPages}
+                      kfzaValues={questionValues}
+                      date={ConvertTime(item.timestamp)}
+                      id={item._id}
+                      persID={item.name}
+                      onDelete={handleDelete}
+                      KFZA="true"
+                    />
+                  );
+                })
+                
+              ):(
+                <tr>Keine Einträge vorhanden</tr>
+              )}
               <tr>
                 <td colSpan="5" className="text-center">
-                  {kfzaData ? (
+                  {kfzaData.length!==0 ? (
                     <>
                     <FontAwesomeIcon icon={faArrowLeft} onClick={prevPage} className="spaceRightSM" size="2x"/>
                     Seite {currentPage + 1} von {numPages} 

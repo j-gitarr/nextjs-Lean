@@ -44,7 +44,8 @@ export default function EawsData(){
       }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
       useEffect(() => {
-        setNumPages(Math.ceil(eawsData.length / displayedPages));
+        const temp = Math.ceil(eawsData.length / displayedPages);
+        temp === 0? setNumPages(1):setNumPages(temp);
       }, [eawsData]);
 
       const nextPage = ()=>{
@@ -119,7 +120,7 @@ export default function EawsData(){
                     </tr>
                 </thead>
                 <tbody>
-                    {eawsData?(
+                    {eawsData.length !== 0?(
                         eawsData.slice(currentPage*displayedPages, currentPage*displayedPages+displayedPages).map((item, index)=> (
                             <DataField 
                                 key={index} 
@@ -133,14 +134,12 @@ export default function EawsData(){
                             />
                         ))
                         ):(
-                        <tr className="table-warning">
-                            <td colSpan="3">Fügen Sie Einträge hinzu</td>
-                        </tr>
+                        <tr className="table-warning">Keine Einträge vorhanden</tr>
                         )   
                     }
                     <tr>
                         <td colSpan="5" className="text-center">
-                        {eawsData ? (
+                        {eawsData.length !== 0 ? (
                             <>
                             <FontAwesomeIcon icon={faArrowLeft} onClick={prevPage} className="spaceRightSM" size="2xl"/>
                             <FontAwesomeIcon icon="fa-solid fa-square-arrow-right" size="2xl" />

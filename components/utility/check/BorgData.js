@@ -43,7 +43,8 @@ export default function ShowData() {
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   useEffect(() => {
-    setNumPages(Math.ceil(borgData.length / displayedPages));
+    const temp = Math.ceil(borgData.length / displayedPages);
+    temp === 0? setNumPages(1):setNumPages(temp);
   }, [borgData]);
 
   const nextPage = ()=>{
@@ -119,7 +120,7 @@ const handleEdit = async (id, index) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {borgData?(
+                    {borgData.length !== 0?(
                         borgData.slice(currentPage*displayedPages, currentPage*displayedPages+displayedPages).map((item, index)=> (
                             <DataField 
                                 key={index} 
@@ -134,14 +135,14 @@ const handleEdit = async (id, index) => {
                             />
                         ))
                         ):(
-                        <tr className="table-warning">
-                            <td colSpan="3">Fügen Sie Einträge hinzu</td>
+                        <tr>
+                            Keine Einträge vorhanden
                         </tr>
                         )   
                     }
                     <tr>
                         <td colSpan="5" className="text-center">
-                        {borgData ? (
+                        {borgData.length !== 0? (
                             <>
                             <FontAwesomeIcon icon={faArrowLeft} onClick={prevPage} className="spaceRightSM" size="2xl"/>
                             <FontAwesomeIcon icon="fa-solid fa-square-arrow-right" size="2xl" />

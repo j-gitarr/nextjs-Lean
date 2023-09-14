@@ -43,7 +43,8 @@ export default function ShowData() {
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   useEffect(() => {
-    setNumPages(Math.ceil(nasaData.length / displayedPages));
+    const temp = Math.ceil(nasaData.length / displayedPages);
+        temp === 0? setNumPages(1):setNumPages(temp);
   }, [nasaData]);
 
   const nextPage = ()=>{
@@ -89,7 +90,7 @@ export default function ShowData() {
               </tr>
           </thead>
           <tbody>
-              {nasaData?(
+              {nasaData.length !== 0?(
                 nasaData.slice(currentPage*displayedPages, currentPage*displayedPages+displayedPages).map((item, index)=> (
                       <DataField 
                           key={index} 
@@ -109,13 +110,13 @@ export default function ShowData() {
                   ))
                   ):(
                   <tr className="table-warning">
-                      <td colSpan="3">Fügen Sie Einträge hinzu</td>
+                      Keine Einträge vorhanden
                   </tr>
                   )   
               }
               <tr>
                 <td colSpan="5" className="text-center">
-                  {nasaData ? (
+                  {nasaData.length !==0 ? (
                     <>
                     <FontAwesomeIcon icon={faArrowLeft} onClick={prevPage} className="spaceRightSM" size="2xl"/>
                     <FontAwesomeIcon icon="fa-solid fa-square-arrow-right" size="2xl" />
