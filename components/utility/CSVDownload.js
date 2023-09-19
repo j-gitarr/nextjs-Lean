@@ -1,14 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import json2csv from 'json2csv';
 import DateCamelCase from './DateCamelCase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 function CSVDownload({type, children, className}) {
-  const companyName = localStorage.getItem("companyName");
+  const [companyName, setCompanyName] = useState(null);
+
+  useEffect(() => {
+    // Check if running in the browser before accessing localStorage
+    if (typeof window !== 'undefined') {
+      const storedCompanyName = localStorage.getItem('companyName');
+      setCompanyName(storedCompanyName);
+    }
+  }, []);
+
 
   const handleDownload = async () => {
     try {
+
+      if (!companyName) {
+        console.error('No companyName found in localStorage');
+        return;
+      }
+
       // Fetch data from your API when the button is clicked
       let response;
       let fname;
