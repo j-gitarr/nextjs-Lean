@@ -147,7 +147,6 @@ const handleEdit = async (id, index) => {
                         {customData.length !== 0? (
                             <>
                             <FontAwesomeIcon icon={faArrowLeft} onClick={prevPage} className="spaceRightSM" size="2xl"/>
-                            <FontAwesomeIcon icon="fa-solid fa-square-arrow-right" size="2xl" />
                             Seite {currentPage + 1} von {numPages} 
                             <FontAwesomeIcon icon={faArrowRight} onClick={nextPage} className="spaceLeftSM" size="2xl"/>     
                             </>  

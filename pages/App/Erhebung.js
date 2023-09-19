@@ -54,8 +54,9 @@ export default function Erhebung(){
                 </p>
             </main>
 
+            <a id="company"></a>
             <Space height="10vh"/>
-            
+
             <Space height="5vh" className="backgroundJean"/>
             <h3  className="backgroundJean" style={{width:"100%", margin:"0 auto", textAlign:"center"}}>
                 <b>Jetzt Starten</b>

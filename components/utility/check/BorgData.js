@@ -113,6 +113,7 @@ const handleEdit = async (id, index) => {
                 <thead className="table-light">
                     <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Arbeitsstation</th>
                         <th scope="col">PID</th>
                         <th scope="col">Wert</th>
                         <th scope="col">Datum</th>
@@ -126,6 +127,7 @@ const handleEdit = async (id, index) => {
                                 key={index} 
                                 index={index+1 +(currentPage*displayedPages)} 
                                 value={item.value}
+                                workplace={item.workplace}
                                 date={ConvertTime(item.timestamp)} 
                                 id={item._id}
                                 persID={item.name}
@@ -141,11 +143,10 @@ const handleEdit = async (id, index) => {
                         )   
                     }
                     <tr>
-                        <td colSpan="5" className="text-center">
+                        <td colSpan="6" className="text-center">
                         {borgData.length !== 0? (
                             <>
                             <FontAwesomeIcon icon={faArrowLeft} onClick={prevPage} className="spaceRightSM" size="2xl"/>
-                            <FontAwesomeIcon icon="fa-solid fa-square-arrow-right" size="2xl" />
                             Seite {currentPage + 1} von {numPages} 
                             <FontAwesomeIcon icon={faArrowRight} onClick={nextPage} className="spaceLeftSM" size="2xl"/>     
                             </>  

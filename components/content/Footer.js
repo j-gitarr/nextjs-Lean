@@ -15,11 +15,11 @@ export default function Footer(){
     return(
         <div className="backgroundSoftGrey" style={{position:"sticky"}}>
             <Space height="20px"/>
-            <div class={`${style.flexContainer}`}>
+            <div className={`${style.flexContainer}`}>
 
 
                 
-                <div class={`${style.flexItems} bold`}>
+                <div className={`${style.flexItems} bold`}>
                     <div className={style.customCenter}>
                         <h3>LEA</h3>
                         <hr/>
@@ -33,7 +33,7 @@ export default function Footer(){
                             Kontakt</StylishLink><br/>
                     </div>
                 </div>
-                <div class={`${style.flexItems} bold`}>
+                <div className={`${style.flexItems} bold`}>
                     <h3 >App</h3><hr/>
                     <div className={style.flexContainerInner}>
                         <div className={style.flexItems}>

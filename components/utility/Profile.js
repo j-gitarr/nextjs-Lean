@@ -72,25 +72,14 @@ export default function Profile(props){
 
           <Space height="5vh"/>
 
-          <div style={{display:`${weiter? "" : "none"}`, maxWidth:"830px", width:"100%", padding:"0"}}>
-            <SideBySide 
-              className="blank"
-              firstItem={
-                <p>
-                  Ihre aktuell gewählte ID lautet: <b>{companyName}</b>
-                </p>
-              }
-              secondItem={
-                <Link href="/App/insert/questionaires/EAWS">
-                <button className="btn btn-primary">
-                  Erhebung starten
-                </button>
-                <br/>
-                <br/>
-                </Link>
-              }
-              secondItemStyle={{margin:"0 0 0 20px"}}
-            />
+          <div style={{display:`${weiter? "" : "none"}`}}className="centerContent">
+            <Link href="/App/insert/questionaires/EAWS">
+            <button className="btn btn-primary">
+              Erhebung starten
+            </button>
+            <br/>
+            <br/>
+            </Link>
           </div>
       <GlobalToast/>
       </main>

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 export default function useBorg() {
-  const [borgData, setBorgData] = useState([]);
+  const [eawsData, setEawsData] = useState(null);
 
   useEffect(() => {
     // Fetch data when the component mounts
@@ -17,11 +17,11 @@ export default function useBorg() {
 
     async function fetchData() {
       try {
-        const response = await fetch("/api/fetchBorg?companyName=" + companyName);
+        const response = await fetch("/api/fetchEAWS?companyName=" + companyName);
         if (response.ok) {
           console.log("awaiting response");
           const data = await response.json();
-          setBorgData(data.data); // Set the fetched data in state
+          setEawsData(data.data); // Set the fetched data in state
         } else {
           console.error("Failed to fetch data");
         }
@@ -33,5 +33,5 @@ export default function useBorg() {
     fetchData();
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
-  return borgData; // Return the fetched Borg data
+  return eawsData; // Return the fetched EAWS data
 }

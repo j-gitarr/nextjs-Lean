@@ -51,6 +51,7 @@ export default function DataField(props) {
         entryExists ? (
           <tr>
             <th scope="row">{index}</th>
+            <td>{workplace}</td>
             <td>{persID}</td>
             <td>{value}</td>
             <td>{date}</td>
@@ -115,13 +116,11 @@ export default function DataField(props) {
             <th scope="row">{index}</th>
             <td>{persID}</td>
             <td>
-                  <tr>
-                    {kfzaValues.map((item) => (
-                      <><td key={item.index}>{item.value}</td> <td></td></>
-                    ))}
-
-                  </tr>
+              {kfzaValues.map((item) => (
+                <span key={item.index}>{`${item.value}, `}</span>
+              ))}
             </td>
+
             <td>{date}</td>
             <td>
               <button className="btn btn-danger" onClick={handleDelete}>

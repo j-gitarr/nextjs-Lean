@@ -16,7 +16,6 @@ export default function EawsData(){
         // Fetch data when the component mounts
     
         const companyName = localStorage.getItem("companyName");
-        console.log("companyName is:" + companyName);
         
         //TODO Programm if there is no Firm Associated...
         if(companyName === null){
@@ -134,7 +133,9 @@ export default function EawsData(){
                             />
                         ))
                         ):(
-                        <tr className="table-warning">Keine Einträge vorhanden</tr>
+                            <tr>
+                                <td colSpan="4">Keine Einträge vorhanden</td>
+                            </tr>
                         )   
                     }
                     <tr>
@@ -142,7 +143,6 @@ export default function EawsData(){
                         {eawsData.length !== 0 ? (
                             <>
                             <FontAwesomeIcon icon={faArrowLeft} onClick={prevPage} className="spaceRightSM" size="2xl"/>
-                            <FontAwesomeIcon icon="fa-solid fa-square-arrow-right" size="2xl" />
                             Seite {currentPage + 1} von {numPages} 
                             <FontAwesomeIcon icon={faArrowRight} onClick={nextPage} className="spaceLeftSM" size="2xl"/>     
                             </>  

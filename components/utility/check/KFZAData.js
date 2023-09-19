@@ -14,7 +14,6 @@ export default function ShowData() {
     // Fetch data when the component mounts
 
     const companyName = localStorage.getItem("companyName");
-    console.log("companyName is:" + companyName);
     
     // TODO: Program if there is no Firm Associated...
     if (companyName === null) {
