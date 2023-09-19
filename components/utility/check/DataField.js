@@ -4,11 +4,12 @@ import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export default function DataField(props) {
   // Destructure the props to get 'key' and 'value'
-  const { index, value, date, id, onDelete, onEdit, persID,
+  const { index, value, date, id, onDelete, onEdit, persID, workplace,
           EAWS, 
           BORG,
           NASA, mental, physical, temporal, performance, effort, frustration, 
-          KFZA, kfzaValues } = props;
+          KFZA, kfzaValues,
+          Custom, valueName} = props;
 
   // Use a separate variable to check if an entry exists
   const entryExists = index !== undefined && value !== undefined;
@@ -130,6 +131,24 @@ export default function DataField(props) {
           </tr>
         )
       ) : null}
+
+      {Custom?(
+        <tr>
+          <th scope="row">{index}</th>
+          <td>{valueName}</td>
+          <td>{workplace}</td>
+          <td>{value}</td>
+          <td>{date}</td>
+          <td className="text-end">
+              <button className="btn btn-primary spaceRightSM" onClick={handleEdit}>
+                Edit <FontAwesomeIcon icon={faEdit} />
+              </button>
+              <button className="btn btn-danger" onClick={handleDelete}>
+                Delete <FontAwesomeIcon icon={faTrash} />
+              </button>
+            </td>
+        </tr>
+      ): null}
 
     </>
   );

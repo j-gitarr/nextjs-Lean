@@ -42,6 +42,9 @@ h2{
   padding-bottom: 20px;
   text-align: center;
 }
+h3, h4{
+  text-align: center;
+}
 
 p{
   white-space: pre-line;
@@ -103,6 +106,12 @@ main{
 /* Positioning */
 .center{
   margin: 0 auto;
+}
+
+.centeredContent {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .centeredMax1000{

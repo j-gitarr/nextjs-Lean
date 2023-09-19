@@ -48,10 +48,10 @@ function Navbar(){
                 KFZA
             </Link>
             <Link
-                href="/App/insert/questionaires/custom"
+                href="/App/insert/questionaires/Custom"
                 className={
                     `${styles.NavText} 
-                    ${router.pathname ==="/App/insert/questionaires/custom"? styles.NavTextCurrent:""}`}>
+                    ${router.pathname ==="/App/insert/questionaires/Custom"? styles.NavTextCurrent:""}`}>
                 Eigen
             </Link>
         </nav>

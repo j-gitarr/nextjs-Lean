@@ -13,13 +13,13 @@ function Navbar(){
                 <img src="/images/LEA_Logo_white.png" className={styles.Logo} href="/"/>
             </Link>
             <Link 
-                href="/App/analyze/BuildAnalyze" 
+                href="/App/analyze/Descriptive" 
                 className={
                     `${styles.NavText} 
                     ${styles.borderRight} 
                     ${router.pathname ==="/App/analyze/BuildAnalyze"? styles.NavTextCurrent:""}`
             }>
-                AnalyzeTest
+                Deskriptiv
             </Link>
             <Link 
                 href="" 
@@ -28,13 +28,10 @@ function Navbar(){
                     ${styles.borderRight} 
                     ${router.pathname ==="/questionaires/Borg"? styles.NavTextCurrent:""}`
                     } >
-                Analyze2
+                Explorativ
             </Link>
             <Link href="/App/analyze/BuildAnalyze" className={`${styles.NavText} ${styles.borderRight} ${router.pathname ==="/questionaires/NASA-TLX"? styles.NavTextCurrent:""}`}>
-                Analyze3
-            </Link>
-            <Link href="/App/analyze/BuildAnalyze" className={`${styles.NavText} ${router.pathname ==="/questionaires/KFZA"? styles.NavTextCurrent:""}`}>
-                Analyze4
+                Induktiv
             </Link>
         </nav>
     );

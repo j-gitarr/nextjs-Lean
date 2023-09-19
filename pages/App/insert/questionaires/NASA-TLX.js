@@ -14,6 +14,7 @@ export default function(){
 
     
     const [name, setName] = useState("");
+    const [workplace, setWorkplace] = useState("")
 
     const [mentalValue, setMentalValue] = useState(50);
     const [physicalValue, setPhysicalValue] = useState(50);
@@ -48,6 +49,10 @@ export default function(){
             toast.warn("Bitte geben Sie eine Identifikationsnummer ein");
             return;
           }
+        if(!workplace){
+            toast.warn("Bitte geben Sie eine Arbeitsstation ein");
+            return;
+        }
         
         try {
           const response = await fetch("/api/submitNASAValues", {
@@ -63,12 +68,13 @@ export default function(){
               effort: effortValue,
               frustration: frustrationValue,
               name: name,
+              workplace: workplace,
               companyName:localStorage.getItem("companyName"),
             }),
           });
       
           if (response.ok) {
-            toast.info("Eingabe Erfolgreich");
+            toast.success("Eingabe Erfolgreich");
           } else {
             console.error("Failed to save values.");
             toast.error("Etwas hat nicht funktioniert");
@@ -93,47 +99,68 @@ export default function(){
                     <p className="center tcw">{content.introduction}</p>
                     <Space height="20px"/>
                 </div>
-                
-                
-                <ShortTextInput 
-                    value={name} 
-                    onChange={(event)=>setName(event.target.value)}
-                    placeholder="Geben Sie hier bitte ihre identifikationsnummer ein..."
-                    height="5px"
-                    maxWidth="750px"
-                    
-                />
 
                 <Space height="10vh"/>
+
+                <SideBySide
+                    firstItem={
+                        <><h4>PID: </h4>
+                        <ShortTextInput 
+                            value={name} 
+                            onChange={(event)=>setName(event.target.value)}
+                            placeholder="Geben Sie hier bitte ihre persönliche identifikationsnummer ein..."
+                            height="5px"
+                            maxWidth="750px"
+                            background={"white"}        
+                        /></>
+                    }
+                    secondItem={
+                        <><h4>Arbeitsstaion: </h4>
+                        <ShortTextInput
+                            value={workplace}
+                            onChange={(event)=>setWorkplace(event.target.value)}
+                            placeholder="Geben Sie hier bitte Ihre derzeitige Arbeitsstation ein..."
+                            height="5px"
+                            maxWidth="750px"
+                            background={"white"} 
+                        /></>
+                    }
+                />
+
+                <Space height="20vh"/>
                 
                 <h2 className={style.H2}>Geistige Anforderungen</h2>
+                <Space height="30px"/>
                 <SideBySide 
                     firstItem={content.mentalText}
                     secondItem={
                         <Scale step="5" onChange={handleMentalChange} value={mentalValue}/>
                     }
                 />
-                <br/><br/>
+                <Space height="20vh"/>
 
                 <h2 className={style.H2}>Körperliche Anforderungen</h2>
+                <Space height="30px"/>
                 <SideBySide 
                     firstItem={content.physicalText} 
                     secondItem={
                         <Scale step="5" onChange={handlePhysicalChange} value={physicalValue}/>
                     }
                 />
-                <br/><br/>
+                <Space height="20vh"/>
 
                 <h2 className={style.H2}>Zeitliche Anforderungen</h2>
+                <Space height="30px"/>
                 <SideBySide
                     firstItem={content.temporalText}
                     secondItem={
                         <Scale step="5" onChange={handleTemporalChange} value={temporalValue}/>
                     }
                 />
-                <br/><br/>
+                <Space height="20vh"/>
 
                 <h2 className={style.H2}>Leistung</h2>
+                <Space height="30px"/>
                 <SideBySide
                     firstItem={content.performance}
                     secondItem={
@@ -144,29 +171,31 @@ export default function(){
                             value={performanceValue}/>
                     }
                 />
-                <br/><br/>
+                <Space height="20vh"/>
 
                 <h2 className={style.H2}>Anstrengung</h2>
+                <Space height="30px"/>
                 <SideBySide
                     firstItem={content.effort}
                     secondItem={
                         <Scale step="5" onChange={handleEffortChange} value={effortValue}/>
                     }
                 />
-                <br/><br/>
+                <Space height="20vh"/>
 
                 <h2 className={style.H2}>Frustration</h2>
+                <Space height="30px"/>
                 <SideBySide
                     firstItem={content.frustration}
                     secondItem={
                         <Scale step="5" onChange={handleFrustrationChange} value={frustrationValue}/>
                     }
                 />
-                <br/><br/>
+                <Space height="20vh"/>
                 
                 <div className="backgroundJean tcw">
                     <Space height="20px"/>
-                    <p className="Paragraph center">{content.annotation}</p>
+                    <p className=" center">{content.annotation}</p>
                     <Space height="20px"/>
                 </div>
                 <Space height="10vh"/>
@@ -177,7 +206,7 @@ export default function(){
                     onClick={saveNASAValues}
                     className="btn btn-primary btn-lg"
                 >
-                    Save Values
+                    Übermitteln
                 </button>
 
             </main>

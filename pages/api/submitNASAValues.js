@@ -2,7 +2,7 @@ import clientPromise from "@lib/mongodb";
 
 export default async (req, res) => {
   if (req.method === "POST") {
-    const { mental, physical, temporal, performance, effort, frustration, name, companyName } = req.body;
+    const { mental, physical, temporal, performance, effort, frustration, name, workplace, companyName } = req.body;
 
     try {
       // Connect to your MongoDB database
@@ -19,6 +19,7 @@ export default async (req, res) => {
         frustration,
         companyName,
         name,
+        workplace,
         timestamp: new Date(),
       });
 

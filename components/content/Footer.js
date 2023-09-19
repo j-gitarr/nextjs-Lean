@@ -23,13 +23,13 @@ export default function Footer(){
                     <div className={style.customCenter}>
                         <h3>LEA</h3>
                         <hr/>
-                        <StylishLink href="" className={style.singleIndent}>
+                        <StylishLink href="/" className={style.singleIndent}>
                             Startseite</StylishLink><br/>
-                        <StylishLink href=""className={style.singleIndent}>
+                        <StylishLink href="/about"className={style.singleIndent}>
                             Über</StylishLink><br/>
-                        <StylishLink href="" className={style.singleIndent}>
+                        <StylishLink href="/services" className={style.singleIndent}>
                             Services</StylishLink><br/>
-                        <StylishLink href="" className={style.singleIndent}>
+                        <StylishLink href="/contact" className={style.singleIndent}>
                             Kontakt</StylishLink><br/>
                     </div>
                 </div>
@@ -37,24 +37,27 @@ export default function Footer(){
                     <h3 >App</h3><hr/>
                     <div className={style.flexContainerInner}>
                         <div className={style.flexItems}>
-                            <StylishLink href="" className={style.singleIndent}>
+                            <StylishLink href="/App/Erhebung" className={style.singleIndent}>
                                 Erheben
                             </StylishLink><br/>
-                            <StylishLink href="" className={style.doubleIndent}>
+                            <StylishLink href="/App/insert/questionaires/EAWS" className={style.doubleIndent}>
                                 EAWS
                             </StylishLink><br/>
-                            <StylishLink href="" className={style.doubleIndent}>
+                            <StylishLink href="/App/insert/questionaires/Borg" className={style.doubleIndent}>
                                 BORG
                             </StylishLink><br/>
-                            <StylishLink href="" className={style.doubleIndent}>
+                            <StylishLink href="/App/insert/questionaires/NASA-TLX" className={style.doubleIndent}>
                                 NASA-TLX
                             </StylishLink><br/>
-                            <StylishLink href="" className={style.doubleIndent}>
+                            <StylishLink href="/App/insert/questionaires/KFZA" className={style.doubleIndent}>
                                 KFZA
+                            </StylishLink><br/>
+                            <StylishLink href="/App/insert/questionaires/Custom" className={style.doubleIndent}>
+                                Eigene Prozessdaten
                             </StylishLink><br/>
                         </div>
                         <div className={style.flexItems}>
-                            <StylishLink href="" className={style.singleIndent}>
+                            <StylishLink href="/App/Check" className={style.singleIndent}>
                                 Überprüfen
                             </StylishLink><br/>
                             <StylishLink href="" className={style.doubleIndent}>
@@ -65,7 +68,7 @@ export default function Footer(){
                             </StylishLink><br/>
                         </div>
                         <div className={style.flexItems}>
-                            <StylishLink href="" className={style.singleIndent}>
+                            <StylishLink href="/App/Analysieren" className={style.singleIndent}>
                                 Analysieren
                             </StylishLink><br/>
                             <StylishLink href="" className={style.doubleIndent}>

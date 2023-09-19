@@ -2,16 +2,16 @@ import clientPromise from "@lib/mongodb";
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { value, name, workplace, companyName } = req.body;
+    const { value, valueName, workplace, companyName } = req.body;
 
     try {
       const client = await clientPromise;
       const db = client.db("leanDB"); // Get the database instance
 
       // Insert the document into the MongoDB collection
-      await db.collection('BORG_Value').insertOne({ 
+      await db.collection('CustomData').insertOne({ 
         value,
-        name,
+        valueName,
         workplace,
         companyName,
         timestamp: new Date()
