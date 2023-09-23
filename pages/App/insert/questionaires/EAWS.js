@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import PageContainer from '@components/navigation/insert/PageContainerInsert';
 import {toast } from 'react-toastify';
-import GlobalToast from '@components/GlobalToast';
 import Space from '@components/style/Space';
 import Link from 'next/link';
 
 export default function EAWS() {
     const [eawsScore, setEawsScore] = useState(""); // State to store the EAWS Score
+    const [workplace, setWorkplace] = useState("");
 
     const handleEawsScoreChange = (event) => {
         setEawsScore(event.target.value);
@@ -20,21 +20,18 @@ export default function EAWS() {
             return;
         }else{
             try {
-
-
                 const response = await fetch('/api/create-EAWS-entry', {
                     method: 'POST',
                     headers: {
                     'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ value:eawsScore, companyName:localStorage.getItem("companyName")}),
+                    body: JSON.stringify({ value:eawsScore, workplace:workplace, companyName:localStorage.getItem("companyName")}),
                 });
                 if (response.ok) {
-                    console.log('Wert erfolgreich übernommen');
                     toast.info('Wert erfolgreich gespeichert');
                     // Reset the input after submission
                     setEawsScore("");
-    
+                    setWorkplace("");
                 } else {
                     console.error('Failed to create entry');
                 }
@@ -58,14 +55,17 @@ export default function EAWS() {
 
             <div className="backgroundJean">
                 <Space height="20px"/>
-                <p className="center tcw">Beschreibung</p>
+                
+                <p className="centeredMax800 SpaceSideSM tcw">{"Das Ergonomic Assessment Worksheet (EAWS) ist ein Experten Screeningverfahren, zur Bewertung von körperlicher Belastung. Dabei werden Punkte für Belastungsarten vergeben, welche aggregiert und nach einem Ampelschema bewertet werden (grün < 26p, gelb <51p, rot >50p). Die Bewertungsgrundlagen des EAWS entstammen internationalen (ISO), europäischen (CEN) und nationalen (DIN) Normen; (inter-)national anerkannten Bewertungsverfahren und einschlägigen Literaturquellen (z.B. Publikationen, Dissertationen). Das EAWS kann als „Papier- und Bleistiftmethode“ oder IT-gestützt über den kompletten Produktentstehungsprozess eingesetzt werden. -iad TU Darmstadt "}
+                <br/>{"Der von Ihnen oder einem Experten ermittelte EAWS-Wert wird in dem unteren Feld eingetragen und dient hilft bei der Verschlankung und Optimierung Ihrer Prozesse."}
+                </p>
                 <Space height="20px"/>
             </div>
             
             <Space height="10vh"/>
 
             <main>
-            <p className="text-center">Bitte tragen Sie hier den ermittelten EAWS Score ein:</p>
+            <p className="text-center">Bitte tragen Sie hier den ermittelten <b>EAWS Score </b>ein:</p>
             <div className="d-flex justify-content-center input-group input-group-lg">
                 <form onSubmit={handleFormSubmit}>
                     <input
@@ -75,6 +75,17 @@ export default function EAWS() {
                         onChange={handleEawsScoreChange}
                     />
                     <br/>
+
+                    <p>Für welche <b>Arbeitsstation</b> wurde dieser Wert erhoben?</p>
+                    <input
+                        type="text"
+                        className='form-control'
+                        value={workplace}
+                        onChange={(event)=>setWorkplace(event.target.value)}
+                    />
+
+                    <br/>
+
                     <div className='d-flex justify-content-center'>
                         <button 
                             type="submit"

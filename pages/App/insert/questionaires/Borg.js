@@ -68,7 +68,7 @@ export default function Borg(){
 
                 <div className="backgroundJean">
                     <Space height="20px"/>
-                    <p className="center tcw">
+                    <p className="centeredMax800  tcw">
                         Im Folgenden wird der Borgwert erfasst. Dieser Wert beschreibt die wahrgenommene Anstrengung bei körperlichen Aktivitäten. 
                         Geben Sie hierfür bitte ihre PID in das vorgesehene Feld ein, tragen Sie ein, in welche Arbeitsstation Sie sich derzeit befinden und wählen Sie anschließend einen Wert zwischen 6 und 20.
                     </p>

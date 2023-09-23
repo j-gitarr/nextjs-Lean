@@ -83,7 +83,7 @@ export default function ShowData() {
           <thead className="table-light">
               <tr>
                   <th scope="col">#</th>
-                  <th scope="col">PID</th>
+                  <th scope="col">Asrbeitsstation</th>
                   <th scope="col">NASA-TLX Werte</th>
                   <th scope="col">Datum</th>
                   <th scope="col"></th>
@@ -104,6 +104,7 @@ export default function ShowData() {
                           date={ConvertTime(item.timestamp)} 
                           id={item._id}
                           persID={item.name}
+                          workplace={item.workplace}
                           onDelete={handleDelete}
                           NASA="true"
                       />

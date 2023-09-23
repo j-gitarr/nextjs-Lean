@@ -10,7 +10,7 @@ export default function Analyze(){
               <Space height="10vh"/>
                 <h1>Analysieren</h1>
             <Space Separator="true"/>
-            <main>
+            <main className="centeredMax800">
                 <p>
                     Wenn Sie bereits Daten erhoben haben, können Sie hier ihre Daten analysieren. Ihnen stehen dafür verschiedene Mittel bereit: 
                 </p>
@@ -25,7 +25,7 @@ export default function Analyze(){
                 </p>
 
                 <Space height="40px"/>
-                <Link href="/App/check/ShowData">
+                <Link href="/App/analyze/Descriptive">
                     <button className="btn btn-primary">
                         Mit der Analyse starten
                     </button>

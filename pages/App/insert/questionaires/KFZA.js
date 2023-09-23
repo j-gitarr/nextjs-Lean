@@ -45,30 +45,6 @@ export default function(){
         }
 
         try {
-
-            // // Create an array of objects with question index and value
-            // const dataToSend = questionValues.map((question, index) => ({
-            //     index,
-            //     value: parseInt(question.value),
-            // }));
-
-            // console.log("values are:" + questionValues.map((question, index)=>({
-            //     index, 
-            //     value: parseInt(question.value),
-            // }).value))
-
-            // // Send the selected value to your MongoDB database via your API endpoint
-            // const response = await fetch("/api/submitKFZAValue", {
-            //     method: "POST",
-            //     headers: {
-            //         "Content-Type": "application/json",
-            //     },
-            //     body: JSON.stringify({
-            //         questionValues: dataToSend, 
-            //         name:name, 
-            //         companyName:localStorage.getItem("companyName")}),
-            // });
-
             // Create an object with key-value pairs
             const dataToSend = {};
             questionValues.forEach((question, index) => {
@@ -107,17 +83,22 @@ export default function(){
             <Space height="10vh"/>
 
             <div className="backgroundJean">
-                    <Space height="20px"/>
-                    <p className="center tcw">TODO INTRODUCTION</p>
-                    <Space height="20px"/>
-                </div>
+                <Space height="20px"/>
+                <p className="centeredMax800  tcw">Der Kurz-Fragebogen zur Arbeitsanalyse (KFZA) ist ein arbeitspsychologischer Fragebogen, der 1995 von Jochen Prümper, Klaus Hartmannsgruber und Michael Frese als Instrument zur Ermittlung psychischer Belastungen in der Arbeitssituation entwickelt und veröffentlicht wurde. Es handelt sich um ein theoretisch fundiertes, standardisiertes, quantitatives Verfahren der Verhältnisprävention, welches bereits langjährig in der betrieblichen Praxis im Einsatz ist. -fragebogen-arbeitsanalyse.at
+                    <br/><br/>Für jede Frage haben sie die Möglichkeit eines von fünf Feldern zu markieren. Bitte geben Sie zunächst Ihre persönliche Identifikationsnummer ein. Antworten Sie anschließend auf jede Frage und klicken Sie dann weiter unten auf Übermitteln, um die Daten zu Übermitteln. 
+                </p>
+                <Space height="20px"/>
+            </div>
 
+            <Space height="10vh"/>
+            <h4>PID: </h4>
             <ShortTextInput 
                     value={name} 
                     onChange={(event)=>setName(event.target.value)}
                     placeholder="Geben Sie hier bitte ihre identifikationsnummer ein..."
                     height="5px"
-                    maxWidth="750px"        
+                    maxWidth="750px"  
+                    background={"backgroundWhite"}
             />
             
             <Space height="10vh"/>

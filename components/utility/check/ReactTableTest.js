@@ -26,7 +26,6 @@ export default function ReactTableTest() {
 
   useEffect(() => {
     const companyName = localStorage.getItem("companyName");
-    console.log("companyName is:" + companyName);
   
     if (companyName === null) {
       console.error("no Company Associated");

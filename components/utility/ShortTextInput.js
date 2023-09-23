@@ -8,12 +8,12 @@ import Space from "../style/Space";
                 <Space height={props.height || "10vh"}/>
                     <h3 className="text-center text-white centeredMax1000">{props.children}</h3>
                     <input
-                        type="text"
+                        type={props.type? props.type: "text"}
                         id="name"
                         name="name"
                         value={props.value}
                         onChange={props.onChange}
-                        className="form-control from-control-lg centeredMax1000"
+                        className="form-control form-control-lg centeredMax1000"
                         placeholder={props.placeholder}
                         style={{maxWidth:`${props.maxWidth || "auto"}`}}
                         ref={props.ref}

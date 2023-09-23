@@ -1,11 +1,13 @@
+// getBorg.js
 import { useEffect, useState } from "react";
 
 export default function useBorg() {
-  const [borgData, setBorgData] = useState([]);
+  const [nasaData, setNasaData] = useState(null);
 
   useEffect(() => {
     // Fetch data when the component mounts
     const companyName = localStorage.getItem("companyName");
+    
 
     // TODO Program if there is no Firm Associated...
     if (companyName === null) {
@@ -15,11 +17,11 @@ export default function useBorg() {
 
     async function fetchData() {
       try {
-        const response = await fetch("/api/fetchBorg?companyName=" + companyName);
+        const response = await fetch("/api/fetchNASATLX?companyName=" + companyName);
         if (response.ok) {
           console.log("awaiting response");
           const data = await response.json();
-          setBorgData(data.data); // Set the fetched data in state
+          setNasaData(data.data); // Set the fetched data in state
         } else {
           console.error("Failed to fetch data");
         }
@@ -31,5 +33,5 @@ export default function useBorg() {
     fetchData();
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
-  return borgData; // Return the fetched Borg data
+  return nasaData; // Return the fetched EAWS data
 }

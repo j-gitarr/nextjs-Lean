@@ -2,7 +2,7 @@ import clientPromise from "@lib/mongodb";
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { value, companyName } = req.body;
+    const { value, workplace, companyName } = req.body;
 
     try {
       const client = await clientPromise;
@@ -11,6 +11,7 @@ export default async function handler(req, res) {
       // Insert the document into the MongoDB collection
       await db.collection('EAWS_Score').insertOne({ 
         value: parseInt(value),
+        workplace,
         companyName,
         timestamp: new Date()
     });

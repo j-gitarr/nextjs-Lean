@@ -47,10 +47,10 @@ h3, h4{
 }
 
 p{
-  white-space: pre-line;
+  /* white-space: pre-line; */
   padding: 5px 2%;
   text-align: justify;
-  max-width: 800px;
+  /* max-width: 800px; */
 }
 
 
@@ -118,6 +118,10 @@ main{
   max-width: 1000px;
   margin: auto;
 }
+.centeredMax800{
+  max-width: 800px;
+  margin: auto;
+}
 
 
 /* SPACING */
@@ -127,6 +131,10 @@ main{
 .spaceLeftSM{
   margin-left: 5px;
 }
+.spaceSideSM{
+  margin: 0 5px;
+}
+
 
 /* TEXTColors */
 .tcw{
@@ -160,4 +168,34 @@ main{
 }
 .backgroundWhite{
   background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.info-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.infoIcon {
+  color: #2c558c;
+  font-size: 2rem;
+}
+.infoIcon:hover{
+  color: ##063970;
+  font-size: 3rem;
+}
+
+.info-content {
+  display: none;
 }

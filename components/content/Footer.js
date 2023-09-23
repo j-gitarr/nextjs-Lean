@@ -2,6 +2,7 @@ import Space from "@components/style/Space";
 import React from "react";
 import style from "@styles/Footer.module.css"
 import Link from "next/link";
+import FireworksShow from "@components/utility/Fireworks";
 
 
 const StylishLink = ({href, children, className}) =>(
@@ -83,6 +84,7 @@ export default function Footer(){
                 <div className={`${style.flexItems}`}>
                     <div className={`${style.verticallyCenter}`}>
                         ©2023 Jerome Fürst  
+                        {/* <FireworksShow/> */}
                     </div>
                 </div>
             </div>

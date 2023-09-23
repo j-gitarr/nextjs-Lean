@@ -73,7 +73,7 @@ export default function DataField(props) {
         nasaExists ? (
           <tr>
             <th scope="row">{index}</th>
-            <td>{persID}</td>
+            <td>{workplace}</td>
             <td>
               <table className="table table-sm table-borderless">
                 <thead>

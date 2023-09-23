@@ -17,7 +17,7 @@ export default function Home() {
         <Space height="20vh"/>
       </header>
       <main>
-          <p><b>LEA</b> ist Ihre wegweisende Webapplikation, die es Ihrem Unternehmen ermöglicht, tiefgreifende Erkenntnisse über die Arbeitsbedingungen und die Leistung ihrer Mitarbeiter zu gewinnen. Durch die nahtlose Integration bewährter Ergonomiebewertungsinstrumente wie dem EAWS-Fragebogen, dem NASA-TLX-Fragebogen, der Borg-Skala und dem KFZA-Fragebogen bieten wir Ihnen eine umfassende Lösung, um die Arbeitsbelastung zu quantifizieren und zu analysieren.</p>
+          <p className="centeredMax800 spaceSideSM"><b>LEA</b> ist Ihre wegweisende Webapplikation, die es Ihrem Unternehmen ermöglicht, tiefgreifende Erkenntnisse über die Arbeitsbedingungen und die Leistung ihrer Mitarbeiter zu gewinnen. Durch die nahtlose Integration bewährter Ergonomiebewertungsinstrumente wie dem EAWS-Fragebogen, dem NASA-TLX-Fragebogen, der Borg-Skala und dem KFZA-Fragebogen bieten wir Ihnen eine umfassende Lösung, um die Arbeitsbelastung zu quantifizieren und zu analysieren.</p>
           
           <Space height="20vh"/>
           <Space height="10px" color="#617784" width="100%"/>
@@ -28,11 +28,12 @@ export default function Home() {
           <Space height="10vh"/>
           
           
-          
-          <p><strong>Ganzheitliche Datenanalyse:</strong> LEA erfasst und analysiert umfassende Daten mithilfe der genannten Ergonomiebewertungswerkzeuge. Dadurch erhalten Sie detaillierte Einblicke in die physische und mentale Belastung Ihrer Mitarbeiter während ihrer Arbeitsabläufe.</p><br/><br/>
-          <p><strong>Fokus auf Mitarbeiterleistung:</strong> Wir unterstützen Sie dabei, die Schwankungen in der Arbeitsleistung Ihrer Mitarbeiter besser zu verstehen. Durch die Verknüpfung von Belastungs- und Leistungsdaten identifizieren wir Zusammenhänge, die Ihnen bei der Optimierung Ihrer Prozesse helfen.</p><br/><br/>
-          <p><strong>Maßgeschneiderte Empfehlungen:</strong> Basierend auf den gewonnenen Erkenntnissen erhalten Sie präzise Empfehlungen zur Anpassung Ihrer Arbeitsprozesse. Unser Ziel ist es, die Mitarbeiterzufriedenheit zu steigern und gleichzeitig die Effizienz und Effektivität Ihrer Abläufe zu maximieren.</p><br/><br/>
-          <p><strong>Ganzheitlicher Ansatz:</strong> Bei LEA verstehen wir, dass ergonomische Aspekte nicht isoliert betrachtet werden können. Unsere Webapplikation berücksichtigt sämtliche Facetten und hilft Ihnen dabei, ein ausgewogenes Verhältnis zwischen Mitarbeiterwohlbefinden und betrieblicher Produktivität zu erreichen.</p><br/><br/>
+          <div  className="centeredMax800 spaceSideSM">
+            <p><strong>Ganzheitliche Datenanalyse:</strong> LEA erfasst und analysiert umfassende Daten mithilfe der genannten Ergonomiebewertungswerkzeuge. Dadurch erhalten Sie detaillierte Einblicke in die physische und mentale Belastung Ihrer Mitarbeiter während ihrer Arbeitsabläufe.</p><br/><br/>
+            <p><strong>Fokus auf Mitarbeiterleistung:</strong> Wir unterstützen Sie dabei, die Schwankungen in der Arbeitsleistung Ihrer Mitarbeiter besser zu verstehen. Durch die Verknüpfung von Belastungs- und Leistungsdaten identifizieren wir Zusammenhänge, die Ihnen bei der Optimierung Ihrer Prozesse helfen.</p><br/><br/>
+            <p><strong>Maßgeschneiderte Empfehlungen:</strong> Basierend auf den gewonnenen Erkenntnissen erhalten Sie präzise Empfehlungen zur Anpassung Ihrer Arbeitsprozesse. Unser Ziel ist es, die Mitarbeiterzufriedenheit zu steigern und gleichzeitig die Effizienz und Effektivität Ihrer Abläufe zu maximieren.</p><br/><br/>
+            <p><strong>Ganzheitlicher Ansatz:</strong> Bei LEA verstehen wir, dass ergonomische Aspekte nicht isoliert betrachtet werden können. Unsere Webapplikation berücksichtigt sämtliche Facetten und hilft Ihnen dabei, ein ausgewogenes Verhältnis zwischen Mitarbeiterwohlbefinden und betrieblicher Produktivität zu erreichen.</p><br/><br/>
+          </div>
       
 
 
@@ -49,7 +50,7 @@ export default function Home() {
           
           <Space height="10vh"/>
 
-          <p><b>Erleben</b> Sie, wie LEA die Gesundheit, Zufriedenheit und Produktivität Ihrer Mitarbeiter steigert. Wir laden Sie herzlich dazu ein, sich näher umzusehen und gemeinsam mit uns die Zukunft Ihrer Arbeitsprozesse zu gestalten.</p>
+          <p  className="centeredMax800 spaceSideSM"><b>Erleben</b> Sie, wie LEA die Gesundheit, Zufriedenheit und Produktivität Ihrer Mitarbeiter steigert. Wir laden Sie herzlich dazu ein, sich näher umzusehen und gemeinsam mit uns die Zukunft Ihrer Arbeitsprozesse zu gestalten.</p>
 
           <Space height="20vh"/>
       </main>

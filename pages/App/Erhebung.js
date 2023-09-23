@@ -11,8 +11,8 @@ export default function Erhebung(){
                 <h1>Erheben</h1>
             <Space Separator="true"/>
 
-            <main>
-                <p>
+            <main className="centeredMax800 ">
+                <p className="spaceSideSM">
                     <b>Übersicht:</b> Wenn Sie ihre Produktionsprozesse schlanker gestalten wollen ist der erste Schritt
                     das Sammeln von Daten. 
                     
@@ -30,7 +30,7 @@ export default function Erhebung(){
                 </p>
             </main>
                 <Space className="backgroundJean" height="10px" margin="20vh 0 10vh 0"/>
-            <main>
+            <main className="centeredMax800">
                 <h3>Ablauf</h3>
                 <Space height="10vh"/>
                 <p>
@@ -63,7 +63,7 @@ export default function Erhebung(){
             </h3>
             <Space height="5vh" className="backgroundJean"/>
             
-            <main>
+            <main className="centeredMax800">
                 <Space height="10vh"/>
                 <p>Um direkt loszulegen, tragen Sie hier bitte den eindeutigen Identifizierungscode für Ihr Unternhemen ein:</p>
             </main>

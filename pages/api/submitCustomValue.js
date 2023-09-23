@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
       // Insert the document into the MongoDB collection
       await db.collection('CustomData').insertOne({ 
-        value,
+        value: parseFloat(value),
         valueName,
         workplace,
         companyName,

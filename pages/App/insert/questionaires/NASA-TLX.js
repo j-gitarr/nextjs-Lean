@@ -96,7 +96,7 @@ export default function(){
 
                 <div className="backgroundJean">
                     <Space height="20px"/>
-                    <p className="center tcw">{content.introduction}</p>
+                    <p className="centeredMax800  tcw">{content.introduction}</p>
                     <Space height="20px"/>
                 </div>
 
@@ -195,7 +195,7 @@ export default function(){
                 
                 <div className="backgroundJean tcw">
                     <Space height="20px"/>
-                    <p className=" center">{content.annotation}</p>
+                    <p className=" centeredMax800 ">{content.annotation}</p>
                     <Space height="20px"/>
                 </div>
                 <Space height="10vh"/>

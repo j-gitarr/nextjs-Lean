@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 
 
 export default function Borg(){
-    const [selectedValue, setSelectedValue] = useState(); // State to store the selected value
+    const [selectedValue, setSelectedValue] = useState(0); // State to store the selected value
     const [valueName, setValueName] = useState("");
     const [workplace, setWorkplace] = useState("");
 
@@ -66,8 +66,10 @@ export default function Borg(){
 
                 <div className="backgroundJean">
                     <Space height="20px"/>
-                    <p className="center tcw">
-                        TODO
+                    <p className="centeredMax800  tcw">
+                    Hier haben Sie die Möglichkeit eigene Betriebswissenschaftliche Kennzahlen aufzunehmen. Je mehr Daten Sie beisteuern, desto eher können Lean Potentiale ermittelt werden. Tragen Sie dafür in die Felder unten die Arbeitsstation ein, von welcher die Kennzahl stammt, den Namen der Kennzahl und den Wert.
+                    <br/><br/>Im Schritt Analysieren werden Ihre Daten statistisch analysiert und mit anderen Werten korreliert, um Zusammenhänge zu identifizieren und ihnen mögliche Handlungsempfehlungen zu präsentieren. 
+
                     </p>
                     <Space height="20px"/>
                 </div>
@@ -100,6 +102,7 @@ export default function Borg(){
                 
                 <div className="centeredContent"><p style={{margin:"0"}}>Geben Sie hier bitte den <b>Wert</b> der Kennzahl ein</p></div>
                 <ShortTextInput
+                    type="number"
                     value={selectedValue}
                     onChange={(event)=>setSelectedValue(event.target.value)}
                     placeholder=""
