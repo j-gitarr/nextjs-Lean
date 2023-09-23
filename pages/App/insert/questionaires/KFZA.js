@@ -95,7 +95,7 @@ export default function(){
             <ShortTextInput 
                     value={name} 
                     onChange={(event)=>setName(event.target.value)}
-                    placeholder="Geben Sie hier bitte ihre identifikationsnummer ein..."
+                    placeholder="Ihre persönliche Identifikationsnummer..."
                     height="5px"
                     maxWidth="750px"  
                     background={"backgroundWhite"}

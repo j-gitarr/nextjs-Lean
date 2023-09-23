@@ -42,9 +42,15 @@
 }
 
 .Logo{
-    width: auto;
-    height: 8vh;
-    padding-left: 10px;
+    width: 9vh;
+    height: auto;
+    margin: 1vh 0;
+    padding: 0 2px;
+}
+
+.LogoContainer{
+    width: 9vh;
+    height: 9vh;
 }
 
 .sidePanel{

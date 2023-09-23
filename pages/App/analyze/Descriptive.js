@@ -43,6 +43,24 @@ const BoxPlotCustom = dynamic(
   }
 );
 
+function HeaderWithInfo({ children }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center", // Center horizontally
+      }}
+    >
+      <h2 style={{ marginRight: "10px", padding: "0" }}>{children}</h2>
+      <InfoExpandable>
+        Bitte beachten Sie, dass mindestens 4 Datenpunkte pro Feld vorhanden
+        sein müssen, um eine sinnvolle Auswertung durchzuführen.
+      </InfoExpandable>
+    </div>
+  );
+}
+
 export default function Descriptive() {
   const transformedArray = PrepBorg();
   const transformedNasa = PrepNASA();
@@ -69,7 +87,7 @@ export default function Descriptive() {
 
       <Space Separator="true" />
 
-      <h2>Borg</h2>
+      <HeaderWithInfo>Borg</HeaderWithInfo>
       {transformedArray ? (
         <div className="centeredMax1000">
           <BoxPlotChart
@@ -80,7 +98,7 @@ export default function Descriptive() {
           />
         </div>
       ) : (
-        "Laoding Data"
+        "Loading Data"
       )}
 
       <Space Separator="true" />
@@ -98,7 +116,7 @@ export default function Descriptive() {
 
       <Space Separator="true" />
 
-      <h2>KFZA</h2>
+      <HeaderWithInfo>KFZA</HeaderWithInfo>
       {transformedKfza.length !== 0 ? (
         <div className="centeredMax1000">
           <BoxPlotKfza data={transformedKfza} />
@@ -106,25 +124,15 @@ export default function Descriptive() {
       ) : null}
       <Space Separator="true" />
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center", // Center horizontally
-        }}
-      >
-        <h2 style={{ marginRight: "10px", padding: "0" }}>Eigene Kennwerte</h2>
-        <InfoExpandable>
-          Bitte beachten Sie, dass mindestens 4 Datenpunkte pro Feld vorhanden
-          sein müssen um eine sinnvolle auswertung durchzufürhen.
-        </InfoExpandable>
-      </div>
+      <HeaderWithInfo>Eigene Kennwerte</HeaderWithInfo>
       {transformedCustom.length !== 0 ? (
         <div className="centeredMax1000">
           <BoxPlotCustom data={transformedCustom} />
         </div>
       ) : null}
+
+        <Space height="10vh"/>
+
     </PageContainer>
-    
   );
 }

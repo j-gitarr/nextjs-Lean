@@ -47,7 +47,7 @@ export default function Borg(){
           // Clear the selected value after submission
           setSelectedValue("");
           setName("");
-          setWorkplace("");
+        //   setWorkplace("");
           window.location.href="#top";
         } else {
           console.error("Failed to submit value.");
@@ -83,18 +83,18 @@ export default function Borg(){
                         <ShortTextInput 
                             value={name} 
                             onChange={(event)=>setName(event.target.value)}
-                            placeholder="Geben Sie hier bitte ihre persönliche identifikationsnummer ein..."
+                            placeholder="Ihre persönliche Identifikationsnummer..."
                             height="5px"
                             maxWidth="750px"
                             background={"white"}        
                         /></>
                     }
                     secondItem={
-                        <><h4>Arbeitsstaion: </h4>
+                        <><h4>Arbeitsstation: </h4>
                         <ShortTextInput
                             value={workplace}
                             onChange={(event)=>setWorkplace(event.target.value)}
-                            placeholder="Geben Sie hier bitte Ihre derzeitige Arbeitsstation ein..."
+                            placeholder="Ihre derzeitige Arbeitsstation..."
                             height="5px"
                             maxWidth="750px"
                             background={"white"} 

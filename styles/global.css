@@ -188,12 +188,11 @@ main{
 }
 
 .infoIcon {
-  color: #2c558c;
+  color: #007bff;
   font-size: 2rem;
 }
 .infoIcon:hover{
-  color: ##063970;
-  font-size: 3rem;
+  color: #0056b3;
 }
 
 .info-content {

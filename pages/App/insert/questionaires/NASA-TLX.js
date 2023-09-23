@@ -75,6 +75,13 @@ export default function(){
       
           if (response.ok) {
             toast.success("Eingabe Erfolgreich");
+            setName("");
+            setMentalValue(50);
+            setFrustrationValue(50);
+            setPhysicalValue(50);
+            setEffortValue(50);
+            setTemporalValue(50);
+            setPerformanceValue(50);
           } else {
             console.error("Failed to save values.");
             toast.error("Etwas hat nicht funktioniert");
@@ -108,18 +115,18 @@ export default function(){
                         <ShortTextInput 
                             value={name} 
                             onChange={(event)=>setName(event.target.value)}
-                            placeholder="Geben Sie hier bitte ihre persönliche identifikationsnummer ein..."
+                            placeholder="Ihre persönliche Identifikationsnummer..."
                             height="5px"
                             maxWidth="750px"
                             background={"white"}        
                         /></>
                     }
                     secondItem={
-                        <><h4>Arbeitsstaion: </h4>
+                        <><h4>Arbeitsstation: </h4>
                         <ShortTextInput
                             value={workplace}
                             onChange={(event)=>setWorkplace(event.target.value)}
-                            placeholder="Geben Sie hier bitte Ihre derzeitige Arbeitsstation ein..."
+                            placeholder="Ihre derzeitige Arbeitsstation..."
                             height="5px"
                             maxWidth="750px"
                             background={"white"} 

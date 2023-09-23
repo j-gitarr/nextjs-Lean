@@ -1,29 +1,28 @@
-import React, { useState } from "react";
-import style from "@styles/utility/FloatingCTAButton.module.css"
+import style from "@styles/utility/FloatingCTAButton.module.css";
+import Link from "next/link";
+import { useRouter } from "next/router"; // Import useRouter
 
-function FloatingCTAButton() {
-  const [isOpen, setIsOpen] = useState(false);
+import React from "react";
+import ToggleFullscreen from "./ToggleFullscreen";
 
-  const toggleButton = () => {
-    setIsOpen(!isOpen);
-  };
+const HoveringCTA = () => {
+  const router = useRouter(); // Get the router object
+
+  // Check if the pathname starts with "/App"
+  const isAppPage = router.pathname.startsWith("/App");
 
   return (
-    <div className={`${style.floatingCTAButton} btn btn-primary ${isOpen ? "open" : ""}`}>
-      <button onClick={toggleButton} className={style.ctaButton}>
-        {isOpen ? "Close" : "Open CTA"}
-      </button>
-      {isOpen && (
-        <div className="cta-content">
-          {/* Add your CTA content here */}
-          <p>This is your call to action content.</p>
-          <button className="cta-close" onClick={toggleButton}>
-            Close
+    <ToggleFullscreen>
+      <Link href={isAppPage ? "/" : "App"}>
+        <div className={style.ctaContainer}>
+          <button className={style.ctaButton}>
+            {isAppPage ? "Zurück zur Webpage" : "Loslegen!"}{" "}
+            {/* Change button text */}
           </button>
         </div>
-      )}
-    </div>
+      </Link>
+    </ToggleFullscreen>
   );
-}
+};
 
-export default FloatingCTAButton;
+export default HoveringCTA;

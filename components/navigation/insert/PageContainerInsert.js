@@ -1,5 +1,5 @@
-import Navbar from "@components/navigation/insert/NavbarAppInsert"
-import SidePanel from "@components/navigation/SidePanelApp";
+import Navbar from "@components/navigation/app/NavbarApp"
+import SidePanel from "@components/navigation/insert/SidePanelInsert";
 import Content from "@components/Content"
 import style from "@styles/PageContainer.module.css"
 import CheckCompanyName from "@components/utility/CheckCompanyName";
