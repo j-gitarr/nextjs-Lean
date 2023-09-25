@@ -12,7 +12,7 @@ const HoveringCTA = () => {
   const isAppPage = router.pathname.startsWith("/App");
 
   return (
-    <ToggleFullscreen>
+    <ToggleFullscreen cta="true">
       <Link href={isAppPage ? "/" : "App"}>
         <div className={style.ctaContainer}>
           <button className={style.ctaButton}>

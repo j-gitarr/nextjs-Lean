@@ -85,7 +85,7 @@ export default function Home() {
         <main>
         <ToggleFullscreen>
           <Link href="/App">
-            <h2 className="btn btn-secondary btn-lg">Starten Sie jetzt!</h2>
+            <h2 className="btn btn-primary btn-lg">Starten Sie jetzt!</h2>
           </Link>
         </ToggleFullscreen>
           </main>

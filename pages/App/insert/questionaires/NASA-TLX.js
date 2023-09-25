@@ -16,7 +16,7 @@ export default function(){
     const [name, setName] = useState("");
     const [workplace, setWorkplace] = useState("")
 
-    const [mentalValue, setMentalValue] = useState(50);
+    const [mentalValue, setMentalValue] = useState();
     const [physicalValue, setPhysicalValue] = useState(50);
     const [temporalValue, setTemporalValue] = useState(50);
     const [performanceValue, setPerformanceValue] = useState(50);
@@ -47,10 +47,12 @@ export default function(){
     async function saveNASAValues() {
         if (!name) {
             toast.warn("Bitte geben Sie eine Identifikationsnummer ein");
+            window.location.href="#top";
             return;
           }
         if(!workplace){
             toast.warn("Bitte geben Sie eine Arbeitsstation ein");
+            window.location.href="#top";
             return;
         }
         
@@ -82,6 +84,7 @@ export default function(){
             setEffortValue(50);
             setTemporalValue(50);
             setPerformanceValue(50);
+            window.location.href="#top";
           } else {
             console.error("Failed to save values.");
             toast.error("Etwas hat nicht funktioniert");
@@ -96,6 +99,7 @@ export default function(){
     
     return (
         <PageContainer>
+            <a id="top"></a>
             <div>
                 <Space height="10vh"/>
                 <h1>NASA-TLX</h1>

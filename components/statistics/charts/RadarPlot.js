@@ -1,8 +1,10 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 
-export default function ApexChart({ data }) {
-    const series = [
+export default function ApexChart({ data, height }) {
+  const vh = height?(window.innerHeight*height/100):(window.innerHeight*60/100);   
+  
+  const series = [
         ...Object.keys(data).map((workplace) => ({
           name: workplace,
           data: [
@@ -22,7 +24,6 @@ export default function ApexChart({ data }) {
 
   const options = {
     chart: {
-      height: 350,
       type: 'radar',
       dropShadow: {
         enabled: true,
@@ -31,7 +32,13 @@ export default function ApexChart({ data }) {
         top: 1,
       },
     },
-    
+    title:{
+      text: "NASA-TLX Radarplot",
+      align: "center",
+      style:{
+        fontSize: "30px"
+      } 
+    },
     stroke: {
       width: 2,
     },
@@ -67,7 +74,7 @@ export default function ApexChart({ data }) {
       {series.length===1?(
         <p style={{textAlign:"center"}}>Es sind noch keine Daten vorhanden</p>
       ):(
-        <ReactApexChart options={options} series={series} type="radar" height={500} />
+        <ReactApexChart options={options} series={series} type="radar" height={vh} />
       )}
     </div>
   );

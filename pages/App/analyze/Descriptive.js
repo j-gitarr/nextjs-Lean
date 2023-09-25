@@ -76,7 +76,7 @@ export default function Descriptive() {
       <p>TODO hier ist some text</p>
       <Space Separator="true" />
 
-      <h2>EAWS</h2>
+      {/* <h2>EAWS</h2> */}
       {transformedEaws ? (
         <div className="centeredMax1000">
           <BarPlot data={transformedEaws} />
@@ -87,7 +87,8 @@ export default function Descriptive() {
 
       <Space Separator="true" />
 
-      <HeaderWithInfo>Borg</HeaderWithInfo>
+      {/* BORG */}
+
       {transformedArray ? (
         <div className="centeredMax1000">
           <BoxPlotChart
@@ -100,10 +101,11 @@ export default function Descriptive() {
       ) : (
         "Loading Data"
       )}
+      <HeaderWithInfo></HeaderWithInfo>
 
       <Space Separator="true" />
 
-      <h2>NASA-TLX</h2>
+      {/* <h2>NASA-TLX</h2> */}
       {transformedNasa ? (
         <div className="centeredMax1000">
           <RadarPlot data={transformedNasa} />
@@ -116,23 +118,21 @@ export default function Descriptive() {
 
       <Space Separator="true" />
 
-      <HeaderWithInfo>KFZA</HeaderWithInfo>
       {transformedKfza.length !== 0 ? (
         <div className="centeredMax1000">
           <BoxPlotKfza data={transformedKfza} />
         </div>
       ) : null}
+      <HeaderWithInfo></HeaderWithInfo>
       <Space Separator="true" />
 
-      <HeaderWithInfo>Eigene Kennwerte</HeaderWithInfo>
       {transformedCustom.length !== 0 ? (
         <div className="centeredMax1000">
           <BoxPlotCustom data={transformedCustom} />
         </div>
       ) : null}
-
-        <Space height="10vh"/>
-
+      <HeaderWithInfo></HeaderWithInfo>
+      <Space height="10vh" />
     </PageContainer>
   );
 }

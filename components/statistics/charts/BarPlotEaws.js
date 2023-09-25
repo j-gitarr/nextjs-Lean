@@ -1,9 +1,10 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 
-export default function BarChart({ data }) {
+export default function BarChart({ data, height }) {
   const workplaceLabels = data.map((entry) => entry.workplace);
   const values = data.map((entry) => entry.values[entry.values.length - 1]);
+  const vh = height?(window.innerHeight*height/100):(window.innerHeight*50/100); 
 
   const getColor = (value) => {
     if (value <= 25) {
@@ -20,7 +21,6 @@ export default function BarChart({ data }) {
   const options = {
     chart: {
       type: "bar",
-      height: 350,
     },
     plotOptions:{
       bar:{
@@ -31,6 +31,13 @@ export default function BarChart({ data }) {
       categories: workplaceLabels,
     },
     colors: colors,
+    title:{
+      text: "EAWS Barplot",
+      align: "center",
+      style:{
+        fontSize: "30px"
+      } 
+    },
   };
 
   const series = [
@@ -43,7 +50,7 @@ export default function BarChart({ data }) {
   return (
     <div id="chart">
       {data.length !== 0 ? (
-        <ReactApexChart options={options} series={series} type="bar" height={350} />
+        <ReactApexChart options={options} series={series} type="bar" height={vh} />
       ) : (
         <p style={{ textAlign: "center" }}>Es sind noch keine Daten vorhanden</p>
       )}

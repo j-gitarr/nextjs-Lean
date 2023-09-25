@@ -17,10 +17,6 @@ export default function Borg(){
       e.preventDefault();
   
       // Check if a value has been selected
-      if (selectedValue === null || selectedValue === "" || selectedValue === undefined) {
-        toast.warn("Bitte wählen Sie einen Wert aus");
-        return;
-      }
       if (!name) {
         toast.warn("Bitte geben Sie Ihre ID an.")
         window.location.href="#top";
@@ -29,6 +25,11 @@ export default function Borg(){
       if(!workplace){
         toast.warn("Bitte wählen Sie eine Arbeitsstaion");
         window.location.href="#top";
+        return;
+      }
+      
+      if (selectedValue === null || selectedValue === "" || selectedValue === undefined) {
+        toast.warn("Bitte wählen Sie einen Wert aus");
         return;
       }
   

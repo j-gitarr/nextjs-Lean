@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
-const BoxPlotChart = ({ transformedArray, chartHeightP }) => {
+const BoxPlotChart = ({ transformedArray, height}) => {
   const [dataPoints, setDataPoints] = useState([]);
-  const [chartHeight, setChartHeight] = useState(0);
+  const vh = height?(window.innerHeight*height/100):(window.innerHeight*50/100); 
 
   useEffect(() => {
     // Calculate quartiles and other statistics only on the client-side
@@ -33,12 +33,7 @@ const BoxPlotChart = ({ transformedArray, chartHeightP }) => {
       // Set the processed data to the state
       setDataPoints(processedData);
     }
-
-    const viewportHeight = window.innerHeight;
-    const chartHeightPercentage = chartHeightP; // You can adjust this value as needed
-    const calculatedHeight = (viewportHeight * chartHeightPercentage) / 100;
-    setChartHeight(calculatedHeight);
-  }, [transformedArray, chartHeightP]);
+  }, [transformedArray]);
 
   const options = {
     chart: {
@@ -68,8 +63,10 @@ const BoxPlotChart = ({ transformedArray, chartHeightP }) => {
       },
     },
     title: {
+      text: "Borg Boxplot",
+      align: "center",
       style: {
-        fontSize: "20px", // Adjust the font size for the chart title
+        fontSize: "30px", // Adjust the font size for the chart title
       },
     },
     subtitle: {
@@ -103,7 +100,7 @@ const BoxPlotChart = ({ transformedArray, chartHeightP }) => {
   return (
     <div>
       {dataPoints.length!==0? (
-        <ReactApexChart options={options} series={series} type="boxPlot" height={chartHeight} />
+        <ReactApexChart options={options} series={series} type="boxPlot" height={vh} />
       ):(
         <p style={{textAlign:"center"}}>Es sind noch keine Daten vorhanden</p>
       )}
