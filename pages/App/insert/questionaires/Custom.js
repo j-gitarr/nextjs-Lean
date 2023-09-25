@@ -44,8 +44,8 @@ export default function Borg(){
           toast.success("Wert erfolgreich übermittelt");
           // Clear the selected value after submission
           setSelectedValue("");
-          setValueName("");
-          setWorkplace("");
+          // setValueName("");
+          // setWorkplace("");
           window.location.href="#top";
         } else {
           console.error("Failed to submit value.");
