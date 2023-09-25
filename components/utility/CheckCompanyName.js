@@ -10,7 +10,7 @@ export default function CheckCompanyName() {
       const companyName = localStorage.getItem("companyName");
       if ((!companyName || companyName === "") && (router.pathname !== "/App/Erhebung")) {
         // Redirect the user to "/App/Erhebung#company"
-        router.push('/App/Erhebung#company');
+        router.push('/App/Insert#company');
         console.log("No CompanyName!");
         toast.warn("Bitte Füllen Sie erst Ihre Firmen ID aus!")
       }
