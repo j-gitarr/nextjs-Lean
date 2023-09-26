@@ -70,54 +70,53 @@ export default function EAWS() {
         <Space height="20px" />
       </div>
 
-      <Space height="10vh" />
+      <Space height="20vh" />
 
-      <main>
-        <p className="text-center">
-          Bitte tragen Sie hier den ermittelten <b>EAWS Score </b>ein:
-        </p>
-        <div className="d-flex justify-content-center input-group input-group-lg">
-          <form onSubmit={handleFormSubmit}>
-            <input
-              type="number"
-              className="form-control form-control-lg"
-              value={eawsScore}
-              onChange={handleEawsScoreChange}
-            />
-            <br />
-
-            <p>
-              Für welche <b>Arbeitsstation</b> wurde dieser Wert erhoben?
-            </p>
-            <div className="d-flex justify-content-center">
-              <WorkstationDropdown
-                value={workplace}
-                onValueChange={setWorkplace}
-              />
-            </div>
-
-            <Space Separator="true"/>
-
-            <div className="d-flex justify-content-center">
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={handleFormSubmit}
-              >
-                Bestätigen
-              </button>
-              <Link href="Borg">
-                <button
-                  className="btn btn-secondary"
-                  style={{ marginLeft: "10px" }}
-                >
-                  überspringen
-                </button>
-              </Link>
-            </div>
-          </form>
+      <div>
+        <h5 className="text-center" style={{fontWeight:"normal"}}>
+          Für welche <b>Arbeitsstation</b> wurde dieser Wert erhoben?
+        </h5>
+        <div className="d-flex justify-content-center">
+          <WorkstationDropdown value={workplace} onValueChange={setWorkplace} />
         </div>
-      </main>
+        <Space height="10vh" />
+        <h5 className="text-center" style={{fontWeight:"normal"}}>
+          Bitte tragen Sie hier den ermittelten <b>EAWS Score </b>ein:
+        </h5>
+        <div className="d-flex justify-content-center">
+          <input
+            type="number"
+            className="form-control form-control-lg"
+            value={eawsScore}
+            onChange={handleEawsScoreChange}
+            style={{width:"300px"}}
+          />
+        </div>
+        <br />
+      </div>
+
+      <Space Separator="true" />
+
+      <div>
+        <div className="d-flex justify-content-center">
+          <button
+            type="submit"
+            className="btn btn-primary btn-lg"
+            onClick={handleFormSubmit}
+          >
+            Bestätigen
+          </button>
+          <Link href="Borg">
+            <button
+              className="btn btn-secondary btn-lg"
+              style={{ marginLeft: "10px" }}
+            >
+              überspringen
+            </button>
+          </Link>
+        </div>
+      </div>
+
       <Space height="10vh" />
     </PageContainer>
   );

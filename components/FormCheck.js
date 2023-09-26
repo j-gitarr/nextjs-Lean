@@ -32,7 +32,7 @@ export default function FormCheck({children, id, value, onChange, selectedValue}
                 onChange={handleInputChange}
                 style={{ width: "5vw", height: "5vw", paddingTop: 50 }}
             />
-            <span style={{ flex: 1, paddingLeft: 20 }}>{children}</span>
+            <span style={{ flex: 1, paddingLeft: 20, fontSize:"1.25rem"}}>{children}</span>
         </label>
     );
 

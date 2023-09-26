@@ -92,7 +92,7 @@ export default function Home() {
         <Space height="10vh" />
 
         <p className="centeredMax800 spaceSideSM">
-          <b>Erleben</b> Sie, wie LEA die Gesundheit, Zufriedenheit und
+          <b>Erleben Sie</b> wie LEA die Gesundheit, Zufriedenheit und
           Produktivität Ihrer Mitarbeiter steigert. Wir laden Sie herzlich dazu
           ein, sich näher umzusehen und gemeinsam mit uns die Zukunft Ihrer
           Arbeitsprozesse zu gestalten.

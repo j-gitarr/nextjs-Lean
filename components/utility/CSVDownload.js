@@ -45,6 +45,11 @@ function CSVDownload({type, children, className}) {
           response = await fetch("/api/fetchKFZA?companyName=" + companyName);
           fname = "kfza" + DateCamelCase();    
           break;
+        case "custom":
+          console.log("custom download");
+          response = await fetch("/api/fetchCustom?companyName=" + companyName);
+          fname = "Custom"+DateCamelCase();
+          break;
         default:
           return;
       }

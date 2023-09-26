@@ -1,3 +1,4 @@
+import Space from "@components/style/Space";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 
@@ -7,7 +8,7 @@ function createBoxPlotData(data) {
 
   // Iterate through the data and group/accumulate it
   data.forEach((item) => {
-    const key = `${item.workplace} and ${item.valueName}`;
+    const key = `${item.workplace} - ${item.valueName}`;
     if (!groupedData[key]) {
       // Initialize the group if it doesn't exist
       groupedData[key] = {
@@ -38,13 +39,17 @@ function createBoxPlotData(data) {
     groupedData[key].y = [min, q1, median, q3, max];
   }
 
-  // Create the final box plot data series
-  const boxPlotData = {
-    type: "boxPlot",
-    data: Object.values(groupedData),
-  };
+  let keys = Object.keys(groupedData);
+  let values = Object.values(groupedData);
 
-  return [boxPlotData];
+  let boxPlotsData = [];
+  for (let i = 0; i < keys.length; i++) {
+    boxPlotsData.push({
+      type: "boxPlot",
+      data: [Object.values(groupedData)[i]],
+    });
+  }
+  return [boxPlotsData];
 }
 
 export default function BoxPlotChart({ data }) {
@@ -82,22 +87,55 @@ export default function BoxPlotChart({ data }) {
         size: 1000,
       },
     },
-    title: {
-      text: "Custom Data Boxplot",
-      align: "center",
-      style:{
-        fontSize: "30px",
-      },
-    },
     xaxis: {
       type: "category",
+      labels:{
+        style:{
+          fontSize:"16px"
+        }
+
+      }
     },
+    yaxis: {
+      labels:{
+        show: false,
+      }
+    }
   };
 
   return (
     <div>
-      {console.log(series)}
-      <ReactApexChart options={options} series={series} type="boxPlot" height={500} />
+      {data ? (
+        <>
+          {series.map((item, index) => (
+            <div key={index}>
+              {item.map((group, groupIndex) => (
+                <div key={groupIndex}>
+                  <ReactApexChart
+                    options={{
+                      ...options,
+                      title: {
+                        text: `${group.data[0].x}`, // Set title as the x value
+                        align: "center",
+                        style:{
+                          fontSize: "18px"
+                        }
+                      },
+                    }}
+                    series={[group]}
+                    type="boxPlot"
+                    height={200}
+                  />
+                  <Space height="10vh"/>
+                </div>
+              ))}
+            </div>
+          ))}
+        </>
+      ) : (
+        <p> Loading... </p>
+      )}
     </div>
   );
 }
+

@@ -66,7 +66,6 @@ export default function Borg() {
   return (
     <PageContainer>
       <form onSubmit={handleFormSubmit}>
-        
         <Space height="10vh" />
         <h1>Eigene Prozessdaten</h1>
         <Space height="10vh" />
@@ -84,15 +83,17 @@ export default function Borg() {
             Im Schritt Analysieren werden Ihre Daten statistisch analysiert und
             mit anderen Werten korreliert, um Zusammenhänge zu identifizieren
             und ihnen mögliche Handlungsempfehlungen zu präsentieren.
-          </p><a id="choose"></a>
+          </p>
+          <a id="choose"></a>
           <Space height="20px" />
         </div>
 
         <Space height="10vh" />
 
         <div className="centeredContent">
-          <p style={{ margin: "0" }}>
-            Wählen Sie hier die aktuelle <b>Arbeitsstation</b> aus, oder definieren Sie eine neue Arbeitsstation
+          <p style={{ margin: "0", fontSize: "1.25rem" }}>
+            Wählen Sie hier die aktuelle <b>Arbeitsstation</b> aus, oder
+            definieren Sie eine neue Arbeitsstation
           </p>
         </div>
         <div className="d-flex justify-content-center">
@@ -102,11 +103,12 @@ export default function Borg() {
         <Space height="10vh" />
 
         <div className="centeredContent">
-          <p style={{ margin: "0" }}>
-            Wählen Sie den <b>Namen der Kennzahl</b> aus, oder definieren Sie eine neue Kennzahl
+          <p style={{ margin: "0", fontSize: "1.25rem" }}>
+            Wählen Sie den <b>Namen der Kennzahl</b> aus, oder definieren Sie
+            eine neue Kennzahl
           </p>
         </div>
-        
+
         <div className="d-flex justify-content-center">
           <CustomValueDropdown value={valueName} onValueChange={setValueName} />
         </div>
@@ -114,19 +116,21 @@ export default function Borg() {
         <Space height="10vh" />
 
         <div className="centeredContent">
-          <p style={{ margin: "0" }}>
+          <p style={{ margin: "0", fontSize: "1.25rem" }}>
             Geben Sie hier bitte den <b>Wert</b> der Kennzahl ein
           </p>
         </div>
-        <ShortTextInput
-          type="number"
-          value={selectedValue}
-          onChange={(event) => setSelectedValue(event.target.value)}
-          placeholder=""
-          height="5px"
-          maxWidth="750px"
-          background={"white"}
-        />
+        <div className="d-flex justify-content-center">
+          <ShortTextInput
+            type="number"
+            value={selectedValue}
+            onChange={(event) => setSelectedValue(event.target.value)}
+            placeholder=""
+            height="5px"
+            maxWidth="750px"
+            background={"white"}
+          />
+        </div>
 
         <Space height="10vh" />
 

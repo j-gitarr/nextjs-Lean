@@ -126,12 +126,13 @@ export default function Descriptive() {
       <HeaderWithInfo></HeaderWithInfo>
       <Space Separator="true" />
 
+      <HeaderWithInfo>Eigen definierte Kennzahlen</HeaderWithInfo>
       {transformedCustom.length !== 0 ? (
         <div className="centeredMax1000">
           <BoxPlotCustom data={transformedCustom} />
         </div>
       ) : null}
-      <HeaderWithInfo></HeaderWithInfo>
+      
       <Space height="10vh" />
     </PageContainer>
   );

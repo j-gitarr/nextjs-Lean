@@ -13,38 +13,6 @@ export default function Build(props){
         }
     }
 
-    // const buildBackground = ()=>{
-    //     if (props.Background === "enabled" || props.Background === null || props.Background === "") {
-    //         return (
-    //             <div style={{
-    //                 backgroundImage: `url(/images/construction.jpg)`,
-    //                 backgroundSize:"cover",
-    //                 backgroundRepeat:"no-repeat",
-    //                 width:"100%",
-    //                 height:"100%",
-    //                 display:"flex",
-    //                 flexDirection:"column",
-    //                 alignItems:"center",
-    //                 justifyContent:"center",
-    //             }}>
-        
-    //                 <Space height="30vh"/>
-                    
-    //                 <h1 style={{color: "white", background:"#5e7783"}}>
-    //                     Page currently under construction
-    //                 </h1>
-            
-    //                 <Space height="4000px"/>
-                    
-    //                 <p style={{background:"white"}}>picture by: Photo by Aleksandar Pasaric: https://www.pexels.com/photo/photo-of-skyscrapers-surrounded-with-clouds-1437493/</p>
-    //             </div>
-    //         )
-    //     } else if (props.Background === "disabled" || props.Background === "false") {
-    //         return null;
-    //     }
-    // }
-
-
     const buildBackground = () => {
         if (
           props.Background === "enabled" ||
