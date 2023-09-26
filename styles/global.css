@@ -198,3 +198,12 @@ main{
 .info-content {
   display: none;
 }
+
+
+
+
+
+.scrollableDropdownMenu {
+  max-height: 200px; /* Set the maximum height for scrolling */
+  overflow-y: auto;  /* Enable vertical scrollbar when content exceeds max height */
+}

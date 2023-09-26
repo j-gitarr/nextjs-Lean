@@ -6,12 +6,13 @@ import Space from "@components/style/Space";
 import ShortTextInput from "@components/utility/ShortTextInput";
 import { toast } from "react-toastify";
 import SideBySide from "@components/style/SideBySide";
+import WorkstationDropdown from "@components/utility/WorkstationDropdown";
 
 
 export default function Borg(){
     const [selectedValue, setSelectedValue] = useState(); // State to store the selected value
     const [name, setName] = useState(""); // State to store the name
-    const [workplace, setWorkplace] = useState("");
+    const [workplace, setWorkplace] = useState("Arbeitsstation wählen...");
 
     const handleFormSubmit = async (e) => {
       e.preventDefault();
@@ -22,7 +23,7 @@ export default function Borg(){
         window.location.href="#top";
         return;
       }
-      if(!workplace){
+      if(!workplace || workplace === "Arbeitsstation wählen..."){
         toast.warn("Bitte wählen Sie eine Arbeitsstaion");
         window.location.href="#top";
         return;
@@ -92,14 +93,12 @@ export default function Borg(){
                     }
                     secondItem={
                         <><h4>Arbeitsstation: </h4>
-                        <ShortTextInput
-                            value={workplace}
-                            onChange={(event)=>setWorkplace(event.target.value)}
-                            placeholder="Ihre derzeitige Arbeitsstation..."
-                            height="5px"
-                            maxWidth="750px"
-                            background={"white"} 
-                        /></>
+                        <div className="d-flex justify-content-center">
+                        <WorkstationDropdown value={workplace} onValueChange={setWorkplace}/>
+
+                        </div>
+                        </>
+
                     }
                 />
 

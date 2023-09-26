@@ -1,15 +1,23 @@
-import React from "react";
-import { useCompany } from "@components/context/CompanyContext";
+import React, { useState } from "react";
+import CustomValueDropdown from "@components/utility/CustomValueDropdown"
 
-export default function Test() {
-  const { companyName, setCompanyName } = useCompany();
 
-  return (
+export default function Test(){
+  const [valueName, setValueName] = useState("Bitte Kennzahl wählen...")
+
+  return(
     <div>
-      This is a test!
-      <br />
-      Current company Name: {companyName}
-      <br />
+      der Name der geilsten Kennzahl ist: {valueName}
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
+
+      <CustomValueDropdown value={valueName} onValueChange={setValueName}/>
     </div>
-  );
+  )
+
+
 }

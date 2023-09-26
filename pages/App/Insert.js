@@ -13,46 +13,23 @@ export default function Erhebung(){
 
             <main className="centeredMax800 ">
                 <p className="spaceSideSM">
-                    <b>Übersicht:</b> Wenn Sie ihre Produktionsprozesse schlanker gestalten wollen ist der erste Schritt
-                    das Sammeln von Daten. 
-                    
-                    Durch eine zielgerichtete Sammlung von Prozessdaten und Kennwerten können Verschlankungspotenziale 
-                    identifiziert und anschließend optimiert werden. 
-                    <br/><br/>
-                    Erfasst werden der "Ergonomic Assessment Work Sheet" (EAWS) Wert, 
-                    die körperliche Anstrengung Ihrer Mitarbeiter durch die Borg-Skala, 
-                    die erfahrenen Arbeitsbelastung Ihrer Mitarbeiter durch den 
-                    "NASA Task Load Index" (NASA-TLX) und 
-                    die psychische Belastung durch den Kurz-Fragebogen zur Arbeitsanalyse 
-                    (KFZA) Ihrer Mitarbeiter. 
-                    <br/><br/>
-                    Jeder dieser Fragebogen ist wissenschaftlich evaluiert und erprobt. 
+                Der erste Schritt zur Anwendung von Lean Ergonomics stellt die Erhebung relevanter Prozess- und Belastungsdaten dar. Dabei erlaubt Ihnen LEA die Erfassung folgender Daten: 
+<br/><br/>
+<b>EAWS:</b> Dabei handelt es sich um einen von Experten erfassten Kennwert. Dieser kann mit anderen Werten korreliert werden, um die Aussagekraft zu erhöhen. 
+<br/><br/>
+<b>BORG:</b> Mit der Erfassung des Borg-Wertes können Sie mitarbeiter- und arbeitsstationsspezifisch die empfundene Körperliche Belastung erfassen.
+<br/><br/>
+<b>NASA-TLX:</b> Die Erfassung des NASA-TLX erlaubt Ihnen die subjektiv erfahrene Arbeitsbeanspruchung Ihrer Mitarbeiter nach Arbeitsstation zu analysieren. 
+<br/><br/>
+<b>KFZA:</b> Mit dem KFZA können Sie die psychische Belastung auf ihre Mitarbeiter für den gesamten Arbeitsplatz erfassen. 
+<br/><br/>
+<b>Custom:</b> Weiterhin haben Sie die Möglichkeit eigene Kennwerte zu definieren und zu erfassen. 
+<br/><br/><br/>
+Beachten Sie, je mehr Daten Sie sammeln, desto aussagekräftigere Erkenntnisse erlangen Sie aus der Analyse der Daten und desto eher können Verbesserungs- und Einsparpotentiale erkannt werden. 
+
                 </p>
             </main>
-                <Space className="backgroundJean" height="10px" margin="20vh 0 10vh 0"/>
-            <main className="centeredMax800">
-                <h3>Ablauf</h3>
-                <Space height="10vh"/>
-                <p>
-                    Um ein bestmögliches Ergebnis zu erzielen ist es sinnvoll 
-                    das vorgehen zunächst mit einem unserer Lean Ergonomics Experten abzusprechen (<b>CONTACT TODO</b>).
-                    <br/><br/>                    
-                    <b>Erheben: </b>Aschnließend beginnt das Sammeln von prozessbezogenen und personenbezogenen Daten. 
-                    Ein Teil der Daten müssen durch das Unternehmen selbst (z.b. Zykluszeiten) 
-                    und ein anderer Teil durch die Mitarbeiter erhoben werden (z.B. subjektive Belastung).
-                    <br/><br/>      
-                    <b>Prüfen: </b>Ist die Datensammlung abgeschlossen, haben Sie anschließend die Möglichkeit die gesammelten Daten
-                    zu Prüfen, zu korrigieren, oder auch zu exportieren um diese anderweitig zu verarbeiten. 
-                    <br/><br/>      
-                    <b>Analysieren: </b>Sobald Sie alle benötigten Daten erfasst haben, werden diese automatisch ausgewertet.
-                    Durch die Auswertung erhalten Sie nicht nur Einblick in die Stärken und Schwächen des Produktionsprozesses, 
-                    sondern auch in Ihre Mitarbeiter. Der beste Produktionsprozess ist nur so schnell, wie der Schwächste Mitarbeiter. 
-                    Hier erfahren Sie was einerseits für Ihre Mitarbeiter ändern müssen, damit diese weniger Belastung erhfahren und dadurch 
-                    eine bessere Leistung erzielen. 
-                    Durch eine optimale steuerung der Belastung erhöht sich nicht nur die Mitarbeiterzufriedenheit und Prozessqualität,
-                    zusätzlich werden Prozesse in Ihrer Qualität stabiler und die Wahrscheinlichkeit für Qualitätsschwankung sinkt. 
-                </p>
-            </main>
+            
 
             <a id="company"></a>
             <Space height="10vh"/>
@@ -65,7 +42,7 @@ export default function Erhebung(){
             
             <main className="centeredMax800">
                 <Space height="10vh"/>
-                <p>Um direkt loszulegen, tragen Sie hier bitte den eindeutigen Identifizierungscode für Ihr Unternhemen ein:</p>
+                <p>Um direkt <b>loszulegen</b>, tragen Sie hier bitte den eindeutigen <b>Identifizierungscode</b> für Ihr Unternhemen ein:</p>
             </main>
                 <Profile/>
             

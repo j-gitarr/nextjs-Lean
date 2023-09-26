@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router"; // Import useRouter
 
-export default function ToggleFullscreen({ children, cta}) {
+export default function ToggleFullscreen({ children, cta }) {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const router = useRouter();
   useEffect(() => {
@@ -46,7 +46,7 @@ export default function ToggleFullscreen({ children, cta}) {
 
   const toggleFullscreen = () => {
     // Only toggle if the `toggle` prop is true
-    if (isFullscreen  && router.pathname.startsWith("/App")) {
+    if (isFullscreen && router.pathname.startsWith("/App")) {
       // Exit fullscreen if currently in fullscreen mode
       if (document.exitFullscreen) {
         document.exitFullscreen();
@@ -57,19 +57,11 @@ export default function ToggleFullscreen({ children, cta}) {
       } else if (document.msExitFullscreen) {
         document.msExitFullscreen();
       }
-    } else if(!router.pathname.startsWith("/App") || !cta){
+    } else if (!router.pathname.startsWith("/App") || !cta) {
       // Set fullscreen if not in fullscreen mode
       setFullscreen();
     }
   };
 
-  return (
-    <div
-      // style={{ height: "100%", width: "100%", display: "flex" }}
-      // className={isFullscreen ? "fullscreen" : ""}
-      onClick={toggleFullscreen}
-    >
-      {children}
-    </div>
-  );
+  return <div onClick={toggleFullscreen}>{children}</div>;
 }

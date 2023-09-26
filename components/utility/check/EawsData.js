@@ -5,6 +5,8 @@ import { toast } from "react-toastify";
 import isInt from "../IsInt";
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { customPrompt } from "../CustomPrompt";
+import { customConfirm } from "../CustomConfirm";
 
 export default function EawsData(){
     const [eawsData, setEawsData] = useState([]); // State to hold the fetched data
@@ -57,7 +59,9 @@ export default function EawsData(){
 
       // Function to handle the delete operation
     const handleDelete = async (id, index) => {    
-        if(!confirm("Wollen Sie den Eintrag wirklich entfernen?")){
+        let del = await customConfirm("Wollen Sie den Eintrag wirklich löschen?")
+        if(!del){
+            toast.warn("Vorgang abgebrochen")
             return;
         }
         try {
@@ -80,7 +84,13 @@ export default function EawsData(){
 
 
     const handleEdit = async (id, index) => {
-        let newValue = prompt("here input");
+        let newValue = await customPrompt("Geben Sie hier den neuen Wert ein");
+
+        if(newValue===null){
+            toast.warn("Vorgang abgebrochen");
+            return;
+        }
+
         if(!isInt(newValue)){
             toast.warn("Bitte geben Sie einen Zahlenwert ein!");
             return;

@@ -22,7 +22,7 @@ export default function Check(){
                 </Link>
             </main>
 
-            <Space height="10vh"/>
+            <Space height="20vh"/>
         </PageContainer>
     )
 }

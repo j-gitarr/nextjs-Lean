@@ -7,7 +7,6 @@ import CheckCompanyName from "@components/utility/CheckCompanyName";
 export default function PageContainer({children}){
     return(
         <>
-            {/* <CheckCompanyName/> */}
             <Navbar/>
             <div className={style.VerticalNextToContent}>
                 {/* <SidePanel/> */}

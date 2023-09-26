@@ -4,6 +4,9 @@ import ConvertTime from "../ConvertTime";
 import isInt from "../IsInt";
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { customPrompt } from "../CustomPrompt";
+import {toast} from "react-toastify"
+import { customConfirm } from "../CustomConfirm";
 
 export default function ShowData() {
   const [customData, setCustomData] = useState([]);
@@ -55,7 +58,10 @@ export default function ShowData() {
   }
 
   const handleDelete = async (id, index) => {    
-    if(!confirm("Wollen Sie den Eintrag wirklich entfernen?")){
+    const del = await customConfirm("Wollen Sie den Eintrag wirklich entfernen?");
+    
+    if(!del){
+        toast.warn("Vorgang abgebrochen");
         return;
     }
     try {
@@ -78,7 +84,12 @@ export default function ShowData() {
 
 
 const handleEdit = async (id, index) => {
-    let newValue = prompt("here input");
+    const newValue = await customPrompt("Geben Sie hier den neuen Wert ein");
+    if(newValue === null){
+        toast.warn("Vorgang abgebrochen");
+        return;
+    }
+
     if(!isInt(newValue)){
         toast.warn("Bitte geben Sie einen Zahlenwert ein!");
         return;
