@@ -18,6 +18,7 @@ export function customPrompt(message, defaultValue = '', confirmText = 'ok', can
     promptBox.style.backgroundColor = 'white';
     promptBox.style.padding = '20px';
     promptBox.style.border = '1px solid #ccc';
+    promptBox.style.borderRadius = "10px";
     promptBox.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.2)';
     promptBox.style.display = 'flex';
     promptBox.style.flexDirection = 'column';
@@ -25,13 +26,14 @@ export function customPrompt(message, defaultValue = '', confirmText = 'ok', can
 
     const messageElement = document.createElement('p');
     messageElement.textContent = message;
+    messageElement.style.width = "100%";
+    messageElement.style.padding = "0";
 
     const inputElement = document.createElement('input');
     inputElement.type = 'text';
     inputElement.value = defaultValue;
-    inputElement.style.width = '100%';
-    inputElement.style.padding = '10px';
-    inputElement.style.marginBottom = '10px';
+    inputElement.className = "input-group form-control"
+    inputElement.style.marginBottom = '20px';
     inputElement.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
         // Prevent the default form submission behavior
@@ -44,7 +46,8 @@ export function customPrompt(message, defaultValue = '', confirmText = 'ok', can
 
     const buttonContainer = document.createElement('div');
     buttonContainer.style.display = 'flex';
-    buttonContainer.style.justifyContent = 'space-between';
+    buttonContainer.style.justifyContent = 'right';
+    buttonContainer.style.gap ="20px";
     buttonContainer.style.width = '100%';
     buttonContainer.addEventListener("keydown", (event)=>{
       if(event.key === "Delete"||event.key === "Backspace"){
@@ -57,11 +60,8 @@ export function customPrompt(message, defaultValue = '', confirmText = 'ok', can
 
     const confirmButton = document.createElement('button');
     confirmButton.textContent = confirmText;
-    confirmButton.style.padding = '10px';
-    confirmButton.style.backgroundColor = 'green';
-    confirmButton.style.color = 'white';
-    confirmButton.style.border = 'none';
-    confirmButton.style.cursor = 'pointer';
+    confirmButton.className ="btn btn-primary"
+    confirmButton.style.width = "100%";
     confirmButton.addEventListener('click', () => {
       const userInput = inputElement.value;
       document.body.removeChild(focusTrapWrapper);
@@ -70,11 +70,8 @@ export function customPrompt(message, defaultValue = '', confirmText = 'ok', can
 
     const cancelButton = document.createElement('button');
     cancelButton.textContent = cancelText;
-    cancelButton.style.padding = '10px';
-    cancelButton.style.backgroundColor = 'red';
-    cancelButton.style.color = 'white';
-    cancelButton.style.border = 'none';
-    cancelButton.style.cursor = 'pointer';
+    cancelButton.className = "btn btn-secondary";
+    cancelButton.style.width = "100%";
     cancelButton.addEventListener('click', () => {
       document.body.removeChild(focusTrapWrapper);
       resolve(null); // Resolves with null when canceled

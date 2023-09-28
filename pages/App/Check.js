@@ -1,5 +1,5 @@
 import React from "react";
-import PageContainer from "@components/navigation/check/PageContainerCheck"
+import PageContainer from "@components/navigation/app/PageContainerApp"
 import Space from "@components/style/Space";
 import Link from "next/link";
 

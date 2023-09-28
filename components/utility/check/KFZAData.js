@@ -65,7 +65,6 @@ export default function ShowData() {
       "Wollen Sie den Eintrag wirklich entfernen?"
     );
     if (!del) {
-      toast.warn("Vorgang abgebrochen");
       return;
     }
     try {

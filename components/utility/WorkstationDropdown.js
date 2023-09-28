@@ -56,7 +56,7 @@ export default function WorkstationDropdown({ value, onValueChange }) {
       });
 
       if (response.ok) {
-        toast.success("Wert erfolgreich übermittelt");
+        console.log("neue Arbeitsstation definiert");
       } else {
         console.error("Failed to submit value.");
       }
@@ -67,11 +67,11 @@ export default function WorkstationDropdown({ value, onValueChange }) {
 
   const handleDeleteButtonClick = async (itemToDelete) => {
     const conf = await customConfirm(
-      "Wollen Sie die Arbeitsstation wirklich entfernen?"
+      "Wollen Sie die Arbeitsstation wirklich entfernen?", "Ja", "Nein"
     );
 
     if (!conf) {
-      toast.warn("Vorgang abgebrochen");
+      console.log("Definition Arbeitsstation abgebrochen");
       return;
     }
 
@@ -92,7 +92,7 @@ export default function WorkstationDropdown({ value, onValueChange }) {
       );
 
       if (response.ok) {
-        toast.success("Element erfolgreich gelöscht");
+        toast.success("Arbeitsstation erfolgreich gelöscht");
         // After successfully deleting, update the dropdown
         const updatedItems = items.filter((item) => item !== itemToDelete);
         setItems(updatedItems);
@@ -136,7 +136,7 @@ export default function WorkstationDropdown({ value, onValueChange }) {
 
   const handleAddButtonClick = async () => {
     const newItem = await customPrompt(
-      "Bitte geben Sie hier den Namen Ihrer Arbeitsstation ein:"
+      "Bitte geben Sie hier den Namen Ihrer Arbeitsstation ein:", searchValue
     );
 
     if (newItem !== null) {
@@ -202,7 +202,7 @@ export default function WorkstationDropdown({ value, onValueChange }) {
             onClick={handleAddButtonClick}
           >
             <div className="d-flex justify-content-center">
-              <button className="btn btn-success">hinzufügen</button>
+              <button className="btn btn-primary">hinzufügen</button>
             </div>
           </Dropdown.Item>
         </div>
@@ -210,9 +210,14 @@ export default function WorkstationDropdown({ value, onValueChange }) {
     }
   );
 
+
+  const handleToggle = () =>{
+    setSearchValue("");
+  }
+
   return (
     <div>
-      <Dropdown onSelect={handleDropDownSelect}>
+      <Dropdown onSelect={handleDropDownSelect} onToggle={handleToggle}> 
         <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
           {value}
         </Dropdown.Toggle>

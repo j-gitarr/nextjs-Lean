@@ -136,7 +136,7 @@ export default function WorkstationDropdown({ value, onValueChange }) {
 
   const handleAddButtonClick = async () => {
     const newItem = await customPrompt(
-      "Bitte geben Sie hier den Namen Ihrer Kennzahl ein:"
+      "Bitte geben Sie hier den Namen Ihrer Kennzahl ein:", searchValue
     );
 
     if (newItem !== null) {
@@ -202,7 +202,7 @@ export default function WorkstationDropdown({ value, onValueChange }) {
             onClick={handleAddButtonClick}
           >
             <div className="d-flex justify-content-center">
-              <button className="btn btn-success">hinzufügen</button>
+              <button className="btn btn-primary">hinzufügen</button>
             </div>
           </Dropdown.Item>
         </div>
@@ -210,9 +210,13 @@ export default function WorkstationDropdown({ value, onValueChange }) {
     }
   );
 
+  const handleToggle = ()=>{
+    setSearchValue("");
+  }
+
   return (
     <div>
-      <Dropdown onSelect={handleDropDownSelect}>
+      <Dropdown onSelect={handleDropDownSelect} onToggle={handleToggle}>
         <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
           {value}
         </Dropdown.Toggle>

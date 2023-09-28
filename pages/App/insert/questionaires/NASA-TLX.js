@@ -14,7 +14,7 @@ export default function () {
   const [name, setName] = useState("");
   const [workplace, setWorkplace] = useState("Arbeitsstation wählen...");
 
-  const [mentalValue, setMentalValue] = useState();
+  const [mentalValue, setMentalValue] = useState(50);
   const [physicalValue, setPhysicalValue] = useState(50);
   const [temporalValue, setTemporalValue] = useState(50);
   const [performanceValue, setPerformanceValue] = useState(50);

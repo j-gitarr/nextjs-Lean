@@ -86,7 +86,6 @@ export default function ShowData() {
 const handleEdit = async (id, index) => {
     const newValue = await customPrompt("Geben Sie hier den neuen Wert ein");
     if(newValue === null){
-        toast.warn("Vorgang abgebrochen");
         return;
     }
 

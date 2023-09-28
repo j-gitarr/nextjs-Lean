@@ -61,7 +61,6 @@ export default function EawsData(){
     const handleDelete = async (id, index) => {    
         let del = await customConfirm("Wollen Sie den Eintrag wirklich löschen?")
         if(!del){
-            toast.warn("Vorgang abgebrochen")
             return;
         }
         try {
@@ -87,7 +86,6 @@ export default function EawsData(){
         let newValue = await customPrompt("Geben Sie hier den neuen Wert ein");
 
         if(newValue===null){
-            toast.warn("Vorgang abgebrochen");
             return;
         }
 
@@ -107,7 +105,7 @@ export default function EawsData(){
                 // Update the state to reflect the change
                 setEawsData(updatedData);
                 
-            toast.success("Entry edited successfully");
+            toast.success("Eintrag geändert");
             } else {
                 console.error("Failed to edit entry: " + id);
             }

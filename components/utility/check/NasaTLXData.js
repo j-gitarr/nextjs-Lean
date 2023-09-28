@@ -4,7 +4,6 @@ import ConvertTime from "../ConvertTime";
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { customConfirm } from "../CustomConfirm";
-import { toast } from "react-toastify";
 
 
 export default function ShowData() {
@@ -60,7 +59,6 @@ export default function ShowData() {
   const handleDelete = async (id, index) => {    
     const del = await customConfirm("Wollen Sie den Eintrag wirklich entfernen?")
     if(!del){
-      toast.warn("Vorgang abgebrochen");
       return;
     }
     try {

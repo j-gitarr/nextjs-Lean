@@ -19,6 +19,7 @@ export function customConfirm(message, confirmText = 'OK', cancelText = 'Cancel'
     confirmationBox.style.backgroundColor = 'white';
     confirmationBox.style.padding = '20px';
     confirmationBox.style.border = '1px solid #ccc';
+    confirmationBox.style.borderRadius = "10px"
     confirmationBox.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.2)';
     confirmationBox.style.zIndex = '9999';
     confirmationBox.style.display = 'flex';
@@ -31,16 +32,19 @@ export function customConfirm(message, confirmText = 'OK', cancelText = 'Cancel'
 
     const buttonContainer = document.createElement('div');
     buttonContainer.style.display = 'flex';
-    buttonContainer.style.justifyContent = 'space-between';
     buttonContainer.style.width = '100%';
+    buttonContainer.style.justifyContent = "";
+    buttonContainer.style.gap = "20px"
 
     const confirmButton = document.createElement('button');
     confirmButton.textContent = confirmText;
-    confirmButton.style.padding = '10px';
-    confirmButton.style.backgroundColor = 'green';
-    confirmButton.style.color = 'white';
-    confirmButton.style.border = 'none';
-    confirmButton.style.cursor = 'pointer';
+    // confirmButton.style.padding = '10px';
+    // confirmButton.style.backgroundColor = 'green';
+    // confirmButton.style.color = 'white';
+    // confirmButton.style.border = 'none';
+    // confirmButton.style.cursor = 'pointer';
+    confirmButton.className = "btn btn-primary"
+    confirmButton.style.width = "100%"
     confirmButton.addEventListener('click', () => {
       document.body.removeChild(focusTrapWrapper);
       resolve(true); // Resolves to true when confirmed
@@ -48,11 +52,13 @@ export function customConfirm(message, confirmText = 'OK', cancelText = 'Cancel'
 
     const cancelButton = document.createElement('button');
     cancelButton.textContent = cancelText;
-    cancelButton.style.padding = '10px';
-    cancelButton.style.backgroundColor = 'red';
-    cancelButton.style.color = 'white';
-    cancelButton.style.border = 'none';
-    cancelButton.style.cursor = 'pointer';
+    // cancelButton.style.padding = '10px';
+    // cancelButton.style.backgroundColor = 'red';
+    // cancelButton.style.color = 'white';
+    // cancelButton.style.border = 'none';
+    // cancelButton.style.cursor = 'pointer';
+    cancelButton.className = "btn btn-secondary"
+    cancelButton.style.width = "100%";
     cancelButton.addEventListener('click', () => {
       document.body.removeChild(focusTrapWrapper);
       resolve(false); // Resolves to false when canceled

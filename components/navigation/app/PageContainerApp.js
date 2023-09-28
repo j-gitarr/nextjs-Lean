@@ -1,18 +1,16 @@
 import Navbar from "@components/navigation/app/NavbarApp"
-import SidePanel from "@components/navigation/SidePanelApp";
 import Content from "@components/Content"
 import style from "@styles/PageContainer.module.css"
-import CheckCompanyName from "@components/utility/CheckCompanyName";
+import ToggleFullscreen from "@components/utility/ToggleFullscreen";
 
 export default function PageContainer({children}){
     return(
-        <>
+        <ToggleFullscreen alwaysFull="nice">
             <Navbar/>
             <div className={style.VerticalNextToContent}>
-                {/* <SidePanel/> */}
                 <Content>{children}</Content>
             </div>
-        </>
+        </ToggleFullscreen>
     );
 }
 

@@ -5,6 +5,7 @@ import ShortTextInput from "@components/utility/ShortTextInput";
 import { toast } from "react-toastify";
 import WorkstationDropdown from "@components/utility/WorkstationDropdown";
 import CustomValueDropdown from "@components/utility/CustomValueDropdown";
+import Link from "next/link";
 
 export default function Borg() {
   const [selectedValue, setSelectedValue] = useState(0); // State to store the selected value
@@ -91,7 +92,7 @@ export default function Borg() {
         <Space height="10vh" />
 
         <div className="centeredContent">
-          <p style={{ margin: "0", fontSize: "1.25rem" }}>
+          <p style={{ margin: "0", fontSize: "1.25rem", maxWidth:"800px"}}>
             Wählen Sie hier die aktuelle <b>Arbeitsstation</b> aus, oder
             definieren Sie eine neue Arbeitsstation
           </p>
@@ -103,7 +104,7 @@ export default function Borg() {
         <Space height="10vh" />
 
         <div className="centeredContent">
-          <p style={{ margin: "0", fontSize: "1.25rem" }}>
+          <p style={{ margin: "0", fontSize: "1.25rem", maxWidth:"800px"}}>
             Wählen Sie den <b>Namen der Kennzahl</b> aus, oder definieren Sie
             eine neue Kennzahl
           </p>
@@ -116,7 +117,7 @@ export default function Borg() {
         <Space height="10vh" />
 
         <div className="centeredContent">
-          <p style={{ margin: "0", fontSize: "1.25rem" }}>
+          <p style={{ margin: "0", fontSize: "1.25rem", maxWidth:"800px"}}>
             Geben Sie hier bitte den <b>Wert</b> der Kennzahl ein
           </p>
         </div>
@@ -132,20 +133,22 @@ export default function Borg() {
           />
         </div>
 
-        <Space height="10vh" />
+        <Space height="8vh" />
 
-        <Space height="10vh" />
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", gap:"20px"}}>
           <button
             type="submit"
-            style={{ margin: "0 auto", maxWidth: "800px", fontSize: "36px" }}
-            className="btn btn-primary"
+            className="btn btn-primary btn-lg"
           >
             Übermitteln
           </button>
         </div>
       </form>
-      <Space height="30vh" />
+
+      <div style={{display: "flex", justifyContent: "center"}}>
+      </div>
+
+      <Space height="20vh" />
     </PageContainer>
   );
 }

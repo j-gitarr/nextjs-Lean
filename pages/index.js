@@ -83,11 +83,11 @@ export default function Home() {
         <Space height="10vh" />
 
         <main>
-        <ToggleFullscreen>
+        {/* <ToggleFullscreen> */}
           <Link href="/App">
             <h2 className="btn btn-primary btn-lg">Starten Sie jetzt!</h2>
           </Link>
-        </ToggleFullscreen>
+        {/* </ToggleFullscreen> */}
           </main>
         <Space height="10vh" />
 

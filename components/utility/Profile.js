@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useCompany } from "@components/context/CompanyContext";
 import { toast } from "react-toastify";
-import GlobalToast from "@components/GlobalToast";
 import Space from "@components/style/Space";
 import { redirectTo } from "./redirectTo";
 import Link from "next/link";
-import SideBySide from "@components/style/SideBySide";
 
 export default function Profile(props) {
   // State, um den eingegebenen Firmennamen zu speichern
@@ -49,29 +47,21 @@ export default function Profile(props) {
   return (
     <main>
       {props.children}
-      <form onSubmit={handleCompanyNameChange}>
-        <table>
-          <tr>
-            <td>
-              <input
-                type="text"
-                placeholder="Identifizierungscode"
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                className="input-group-text input-group"
-              />
-            </td>
-            <td>
-              <button
-                type="submit"
-                className="btn btn-secondary"
-                style={{ marginLeft: "30px" }}
-              >
-                Bestätigen
-              </button>
-            </td>
-          </tr>
-        </table>
+      <form onSubmit={handleCompanyNameChange} className="d-flex">
+        <input
+          type="text"
+          placeholder="Identifizierungscode"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          className="input-group-text input-group"
+        />
+        <button
+          type="submit"
+          className="btn btn-secondary"
+          style={{ marginLeft: "30px" }}
+        >
+          Bestätigen
+        </button>
       </form>
 
       <div
@@ -85,7 +75,6 @@ export default function Profile(props) {
           </Link>
         </div>
       </div>
-      <GlobalToast />
     </main>
   );
 }

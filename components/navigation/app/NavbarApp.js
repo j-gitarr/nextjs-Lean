@@ -1,4 +1,3 @@
-import ToggleFullscreen from "@components/utility/ToggleFullscreen";
 import styles from "@styles/Navbar.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -16,8 +15,6 @@ function Navbar() {
   return (
     <nav className={styles.Navbar}>
         <Link href="/App">
-        <ToggleFullscreen>
-
           <div
             className={`${styles.LogoContainer} ${
               router.pathname === "/App" ? styles.NavTextCurrent : ""
@@ -29,7 +26,6 @@ function Navbar() {
               href="/"
             />
           </div>
-        </ToggleFullscreen>
         </Link>
         <Link
           href={linkApp}
@@ -39,9 +35,7 @@ function Navbar() {
                       router.pathname === linkApp ? styles.NavTextCurrent : ""
                     }`}
         >
-        <ToggleFullscreen>
           Start
-        </ToggleFullscreen>
         </Link>
       <Link
         href={linkErhebung}

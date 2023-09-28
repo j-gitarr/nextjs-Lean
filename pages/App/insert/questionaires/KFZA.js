@@ -8,6 +8,7 @@ import SubmitButton from "@components/utility/SubmitButton";
 import Space from "@components/style/Space";
 import ShortTextInput from "@components/utility/ShortTextInput";
 import { toast } from "react-toastify";
+import ReactMarkdown from "react-markdown"
 
 export default function () {
   const [name, setName] = useState("");
@@ -126,9 +127,9 @@ export default function () {
           <SideBySide
             className={style.customContainer}
             firstItem={
-              <p>
-                {index + 1}. {question.text}
-              </p>
+              <ReactMarkdown style={{padding:"0"}}>
+                {question.text}
+                </ReactMarkdown>
             }
             secondItem={
               <KFZAScale

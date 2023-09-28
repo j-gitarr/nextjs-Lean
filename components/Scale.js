@@ -1,45 +1,41 @@
-import React, {useState} from "react";
-import style from "../styles/Scale.module.css"
+import React, { useState } from "react";
+import style from "../styles/Scale.module.css";
+import { Slider } from "@mui/material";
 
+export default function Scale(props) {
+  return (
+    <>
+      {/* <input
+        id={props.id}
+        type="range"
+        list="markers"
+        className={style.customRange}
+        step={props.step}
+        value={props.value}
+        onChange={props.onChange}
+      /> */}
+      
+      <br/>
+      <Slider
+        defaultValue={props.value}
+        valueLabelDisplay="auto"
+        step={props.step}
+        marks
+        min={0}
+        max={100}
+        style={{ height: "50px", color: "#d0d1d3", padding:"0" }}
+        classes={{
+          thumb: style["customThumb"], // Apply the custom styles to the thumb
+          mark: style["customMark"],
+        }}
+        marks={[{ value: 50 }]}
+        onChange={props.onChange}
+      />
 
-
-
-export default function Scale(props){
-    return(
-        <>
-            <input  
-                id={props.id}
-                type="range" 
-                list="markers" 
-                className={style.customRange} 
-                step={props.step}
-                value={props.value}
-                onChange={props.onChange}
-            />
-
-            <datalist id="markers" className={style.datalist}>
-                <option value="0" label={!props.lower ? "gering" : `${props.lower}`}/>
-                <option value="5"/>
-                <option value="10"/>
-                <option value="15"/>
-                <option value="20"/>
-                <option value="25"/>
-                <option value="30"/>
-                <option value="35"/>
-                <option value="40"/>
-                <option value="45"/>
-                <option value="50" label="------"/>
-                <option value="55"/>
-                <option value="60"/>
-                <option value="65"/>
-                <option value="70"/>
-                <option value="75"/>
-                <option value="80"/>
-                <option value="85"/>
-                <option value="90"/>
-                <option value="95"/>
-                <option value="100" label={!props.upper ? "Hoch" : `${props.upper}`}/>
-            </datalist>
-        </>
-    );
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div>{!props.lower ? "gering" : `${props.lower}`}</div>
+        <div>{!props.upper ? "Hoch" : `${props.upper}`}</div>
+      </div>
+    </>
+  );
 }

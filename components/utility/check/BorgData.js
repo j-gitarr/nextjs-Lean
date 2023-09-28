@@ -88,7 +88,6 @@ const handleEdit = async (id, index) => {
     console.log(newValue)
 
     if(newValue === null){
-        toast.warn("Änderung abgebrochen")
         return;
     }
     if(!isInt(newValue)){

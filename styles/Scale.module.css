@@ -1,11 +1,19 @@
 
-.datalist {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    writing-mode: vertical-lr;
-  }
+.customThumb {
+  /* Define your custom styles for the thumb here */
+  width: 16px; /* Example: Change the width of the thumb */
+  height: 60px; /* Example: Change the height of the thumb */
+  background-color: #9e9199; /* Example: Change the background color */
+  border-radius: 5px; /* Make it round */
+}
+
+.customMark {
+  /* Define your custom styles for the marks here */
+  width: 2px; /* Example: Change the width of the marks */
+  /* top: 50px; */
+  height: 80px; /* Example: Change the height of the marks */
+  background-color: black; /* Example: Change the background color */
+}
 
 .option {
     padding: 0;
@@ -16,17 +24,13 @@ input[type="range"].customRange {
   appearance: none;
   background: transparent;
   cursor: pointer;  
-  
-  
   width: 100%;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
 
 input[type="range"].customRange:focus {
   outline: none;
 }
-
-
 
 
 /***** Chrome, Safari, Opera, and Edge Chromium *****/

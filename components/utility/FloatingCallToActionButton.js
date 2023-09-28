@@ -12,16 +12,16 @@ const HoveringCTA = () => {
   const isAppPage = router.pathname.startsWith("/App");
 
   return (
-    <ToggleFullscreen cta="true">
+    // <ToggleFullscreen alwaysFull={!isAppPage} alwaysMin={isAppPage}>
       <Link href={isAppPage ? "/" : "App"}>
         <div className={style.ctaContainer}>
           <button className={style.ctaButton}>
-            {isAppPage ? "Zurück zur Webpage" : "Loslegen!"}{" "}
+            {isAppPage ? "Exit App" : "Loslegen!"}{" "}
             {/* Change button text */}
           </button>
         </div>
       </Link>
-    </ToggleFullscreen>
+    // </ToggleFullscreen>
   );
 };
 

@@ -1,52 +1,36 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router"; // Import useRouter
+import React, { useEffect } from "react";
 
-export default function ToggleFullscreen({ children, cta }) {
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const router = useRouter();
-  useEffect(() => {
-    // Check if the document is in fullscreen mode
-    const fullscreenChangeHandler = () => {
-      setIsFullscreen(
-        !!(document.fullscreenElement || document.webkitFullscreenElement)
-      );
-    };
-
-    // Add a listener for fullscreen change events
-    document.addEventListener("fullscreenchange", fullscreenChangeHandler);
-    document.addEventListener(
-      "webkitfullscreenchange",
-      fullscreenChangeHandler
-    );
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      document.removeEventListener("fullscreenchange", fullscreenChangeHandler);
-      document.removeEventListener(
-        "webkitfullscreenchange",
-        fullscreenChangeHandler
-      );
-    };
-  }, []);
+export default function ToggleFullscreen({ children, cta, alwaysFull, alwaysMin }) {
+  const isFullscreen = () => {
+    return document.fullscreenElement || document.webkitFullscreenElement;
+  };
 
   const setFullscreen = () => {
-    if (!isFullscreen) {
-      // Request fullscreen
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-      } else if (document.documentElement.mozRequestFullScreen) {
-        document.documentElement.mozRequestFullScreen();
-      } else if (document.documentElement.webkitRequestFullscreen) {
-        document.documentElement.webkitRequestFullscreen();
-      } else if (document.documentElement.msRequestFullscreen) {
-        document.documentElement.msRequestFullscreen();
-      }
+    // Check if requesting fullscreen is allowed by the browser
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen().catch((error) => {
+        console.error("Fullscreen request failed:", error);
+      });
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen().catch((error) => {
+        console.error("Fullscreen request failed:", error);
+      });
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen().catch((error) => {
+        console.error("Fullscreen request failed:", error);
+      });
+    } else if (document.documentElement.msRequestFullscreen) {
+      document.documentElement.msRequestFullscreen().catch((error) => {
+        console.error("Fullscreen request failed:", error);
+      });
     }
   };
 
   const toggleFullscreen = () => {
+    console.log("page Clicked");
+
     // Only toggle if the `toggle` prop is true
-    if (isFullscreen && router.pathname.startsWith("/App")) {
+    if (isFullscreen() && !alwaysFull) {
       // Exit fullscreen if currently in fullscreen mode
       if (document.exitFullscreen) {
         document.exitFullscreen();
@@ -57,11 +41,22 @@ export default function ToggleFullscreen({ children, cta }) {
       } else if (document.msExitFullscreen) {
         document.msExitFullscreen();
       }
-    } else if (!router.pathname.startsWith("/App") || !cta) {
+    } else if (!isFullscreen()) {
       // Set fullscreen if not in fullscreen mode
+      console.log("Should Fullscreen...");
       setFullscreen();
     }
   };
 
-  return <div onClick={toggleFullscreen}>{children}</div>;
+  useEffect(() => {
+    // Attach the click event listener to the window object
+    window.addEventListener("click", toggleFullscreen);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("click", toggleFullscreen);
+    };
+  }, []);
+
+  return <>{children}</>;
 }
