@@ -1,7 +1,7 @@
 {
     "questions":[
         {
-            "text":"1. Können Sie bei Ihrer Arbeit **Neues dazulernen**?",
+            "text":"1\\. Können Sie bei Ihrer Arbeit **Neues dazulernen**?",
             "labels":[
                 "sehr wenig", 
                 "ziemlich wenig", 
@@ -11,7 +11,7 @@
             ]
         },
         {
-            "text":"2. Können Sie bei Ihrer Arbeit Ihr **Wissen und Können voll einsetzen**?",
+            "text":"2\\. Können Sie bei Ihrer Arbeit Ihr **Wissen und Können voll einsetzen**?",
             "labels":[
                 "sehr wenig", 
                 "ziemlich wenig", 
@@ -21,7 +21,7 @@
             ]
         },
         {
-            "text": "3. Bei meiner Arbeit habe ich insgesamt gesehen **häufig wechselnde, unterschiedliche Arbeitsaufgaben**.",
+            "text": "3\\. Bei meiner Arbeit habe ich insgesamt gesehen **häufig wechselnde, unterschiedliche Arbeitsaufgaben**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -31,7 +31,7 @@
             ]
         },
         {
-            "text": "4. Bei meiner Arbeit **sehe ich selber** am Ergebnis, ob meine Arbeit **gut** war oder **nicht**.",
+            "text": "4\\. Bei meiner Arbeit **sehe ich selber** am Ergebnis, ob meine Arbeit **gut** war oder **nicht**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -41,7 +41,7 @@
             ]
         },
         {
-            "text": "5. Meine Arbeit ist so gestaltet, dass ich die Möglichkeit habe, ein vollständiges Arbeitsprodukt/eine vollständige Arbeitsaufgabe von **Anfang bis Ende herzustellen**.",
+            "text": "5\\. Meine Arbeit ist so gestaltet, dass ich die Möglichkeit habe, ein vollständiges Arbeitsprodukt/eine vollständige Arbeitsaufgabe von **Anfang bis Ende herzustellen**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -51,7 +51,7 @@
             ]
         },
         {
-            "text": "6. Bei dieser Arbeit gibt es Sachen, die **zu kompliziert** sind (z.B. aufgrund keiner oder unklarer Arbeitsbeschreibungen oder aufgrund mangelnder Qualifizierung).",
+            "text": "6\\. Bei dieser Arbeit gibt es Sachen, die **zu kompliziert** sind (z.B. aufgrund keiner oder unklarer Arbeitsbeschreibungen oder aufgrund mangelnder Qualifizierung).",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -61,7 +61,7 @@
             ]
         },
         {
-            "text": "7. Es werden **zu hohe Anforderungen** an meine **Konzentrationsfähigkeit** gestellt.",
+            "text": "7\\. Es werden **zu hohe Anforderungen** an meine **Konzentrationsfähigkeit** gestellt.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -71,7 +71,7 @@
             ]
         },
         {
-            "text": "8. Ich stehe häufig unter **Zeitdruck**.",
+            "text": "8\\. Ich stehe häufig unter **Zeitdruck**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -81,7 +81,7 @@
             ]
         },
         {
-            "text": "9. Ich habe zu **viel Arbeit**.",
+            "text": "9\\. Ich habe zu **viel Arbeit**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -91,7 +91,7 @@
             ]
         },
         {
-            "text": "10. Oft stehen mir die **benötigten Informationen, Materialien und Arbeitsmittel nicht zur Verfügung**.",
+            "text": "10\\. Oft stehen mir die **benötigten Informationen, Materialien und Arbeitsmittel nicht zur Verfügung**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -101,7 +101,7 @@
             ]
         },
         {
-            "text": "11. Ich werde bei meiner eigentlichen Arbeit **immer wieder durch andere Personen unterbrochen**. ",
+            "text": "11\\. Ich werde bei meiner eigentlichen Arbeit **immer wieder durch andere Personen unterbrochen**. ",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -111,7 +111,7 @@
             ]
         },
         {
-            "text": "12. An meinem Arbeitsplatz gibt es **ungünstige Umgebungsbedingungen**, wie Lärm, Klima, Staub.",
+            "text": "12\\. An meinem Arbeitsplatz gibt es **ungünstige Umgebungsbedingungen**, wie Lärm, Klima, Staub.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -121,7 +121,7 @@
             ]
         },
         {
-            "text": "13. An meinem Arbeitsplatz sind **Räume und Raumausstattung ungenügend**.",
+            "text": "13\\. An meinem Arbeitsplatz sind **Räume und Raumausstattung ungenügend**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -131,7 +131,7 @@
             ]
         },
         {
-            "text": "14. Wenn Sie Ihre Tätigkeit insgesamt betrachten, inwieweit können Sie die **Reihenfolge der Arbeitsschritte selbst bestimmen**?",
+            "text": "14\\. Wenn Sie Ihre Tätigkeit insgesamt betrachten, inwieweit können Sie die **Reihenfolge der Arbeitsschritte selbst bestimmen**?",
             "labels":[
                 "sehr wenig", 
                 "ziemlich wenig", 
@@ -141,7 +141,7 @@
             ]
         },
         {
-            "text": "15. Wie viel **Einfluss** haben Sie darauf, **welche Arbeit Ihnen zugeteilt wird**?",
+            "text": "15\\. Wie viel **Einfluss** haben Sie darauf, **welche Arbeit Ihnen zugeteilt wird**?",
             "labels":[
                 "sehr wenig", 
                 "ziemlich wenig", 
@@ -151,7 +151,7 @@
             ]
         },
         {
-            "text":  "16. Können Sie Ihre Arbeit **selbstständig planen und einteilen**?",
+            "text":  "16\\. Können Sie Ihre Arbeit **selbstständig planen und einteilen**?",
             "labels":[
                 "sehr wenig", 
                 "ziemlich wenig", 
@@ -161,7 +161,7 @@
             ]
         },
         {
-            "text": "17. Ich kann mich **auf meine Kolleginnen und Kollegen verlassen**, wenn es bei der Arbeit schwierig wird.",
+            "text": "17\\. Ich kann mich **auf meine Kolleginnen und Kollegen verlassen**, wenn es bei der Arbeit schwierig wird.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -172,7 +172,7 @@
         },
         {
             "text": 
-            "18. Ich kann mich **auf meine/n direkte/n Vorgesetze/n verlassen**, wenn es bei der Arbeit schwierig wird. ",
+            "18\\. Ich kann mich **auf meine/n direkte/n Vorgesetze/n verlassen**, wenn es bei der Arbeit schwierig wird. ",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -183,7 +183,7 @@
         },
         {
             "text":
-            "19. Man hält in der Abteilung **gut zusammen**.",
+            "19\\. Man hält in der Abteilung **gut zusammen**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -194,7 +194,7 @@
         },
         {
             "text": 
-            "20. Diese Arbeit erfordert **enge Zusammenarbeit** mit anderen Kolleginnen und Kollegen in der Organisation.",
+            "20\\. Diese Arbeit erfordert **enge Zusammenarbeit** mit anderen Kolleginnen und Kollegen in der Organisation.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -205,7 +205,7 @@
         },
         {
             "text": 
-            "21. Ich kann mich während der Arbeit mit verschiedenen Kolleginnen und Kollegen über dienstliche und private Dinge **unterhalten**.",
+            "21\\. Ich kann mich während der Arbeit mit verschiedenen Kolleginnen und Kollegen über dienstliche und private Dinge **unterhalten**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -216,7 +216,7 @@
         },
         {
             "text":
-            "22. Ich bekomme von Vorgesetzten und Kollegen immer **Rückmeldung** über die Qualität meiner Arbeit.",
+            "22\\. Ich bekomme von Vorgesetzten und Kollegen immer **Rückmeldung** über die Qualität meiner Arbeit.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -227,7 +227,7 @@
         },
         {
             "text":
-            "23. Über wichtige Dinge und Vorgänge in unserer Organisation sind wir **ausreichend informiert**",
+            "23\\. Über wichtige Dinge und Vorgänge in unserer Organisation sind wir **ausreichend informiert**",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -238,7 +238,7 @@
         },
         {
             "text":
-            "24. Die Leitung unserer Organisation ist bereit, die **Ideen und Vorschläge** der Beschäftigten zu **berücksichtigen**. ",
+            "24\\. Die Leitung unserer Organisation ist bereit, die **Ideen und Vorschläge** der Beschäftigten zu **berücksichtigen**. ",
             
             "labels":[
                 "trifft gar nicht zu", 
@@ -249,7 +249,7 @@
             ]
         },
         {
-            "text":"25. Unser Unternehmen bietet **gute Weiterbildungsmöglichkeiten**.",
+            "text":"25\\. Unser Unternehmen bietet **gute Weiterbildungsmöglichkeiten**.",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",
@@ -260,7 +260,7 @@
         },
         {
             "text": 
-            "26. Bei uns gibt es **gute Aufstiegschancen** (z.B. auch durch Erweiterung des bisherigen Tätigkeitsfeldes).",
+            "26\\. Bei uns gibt es **gute Aufstiegschancen** (z.B. auch durch Erweiterung des bisherigen Tätigkeitsfeldes).",
             "labels":[
                 "trifft gar nicht zu", 
                 "trifft wenig zu",

@@ -16,8 +16,19 @@
     padding-bottom: 4vh;
     flex-grow: 1; /* Damit der Text die maximal verfügbare breite einnimmt */
     font-weight: bold;
-    
 }
+
+.Settings{
+    width: 8vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    text-align: center;
+    color: white
+}
+.Settings:hover{
+    background: linear-gradient(to right, #617784, #748f9a);
+}
+
 
 .NavTextCurrent{
     background: linear-gradient(to bottom, #617784, #748f9a); /* Faded background on hover */

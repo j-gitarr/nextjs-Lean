@@ -28,10 +28,15 @@ export default function () {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let jumpTo;
 
-    const isEveryValueSet = questionValues.every(
-      (question) => question.value !== null
-    );
+    const isEveryValueSet = questionValues.every((question, index) => {
+      if (question.value === null) {
+        jumpTo = `#kfza${index}`;
+        return false; // Return false to indicate that not every value is set
+      }
+      return true; // Return true for non-null values
+    });
 
     if (name === "") {
       toast.warn("Bitte geben Sie noch Ihre Identifikationsnummer ein!");
@@ -39,6 +44,7 @@ export default function () {
       return;
     }
     if (!isEveryValueSet) {
+      window.location.href = jumpTo;
       toast.warn("Bitte beantworten Sie alle Fragen!");
       return;
     }
@@ -65,6 +71,11 @@ export default function () {
 
       if (response.ok) {
         toast.success("Antworten erfolgreich übermittelt");
+
+        //Reset all values and jump to top...
+        window.location.href = "#top"
+        setQuestionValues(content.questions.map((question) => ({ value: null })));
+        setName("");
       } else {
         console.error("Failed to submit value.");
       }
@@ -124,6 +135,7 @@ export default function () {
           }}
           key={index}
         >
+          <a id={"kfza"+index}/>
           <SideBySide
             className={style.customContainer}
             firstItem={

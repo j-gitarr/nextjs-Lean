@@ -27,10 +27,10 @@ export default function ToggleFullscreen({ children, cta, alwaysFull, alwaysMin 
   };
 
   const toggleFullscreen = () => {
-    console.log("page Clicked");
+    const fullscreenEnabled = JSON.parse(localStorage.getItem("fullscreen"));
 
     // Only toggle if the `toggle` prop is true
-    if (isFullscreen() && !alwaysFull) {
+    if (isFullscreen() && !fullscreenEnabled) {
       // Exit fullscreen if currently in fullscreen mode
       if (document.exitFullscreen) {
         document.exitFullscreen();
@@ -41,7 +41,7 @@ export default function ToggleFullscreen({ children, cta, alwaysFull, alwaysMin 
       } else if (document.msExitFullscreen) {
         document.msExitFullscreen();
       }
-    } else if (!isFullscreen()) {
+    } else if (!isFullscreen() && fullscreenEnabled) {
       // Set fullscreen if not in fullscreen mode
       console.log("Should Fullscreen...");
       setFullscreen();

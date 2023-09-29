@@ -1,23 +1,35 @@
 import React, { useState } from "react";
-import CustomValueDropdown from "@components/utility/CustomValueDropdown"
+import Settings from "@components/Settings"
+import { FormGroup } from "@mui/material";
+import {Switch} from "@mui/material";
 
+export default function Test() {
+  const [checked, setChecked] = useState(false);
+  const [open, setOpen] = useState(false);
 
-export default function Test(){
-  const [valueName, setValueName] = useState("Bitte Kennzahl wählen...")
+  const handleChange = () => {
+    setChecked(!checked);
+  };
+  const handleOpen = ()=> {
+    setOpen(!open);
+  }
 
-  return(
+  return (
     <div>
-      der Name der geilsten Kennzahl ist: {valueName}
+      <FormGroup style={{ transform: 'rotate(90deg)', width:"50px",}}>
+            <Switch
+              checked={checked}
+              onChange={handleChange}
+            />
+      </FormGroup>
 
       <br/>
       <br/>
-      <br/>
-      <br/>
-
-
-      <CustomValueDropdown value={valueName} onValueChange={setValueName}/>
+      <button onClick={handleOpen} >
+        Einstellungen
+        <Settings open={open} handleClose={handleOpen}/>
+      </button>
+      
     </div>
-  )
-
-
+  );
 }

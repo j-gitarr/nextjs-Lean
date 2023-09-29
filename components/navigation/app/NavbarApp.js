@@ -1,6 +1,11 @@
 import styles from "@styles/Navbar.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCog } from "@fortawesome/free-solid-svg-icons";
+import { faSliders } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import Settings from "@components/Settings"
 
 function Navbar() {
   const router = useRouter();
@@ -12,31 +17,40 @@ function Navbar() {
   const linkCheck = "/App/Check";
   const linkAnalyze = "/App/Analysieren";
 
+
+  const [settingsOpen, setSettingsOpen] = useState(false);
+
+
+  const handleCloseSettings = ()=>{
+    setSettingsOpen(!settingsOpen);
+  }
+
+
   return (
     <nav className={styles.Navbar}>
-        <Link href="/App">
-          <div
-            className={`${styles.LogoContainer} ${
-              router.pathname === "/App" ? styles.NavTextCurrent : ""
-            }`}
-          >
-            <img
-              src="/images/LEA_Logo_white.png"
-              className={`${styles.Logo} `}
-              href="/"
-            />
-          </div>
-        </Link>
-        <Link
-          href={linkApp}
-          className={`${styles.NavText} 
+      <Link href="/App">
+        <div
+          className={`${styles.LogoContainer} ${
+            router.pathname === "/App" ? styles.NavTextCurrent : ""
+          }`}
+        >
+          <img
+            src="/images/LEA_Logo_white.png"
+            className={`${styles.Logo} `}
+            href="/"
+          />
+        </div>
+      </Link>
+      <Link
+        href={linkApp}
+        className={`${styles.NavText} 
                     ${styles.borderRight} 
                     ${
                       router.pathname === linkApp ? styles.NavTextCurrent : ""
                     }`}
-        >
-          Start
-        </Link>
+      >
+        Start
+      </Link>
       <Link
         href={linkErhebung}
         className={`${styles.NavText} 
@@ -64,6 +78,7 @@ function Navbar() {
       <Link
         href={linkAnalyze}
         className={`${styles.NavText} 
+        ${styles.borderRight} 
                     ${
                       router.pathname === linkAnalyze || isAnal
                         ? styles.NavTextCurrent
@@ -72,6 +87,10 @@ function Navbar() {
       >
         Analysieren
       </Link>
+      <div className={styles.Settings}>
+        <FontAwesomeIcon icon={faSliders} style={{fontSize: "5vh"}} onClick={handleCloseSettings}/>
+        <Settings open={settingsOpen} handleClose={handleCloseSettings}/>
+      </div>
     </nav>
   );
 }
