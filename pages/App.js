@@ -37,7 +37,7 @@ export default function Erhebung(){
                     Um ein bestmögliches Ergebnis zu erzielen ist es sinnvoll 
                     das vorgehen zunächst mit einem unserer Lean Ergonomics Experten abzusprechen (<b>CONTACT TODO</b>).
                     <br/><br/>                    
-                    <b>Erheben: </b>Aschnließend beginnt das Sammeln von prozessbezogenen und personenbezogenen Daten. 
+                    <b>Erheben: </b>Anschließend beginnt das Sammeln von prozessbezogenen und personenbezogenen Daten. 
                     Ein Teil der Daten müssen durch das Unternehmen selbst (z.b. Zykluszeiten) 
                     und ein anderer Teil durch die Mitarbeiter erhoben werden (z.B. subjektive Belastung).
                     <br/><br/>      

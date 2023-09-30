@@ -16,7 +16,7 @@ export default function Home() {
           <p className="UnderTitel">Ihrer Lean Ergonomics Application</p>
         </em>
         <Space height="5vh" />
-        <Space height="10px" color="#617784" />
+        <Space height="20px" color="#617784" />
         <Space height="20vh" />
       </header>
       <main>
@@ -25,9 +25,10 @@ export default function Home() {
           Unternehmen ermöglicht, tiefgreifende Erkenntnisse über die
           Arbeitsbedingungen und die Leistung ihrer Mitarbeiter zu gewinnen.
           Durch die nahtlose Integration bewährter
-          Ergonomiebewertungsinstrumente wie dem EAWS-Fragebogen, dem
-          NASA-TLX-Fragebogen, der Borg-Skala und dem KFZA-Fragebogen bieten wir
-          Ihnen eine umfassende Lösung, um die Arbeitsbelastung zu
+          Ergonomiebewertungsinstrumente wie dem Ergonomic Assessment Work Sheet
+          (EAWS), dem NASA-TLX-Fragebogen, der Borg-Skala und dem
+          KFZA-Fragebogen, sowie der Erfassung von eignen Prozessdaten, bieten
+          wir Ihnen eine umfassende Lösung, um die Arbeitsbelastung zu
           quantifizieren und zu analysieren.
         </p>
 
@@ -45,16 +46,18 @@ export default function Home() {
             analysiert umfassende Daten mithilfe der genannten
             Ergonomiebewertungswerkzeuge. Dadurch erhalten Sie detaillierte
             Einblicke in die physische und mentale Belastung Ihrer Mitarbeiter
-            während ihrer Arbeitsabläufe.
+            während ihrer Arbeitsabläufe. Gleichzeitig können Sie eigene
+            Kennzahlen definieren, erfassen und Auswerten. Dies ermöglicht ihnen
+            Auswirkung der Ergonomie auf die Arbeitsleistung zu quantifizieren.
           </p>
           <br />
           <br />
           <p>
             <strong>Fokus auf Mitarbeiterleistung:</strong> Wir unterstützen Sie
             dabei, die Schwankungen in der Arbeitsleistung Ihrer Mitarbeiter
-            besser zu verstehen. Durch die Verknüpfung von Belastungs- und
-            Leistungsdaten identifizieren wir Zusammenhänge, die Ihnen bei der
-            Optimierung Ihrer Prozesse helfen.
+            besser zu verstehen. Durch die Verknüpfung von Belastungs-,
+            Leistungs- und Prozessdaten identifizieren wir Zusammenhänge, die
+            Ihnen bei der Optimierung Ihrer Prozesse helfen.
           </p>
           <br />
           <br />
@@ -71,33 +74,31 @@ export default function Home() {
             <strong>Ganzheitlicher Ansatz:</strong> Bei LEA verstehen wir, dass
             ergonomische Aspekte nicht isoliert betrachtet werden können. Unsere
             Webapplikation berücksichtigt sämtliche Facetten und hilft Ihnen
-            dabei, ein ausgewogenes Verhältnis zwischen Mitarbeiterwohlbefinden
-            und betrieblicher Produktivität zu erreichen.
+            dabei, eine Maximierung von Mitarbeiterwohlbefinden und
+            betrieblicher Produktivität zu erreichen.
           </p>
-          <br />
-          <br />
         </div>
 
         <Space height="20vh" />
         <Space height="10px" color="#617784" width="100%" />
         <Space height="10vh" />
 
+        <div className="centeredMax800 spaceSideSM">
+          <p>
+            <b>Erleben Sie</b> wie LEA die Gesundheit, Zufriedenheit und
+            Produktivität Ihrer Mitarbeiter steigert. Wir laden Sie herzlich
+            dazu ein, sich näher umzusehen und gemeinsam mit uns die Zukunft
+            Ihrer Arbeitsprozesse zu gestalten.
+          </p>
+        </div>
+
+        <Space height="10vh" />
+
         <main>
-        {/* <ToggleFullscreen> */}
           <Link href="/App">
             <h2 className="btn btn-primary btn-lg">Starten Sie jetzt!</h2>
           </Link>
-        {/* </ToggleFullscreen> */}
-          </main>
-        <Space height="10vh" />
-
-        <p className="centeredMax800 spaceSideSM">
-          <b>Erleben Sie</b> wie LEA die Gesundheit, Zufriedenheit und
-          Produktivität Ihrer Mitarbeiter steigert. Wir laden Sie herzlich dazu
-          ein, sich näher umzusehen und gemeinsam mit uns die Zukunft Ihrer
-          Arbeitsprozesse zu gestalten.
-        </p>
-
+        </main>
         <Space height="20vh" />
       </main>
     </PageContainer>
