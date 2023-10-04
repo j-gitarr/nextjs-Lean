@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import DataField from "./DataField";
-import ConvertTime from "../ConvertTime";
+import ConvertTime from "../utility/ConvertTime";
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { customConfirm } from "../CustomConfirm";
+import { customConfirm } from "../utility/CustomConfirm";
 
 
 export default function ShowData() {

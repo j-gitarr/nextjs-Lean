@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 import DataField from "./DataField";
-import ConvertTime from "../ConvertTime";
+import ConvertTime from "../utility/ConvertTime";
 import { toast } from "react-toastify";
-import isInt from "../IsInt";
+import isInt from "../utility/IsInt";
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { customPrompt } from "../CustomPrompt";
-import { customConfirm } from "../CustomConfirm";
+import { customPrompt } from "../utility/CustomPrompt";
+import { customConfirm } from "../utility/CustomConfirm";
 
 export default function EawsData(){
     const [eawsData, setEawsData] = useState([]); // State to hold the fetched data
@@ -121,6 +121,7 @@ export default function EawsData(){
                 <thead className="table-light">
                     <tr>
                         <th scope="col">#</th>
+                        <th scope="col">Arbeitsstation</th>
                         <th scope="col">Wert</th>
                         <th scope="col">Datum</th>
                         <th scope="col"></th>
@@ -137,6 +138,7 @@ export default function EawsData(){
                                 id={item._id}
                                 onDelete={handleDelete}
                                 onEdit={handleEdit}
+                                workplace={item.workplace}
                                 EAWS="true"
                             />
                         ))

@@ -57,14 +57,18 @@ export default function ApexChart({ data, height }) {
         'Anstrengung',
         'Frustration',
       ],
+      labels:{
+        style:{
+          fontSize:"16px"
+        }
+      }
     },
-    // yaxis: {
-    //   min: 0, // Set the minimum value for the y-axis
-    //   max: 100, // Set the maximum value for the y-axis
-    // },
+    yaxis: {
+      show: false,
+    },
     tooltip: {
       style: {
-        fontSize: "14px", // Adjust the font size for tooltips
+        fontSize: "20px", // Adjust the font size for tooltips
       },
     },
   };

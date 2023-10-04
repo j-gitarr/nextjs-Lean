@@ -219,3 +219,35 @@ main{
   height: 100%;
   pointer-events: none; /* Ensure clicks go through to underlying elements */
 }
+
+
+
+
+
+
+.MuiTablePagination-displayedRows{
+  padding: 0;
+  margin: 0;
+}
+
+.MuiDataGrid-toolbarContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+
+/* IN PAGE NAvigation --- SHowData...  */
+.inPageLink{
+  /* font-size: 2rem; */
+  color: white;
+  background-color: #5e7783;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.inPageLink:hover{
+  background-color: #4d1635;
+}

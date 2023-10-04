@@ -55,7 +55,7 @@ export default function () {
       questionValues.forEach((question, index) => {
         dataToSend[`question${index}`] = parseInt(question.value);
       });
-
+      
       // Send the selected values to your MongoDB database via your API endpoint
       const response = await fetch("/api/submitKFZAValue", {
         method: "POST",

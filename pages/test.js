@@ -1,35 +1,55 @@
-import React, { useState } from "react";
-import Settings from "@components/Settings"
-import { FormGroup } from "@mui/material";
-import {Switch} from "@mui/material";
+import getKfza from "@components/dbOps/getKfza";
+
+import { useEffect, useState } from "react";
 
 export default function Test() {
-  const [checked, setChecked] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [data, setData] = useState({});
 
-  const handleChange = () => {
-    setChecked(!checked);
-  };
-  const handleOpen = ()=> {
-    setOpen(!open);
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
+  useEffect(() => {
+    const companyName = localStorage.getItem("companyName");
+
+    if (companyName === null) {
+      console.error("no Company Associated");
+      return;
+    }
+
+    async function fetchData() {
+      try {
+        const response = await fetch(
+          "/api/fetchKFZA?companyName=" + companyName
+        );
+        if (response.ok) {
+          console.log("awaiting response");
+          const data = await response.json();
+          setData(data.data); // Set the fetched data in state
+        } else {
+          console.error("Failed to fetch data");
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+
+
+
+  const transformData = ()=>{
+    data.map()
   }
+
+
+
+
 
   return (
     <div>
-      <FormGroup style={{ transform: 'rotate(90deg)', width:"50px",}}>
-            <Switch
-              checked={checked}
-              onChange={handleChange}
-            />
-      </FormGroup>
-
-      <br/>
-      <br/>
-      <button onClick={handleOpen} >
-        Einstellungen
-        <Settings open={open} handleClose={handleOpen}/>
-      </button>
-      
+      <p>test</p>
     </div>
   );
 }

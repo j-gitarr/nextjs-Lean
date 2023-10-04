@@ -31,6 +31,7 @@ export default function DataField(props) {
         entryExists ? (
           <tr>
             <th scope="row">{index}</th>
+            <td>{workplace}</td>
             <td>{value}</td>
             <td>{date}</td>
             <td className="text-end">

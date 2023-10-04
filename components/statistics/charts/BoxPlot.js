@@ -49,7 +49,7 @@ const BoxPlotChart = ({ transformedArray, height}) => {
       categories: dataPoints.map((workplaceData) => `${workplaceData.workplace}`),
       labels: {
         style: {
-          fontSize: "20px", // Adjust the font size for x-axis labels
+          fontSize: "16px", // Adjust the font size for x-axis labels
         },
       },
     },
@@ -71,12 +71,12 @@ const BoxPlotChart = ({ transformedArray, height}) => {
     },
     subtitle: {
       style: {
-        fontSize: "18px", // Adjust the font size for the chart subtitle
+        fontSize: "16px", // Adjust the font size for the chart subtitle
       },
     },
     tooltip: {
       style: {
-        fontSize: "14px", // Adjust the font size for tooltips
+        fontSize: "20px", // Adjust the font size for tooltips
       },
     },
   };

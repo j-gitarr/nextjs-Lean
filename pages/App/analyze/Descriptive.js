@@ -72,9 +72,28 @@ export default function Descriptive() {
     <PageContainer>
       <Space height="10vh" />
       <h1>Deskriptive Analyse</h1>
-      <Space Separator="true" />
-      <p>TODO hier ist some text</p>
-      <Space Separator="true" />
+      
+      <Space height="9vh"/>
+      <div className="backgroundJean">
+      <Space height="20px"/>
+      <div className="centeredMax800">
+        <p>
+          Hier finden Sie eine aktuelle quantitative Analyse all Ihrer erhobenen
+          Daten und können daraus erste Erkenntnisse gewinnen. Ziel dieser
+          Analyse ist es Ihre derzeitigen Prozesse, Arbeitsabläufe und
+          -umgebungen quantitativ aus einer LE-Perspektive zu beschreiben. 
+          <br/>
+          <br/>
+          Bei
+          Fragen und Unklarheiten unterstützt Sie gerne einer unserer
+          LE-Experten. Weiterhin finden Sie zu jeder Auswertung eine kurze
+          Beschreibung als auch Orientierungswerte, die empfohlen werden.
+        </p>
+      </div>
+      <Space height="20px"/>
+      </div>
+
+      <Space height="10vh"/>
 
       {/* <h2>EAWS</h2> */}
       {transformedEaws ? (
@@ -118,6 +137,9 @@ export default function Descriptive() {
 
       <Space Separator="true" />
 
+      <div className="centeredMax1000">
+        <h3>KFZA Auswertung</h3>
+      </div>
       {transformedKfza.length !== 0 ? (
         <div className="centeredMax1000">
           <BoxPlotKfza data={transformedKfza} />
@@ -132,7 +154,7 @@ export default function Descriptive() {
           <BoxPlotCustom data={transformedCustom} />
         </div>
       ) : null}
-      
+
       <Space height="10vh" />
     </PageContainer>
   );

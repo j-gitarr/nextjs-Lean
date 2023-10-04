@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import DataField from "./DataField";
-import ConvertTime from "../ConvertTime";
-import isInt from "../IsInt";
+import ConvertTime from "../utility/ConvertTime";
+import isInt from "../utility/IsInt";
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SetFullscreen from "../SetFullscreen";
+import SetFullscreen from "../utility/SetFullscreen";
 import {toast} from "react-toastify"
-import { customConfirm } from "../CustomConfirm";
-import { customPrompt } from "../CustomPrompt";
+import { customConfirm } from "../utility/CustomConfirm";
+import { customPrompt } from "../utility/CustomPrompt";
 
 export default function ShowData() {
   const [borgData, setBorgData] = useState([]);

@@ -38,6 +38,7 @@ export function customConfirm(message, confirmText = 'OK', cancelText = 'Cancel'
 
     const confirmButton = document.createElement('button');
     confirmButton.textContent = confirmText;
+    confirmButton.id = "CustomConfirmConfirmButton"
     // confirmButton.style.padding = '10px';
     // confirmButton.style.backgroundColor = 'green';
     // confirmButton.style.color = 'white';
@@ -71,7 +72,7 @@ export function customConfirm(message, confirmText = 'OK', cancelText = 'Cancel'
     focusTrapWrapper.appendChild(confirmationBox);
 
     document.body.appendChild(focusTrapWrapper);
-    confirmButton.focus();
+    confirmButton.focus({focusVisible: true});
 
     focusTrapWrapper.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
@@ -91,6 +92,7 @@ export function customConfirm(message, confirmText = 'OK', cancelText = 'Cancel'
         document.body.removeChild(focusTrapWrapper);
         resolve(null); // Resolves with null when canceled
       }
-    });    
+    }); 
+    confirmButton.focus();   
   });
 }

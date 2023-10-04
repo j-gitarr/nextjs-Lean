@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function useBorg() {
+export default function getKfza() {
   const [kfzaData, setKfzaData] = useState([]);
 
   useEffect(() => {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import DataField from "./DataField";
-import ConvertTime from "../ConvertTime";
+import ConvertTime from "../utility/ConvertTime";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { customConfirm } from "../CustomConfirm";
+import { customConfirm } from "../utility/CustomConfirm";
 import { toast } from "react-toastify";
 
 export default function ShowData() {
@@ -104,7 +104,7 @@ export default function ShowData() {
               const questionValues = [];
 
               // Loop through the keys "question0", "question1", etc., and collect their values
-              for (let i = 0; i <= 26; i++) {
+              for (let i = 0; i <= 25; i++) {
                 const key = `question${i}`;
                 questionValues.push({ index: i, value: item[key] });
               }
