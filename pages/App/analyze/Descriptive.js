@@ -7,6 +7,7 @@ import PrepEaws from "@components/statistics/prep/PrepEaws";
 import useKfza from "@components/dbOps/getKfza";
 import SummaryNasa from "@components/statistics/calculation/SummaryNASA";
 import getCustom from "@components/dbOps/getCustom";
+import Link from "next/link";
 
 import dynamic from "next/dynamic"; // Import dynamic from next/dynamic
 import InfoExpandable from "@components/utility/InfoExpandable";
@@ -72,8 +73,18 @@ export default function Descriptive() {
     <PageContainer>
       <Space height="10vh" />
       <h1>Deskriptive Analyse</h1>
+      <Space height="4vh"/>
       
-      <Space height="9vh"/>
+      <div className="centeredMax1000" style={{display: "flex", justifyContent:"space-between"}}>
+        <Link className="inPageLink" href="#eaws">EAWS</Link>
+        <Link className="inPageLink" href="#borg">BORG</Link>
+        <Link className="inPageLink" href="#nasa">NASA-TLX</Link>
+        <Link className="inPageLink" href="#kfza">KFZA</Link>
+        <Link className="inPageLink" href="#custom">Eigene Prozessdaten</Link>
+      </div>
+
+      <Space height="20px"/>
+
       <div className="backgroundJean">
       <Space height="20px"/>
       <div className="centeredMax800">
@@ -95,7 +106,7 @@ export default function Descriptive() {
 
       <Space height="10vh"/>
 
-      {/* <h2>EAWS</h2> */}
+      <a id="eaws"></a>
       {transformedEaws ? (
         <div className="centeredMax1000">
           <BarPlot data={transformedEaws} />
@@ -106,8 +117,9 @@ export default function Descriptive() {
 
       <Space Separator="true" />
 
-      {/* BORG */}
 
+      {/* BORG */}
+      <a id="borg"></a>
       {transformedArray ? (
         <div className="centeredMax1000">
           <BoxPlotChart
@@ -125,6 +137,7 @@ export default function Descriptive() {
       <Space Separator="true" />
 
       {/* <h2>NASA-TLX</h2> */}
+      <a id="nasa"></a>
       {transformedNasa ? (
         <div className="centeredMax1000">
           <RadarPlot data={transformedNasa} />
@@ -137,6 +150,7 @@ export default function Descriptive() {
 
       <Space Separator="true" />
 
+      <a id="kfza"></a>
       <div className="centeredMax1000">
         <h3>KFZA Auswertung</h3>
       </div>
@@ -148,6 +162,7 @@ export default function Descriptive() {
       <HeaderWithInfo></HeaderWithInfo>
       <Space Separator="true" />
 
+      <a id="custom"></a>
       <HeaderWithInfo>Eigen definierte Kennzahlen</HeaderWithInfo>
       {transformedCustom.length !== 0 ? (
         <div className="centeredMax1000">
