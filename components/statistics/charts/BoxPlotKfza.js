@@ -79,84 +79,221 @@ export default function BoxplotChart({ data, height }) {
     betrieblicheLeistungenData.push(entry.question25);
   });
 
+  const vielseitigkeitStats = dataStatistics(vielseitigkeitData);
+  const ganzheitlichkeitStats = dataStatistics(ganzheitlichkeitData);
+  const handlungsspielraumStats = dataStatistics(handlungsspielraumData);
+  const sozialeRueckendeckungStats = dataStatistics(sozialeRueckendeckungData);
+  const zusammenarbeitStats = dataStatistics(zusammenarbeitData);
+  const qualitativeArbeitsbelastungenStats = dataStatistics(qualitativeArbeitsbelastungenData);
+  const quantiativeArbeitsbelastungenStats = dataStatistics(quantiativeArbeitsbelastungenData);
+  const arbeitsunterbrechnugnenStats = dataStatistics(arbeitsunterbrechnugnenData);
+  const umgebungsbelastungenStats = dataStatistics(umgebungsbelastungenData);
+  const informationMitspracheStats = dataStatistics(informationMitspracheData);
+  const betrieblicheLeistungenStats = dataStatistics(betrieblicheLeistungenData);
+
 
   //ASPEKT DER ARBEITSSITUATION
-  const arbeitsinhalt = [];
-  arbeitsinhalt.push(...vielseitigkeitData);
-  arbeitsinhalt.push(...ganzheitlichkeitData);
-  const arbeitsinhaltStats = dataStatistics(arbeitsinhalt);
-  console.log(arbeitsinhaltStats);
+  // const arbeitsinhalt = [];
+  // arbeitsinhalt.push(...vielseitigkeitData);
+  // arbeitsinhalt.push(...ganzheitlichkeitData);
+  // const arbeitsinhaltStats = dataStatistics(arbeitsinhalt);
+  // console.log(arbeitsinhaltStats);
 
-  const ressourcen = [];
-  ressourcen.push(...handlungsspielraumData);
-  ressourcen.push(...sozialeRueckendeckungData);
-  ressourcen.push(...zusammenarbeitData);
-  const ressourcenStats = dataStatistics(ressourcen);
+  // const ressourcen = [];
+  // ressourcen.push(...handlungsspielraumData);
+  // ressourcen.push(...sozialeRueckendeckungData);
+  // ressourcen.push(...zusammenarbeitData);
+  // const ressourcenStats = dataStatistics(ressourcen);
 
-  const stressoren = [];
-  stressoren.push(...qualitativeArbeitsbelastungenData);
-  stressoren.push(...quantiativeArbeitsbelastungenData);
-  stressoren.push(...arbeitsunterbrechnugnenData);
-  stressoren.push(...umgebungsbelastungenData);
-  const stressorenStats = dataStatistics(stressoren);
+  // const stressoren = [];
+  // stressoren.push(...qualitativeArbeitsbelastungenData);
+  // stressoren.push(...quantiativeArbeitsbelastungenData);
+  // stressoren.push(...arbeitsunterbrechnugnenData);
+  // stressoren.push(...umgebungsbelastungenData);
+  // const stressorenStats = dataStatistics(stressoren);
 
-  const organisationsklima = [];
-  organisationsklima.push(...informationMitspracheData);
-  organisationsklima.push(...betrieblicheLeistungenData);
-  const organisationsklimaStats = dataStatistics(organisationsklima);
+  // const organisationsklima = [];
+  // organisationsklima.push(...informationMitspracheData);
+  // organisationsklima.push(...betrieblicheLeistungenData);
+  // const organisationsklimaStats = dataStatistics(organisationsklima);
 
   /////////ApexCharts
   //Arbeitsinhalt
-  const arbeitsinhaltSeries = [
-    { type: "boxPlot", data: [{ x: "Arbeitsinhalt", y: arbeitsinhaltStats }] },
-  ];
-  const arbeitsinhaltOptions = {
-    chart: {
-      type: "boxPlot",
-    },
+  // const arbeitsinhaltSeries = [
+  //   { type: "boxPlot", data: [{ x: "Arbeitsinhalt", y: arbeitsinhaltStats }] },
+  // ];
+  // const arbeitsinhaltOptions = {
+  //   chart: {
+  //     type: "boxPlot",
+  //   },
     
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        barHeight: "50%",
-      },
-    },
-    xaxis: {
-      tickAmount:5, 
-      min: 0,
-      max: 5,
-      labels:{
-        showDuplicates: true,
-        style:{
-          fontSize: "16px"
-        }
-      }
-    },
-    yaxis:{
-      categories: [1,2,3,4,5],
-      labels:{
-        show: false,
-      }
-    },
-    title: {
-      text: "Arbeitsinhalt",
-      align: "center",
-      style: {
-        fontSize: "30px",
-      },
-    },
-    tooltip: {
-      style: {
-        fontSize: "20px", // Adjust the font size for tooltips
-      },
-    },
-  };
+  //   plotOptions: {
+  //     bar: {
+  //       horizontal: true,
+  //       barHeight: "50%",
+  //     },
+  //   },
+  //   xaxis: {
+  //     tickAmount:5, 
+  //     min: 0,
+  //     max: 5,
+  //     labels:{
+  //       showDuplicates: true,
+  //       style:{
+  //         fontSize: "16px"
+  //       }
+  //     }
+  //   },
+  //   yaxis:{
+  //     categories: [1,2,3,4,5],
+  //     labels:{
+  //       show: false,
+  //     }
+  //   },
+  //   title: {
+  //     text: "Arbeitsinhalt",
+  //     align: "center",
+  //     style: {
+  //       fontSize: "30px",
+  //     },
+  //   },
+  //   tooltip: {
+  //     style: {
+  //       fontSize: "20px", // Adjust the font size for tooltips
+  //     },
+  //   },
+  // };
 
-  //Ressourcen
-  const ressourcenSeries = [
-    { type: "boxPlot", data: [{ x: "Ressourcen", y: ressourcenStats }] },
+  // //Ressourcen
+  // const ressourcenSeries = [
+  //   { type: "boxPlot", data: [{ x: "Ressourcen", y: ressourcenStats }] },
+  // ];
+  // const ressourcenOptions = {
+  //   chart: {
+  //     type: "boxPlot",
+  //   },
+  //   plotOptions: {
+  //     bar: {
+  //       horizontal: true,
+  //       barHeight: "50%",
+  //     },
+  //   },
+  //   xaxis: {
+  //     tickAmount:5, 
+  //     min: 0,
+  //     max: 5,
+  //     labels:{
+  //       style:{
+  //         fontSize: "16px"
+  //       }
+  //     }
+  //   },
+  //   yaxis:{
+  //     labels:{
+  //       show: false,
+  //     }
+  //   },
+  //   title: {
+  //     text: "Ressourcen",
+  //     align: "center",
+  //     style: {
+  //       fontSize: "30px",
+  //     },
+  //   },
+  //   tooltip: {
+  //     style: {
+  //       fontSize: "20px", // Adjust the font size for tooltips
+  //     },
+  //   },
+  // };
+
+  // //Stressoren
+  // const stressorenSeries = [
+  //   { type: "boxPlot", data: [{ x: "Stressoren", y: stressorenStats }] },
+  // ];
+  // const stressorenOptions = {
+  //   chart: {
+  //     type: "boxPlot",
+  //   },
+  //   plotOptions: {
+  //     bar: {
+  //       horizontal: true,
+  //       barHeight: "50%",
+  //     },
+  //   },
+  //   xaxis: {
+  //     tickAmount:5, 
+  //     min: 0,
+  //     max: 5,
+  //     labels:{
+  //       style:{
+  //         fontSize: "16px"
+  //       }
+  //     }
+  //   },
+  //   yaxis:{
+  //     labels:{
+  //       show: false,
+  //     }
+  //   },
+  //   title: {
+  //     text: "Stressoren",
+  //     align: "center",
+  //     style: {
+  //       fontSize: "30px",
+  //     },
+  //   },
+  //   tooltip: {
+  //     style: {
+  //       fontSize: "20px", // Adjust the font size for tooltips
+  //     },
+  //   },
+  // };
+
+  // //Organisationsklima 
+  // const organisationsklimaSeries = [
+  //   { type: "boxPlot", data: [{ x: "Organisationsklima", y: organisationsklimaStats }] },
+  // ];
+  // const organisationsklimaOptions = {
+  //   chart: {
+  //     type: "boxPlot",
+  //   },
+  //   plotOptions: {
+  //     bar: {
+  //       horizontal: true,
+  //       barHeight: "50%",
+  //     },
+  //   },
+  //   xaxis: {
+  //     tickAmount:5, 
+  //     min: 0,
+  //     max: 5,
+  //     labels:{
+  //       style:{
+  //         fontSize: "16px"
+  //       }
+
+  //     }
+  //   },
+  //   yaxis:{
+  //     labels:{
+  //       show: false,
+  //     }
+  //   },
+  //   title: {
+  //     text: "Organisationsklima",
+  //     align: "center",
+  //     style: {
+  //       fontSize: "30px",
+  //     },
+  //   },
+  // };
+
+  //Vielseitigkeit
+  const vielseitigkeitSeries = [
+    { type: "boxPlot", data: [{ x: "Vielseitigkeit", y: vielseitigkeitStats }] },
   ];
-  const ressourcenOptions = {
+  const vielseitigkeitOptions = {
     chart: {
       type: "boxPlot",
     },
@@ -174,6 +311,7 @@ export default function BoxplotChart({ data, height }) {
         style:{
           fontSize: "16px"
         }
+
       }
     },
     yaxis:{
@@ -182,67 +320,19 @@ export default function BoxplotChart({ data, height }) {
       }
     },
     title: {
-      text: "Ressourcen",
+      text: "Vielseitigkeit",
       align: "center",
       style: {
         fontSize: "30px",
       },
     },
-    tooltip: {
-      style: {
-        fontSize: "20px", // Adjust the font size for tooltips
-      },
-    },
   };
 
-  //Stressoren
-  const stressorenSeries = [
-    { type: "boxPlot", data: [{ x: "Stressoren", y: stressorenStats }] },
+//Ganzheitlichkeit 
+  const ganzheitlichkeitSeries = [
+    { type: "boxPlot", data: [{ x: "Ganzheitlichkeit", y: ganzheitlichkeitStats }] },
   ];
-  const stressorenOptions = {
-    chart: {
-      type: "boxPlot",
-    },
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        barHeight: "50%",
-      },
-    },
-    xaxis: {
-      tickAmount:5, 
-      min: 0,
-      max: 5,
-      labels:{
-        style:{
-          fontSize: "16px"
-        }
-      }
-    },
-    yaxis:{
-      labels:{
-        show: false,
-      }
-    },
-    title: {
-      text: "Stressoren",
-      align: "center",
-      style: {
-        fontSize: "30px",
-      },
-    },
-    tooltip: {
-      style: {
-        fontSize: "20px", // Adjust the font size for tooltips
-      },
-    },
-  };
-
-  //Organisationsklima 
-  const organisationsklimaSeries = [
-    { type: "boxPlot", data: [{ x: "Organisationsklima", y: organisationsklimaStats }] },
-  ];
-  const organisationsklimaOptions = {
+  const ganzheitlichkeitOptions = {
     chart: {
       type: "boxPlot",
     },
@@ -269,47 +359,441 @@ export default function BoxplotChart({ data, height }) {
       }
     },
     title: {
-      text: "Organisationsklima",
+      text: "Ganzheitlichkeit",
       align: "center",
       style: {
         fontSize: "30px",
       },
     },
   };
+
+  //Handlungsspielraum 
+  const handlungsspielraumSeries = [
+    { type: "boxPlot", data: [{ x: "Handlungsspielraum", y: handlungsspielraumStats }] },
+  ];
+  const handlungsspielraumOptions = {
+    chart: {
+      type: "boxPlot",
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "50%",
+      },
+    },
+    xaxis: {
+      tickAmount:5, 
+      min: 0,
+      max: 5,
+      labels:{
+        style:{
+          fontSize: "16px"
+        }
+
+      }
+    },
+    yaxis:{
+      labels:{
+        show: false,
+      }
+    },
+    title: {
+      text: "Handlungspielraum",
+      align: "center",
+      style: {
+        fontSize: "30px",
+      },
+    },
+  };
+
+
+  //Soziale Rückendeckung 
+  const sozialeRueckendeckungSeries = [
+    { type: "boxPlot", data: [{ x: "Soziale Rückendeckung", y: sozialeRueckendeckungStats }] },
+  ];
+  const sozialeRueckendeckungOptions = {
+    chart: {
+      type: "boxPlot",
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "50%",
+      },
+    },
+    xaxis: {
+      tickAmount:5, 
+      min: 0,
+      max: 5,
+      labels:{
+        style:{
+          fontSize: "16px"
+        }
+
+      }
+    },
+    yaxis:{
+      labels:{
+        show: false,
+      }
+    },
+    title: {
+      text: "Soziale Rückendeckung",
+      align: "center",
+      style: {
+        fontSize: "30px",
+      },
+    },
+  };
+
+  //Zusammenarbeit 
+  const zusammenarbeitSeries = [
+    { type: "boxPlot", data: [{ x: "Zusammenarbeit", y: zusammenarbeitStats }] },
+  ];
+  const zusammenarbeitOptions = {
+    chart: {
+      type: "boxPlot",
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "50%",
+      },
+    },
+    xaxis: {
+      tickAmount:5, 
+      min: 0,
+      max: 5,
+      labels:{
+        style:{
+          fontSize: "16px"
+        }
+
+      }
+    },
+    yaxis:{
+      labels:{
+        show: false,
+      }
+    },
+    title: {
+      text: "Zusammenarbeit",
+      align: "center",
+      style: {
+        fontSize: "30px",
+      },
+    },
+  };
+
+  //Qualitative Arbeitsbelastung 
+  const qualitativeArbeitsbelastungenSeries = [
+    { type: "boxPlot", data: [{ x: "Qualitative Arbeitsbelastung", y: qualitativeArbeitsbelastungenStats }] },
+  ];
+  const qualitativeArbeitsbelastungenOptions = {
+    chart: {
+      type: "boxPlot",
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "50%",
+      },
+    },
+    xaxis: {
+      tickAmount:5, 
+      min: 0,
+      max: 5,
+      labels:{
+        style:{
+          fontSize: "16px"
+        }
+
+      }
+    },
+    yaxis:{
+      labels:{
+        show: false,
+      }
+    },
+    title: {
+      text: "Qualitative Arbeitsbelastung",
+      align: "center",
+      style: {
+        fontSize: "30px",
+      },
+    },
+  };
+
+  //Quantitative Arbeitsbelastung 
+  const quantiativeArbeitsbelastungenSeries = [
+    { type: "boxPlot", data: [{ x: "Quantitative Arbeitsbelastungen", y: quantiativeArbeitsbelastungenStats }] },
+  ];
+  const quantiativeArbeitsbelastungenOptions = {
+    chart: {
+      type: "boxPlot",
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "50%",
+      },
+    },
+    xaxis: {
+      tickAmount:5, 
+      min: 0,
+      max: 5,
+      labels:{
+        style:{
+          fontSize: "16px"
+        }
+
+      }
+    },
+    yaxis:{
+      labels:{
+        show: false,
+      }
+    },
+    title: {
+      text: "Quantitative Arbeitsbelastungen",
+      align: "center",
+      style: {
+        fontSize: "30px",
+      },
+    },
+  };
+
+  //Arbeitsunterbrechungen 
+  const arbeitsunterbrechnugnenSeries = [
+    { type: "boxPlot", data: [{ x: "Arbeitsunterbrechungen", y: arbeitsunterbrechnugnenStats }] },
+  ];
+  const arbeitsunterbrechnugnenOptions = {
+    chart: {
+      type: "boxPlot",
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "50%",
+      },
+    },
+    xaxis: {
+      tickAmount:5, 
+      min: 0,
+      max: 5,
+      labels:{
+        style:{
+          fontSize: "16px"
+        }
+
+      }
+    },
+    yaxis:{
+      labels:{
+        show: false,
+      }
+    },
+    title: {
+      text: "Arbeitsunterbrechungen",
+      align: "center",
+      style: {
+        fontSize: "30px",
+      },
+    },
+  };
+
+  //Umgebungsbelastungen 
+  const umgebungsbelastungenSeries = [
+    { type: "boxPlot", data: [{ x: "Umgebungsbelastungen", y: umgebungsbelastungenStats }] },
+  ];
+  const umgebungsbelastungenOptions = {
+    chart: {
+      type: "boxPlot",
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "50%",
+      },
+    },
+    xaxis: {
+      tickAmount:5, 
+      min: 0,
+      max: 5,
+      labels:{
+        style:{
+          fontSize: "16px"
+        }
+
+      }
+    },
+    yaxis:{
+      labels:{
+        show: false,
+      }
+    },
+    title: {
+      text: "Umgebungsbelastungen",
+      align: "center",
+      style: {
+        fontSize: "30px",
+      },
+    },
+  };
+
+  //Information und Mitsprache
+  const informationMitspracheSeries = [
+    { type: "boxPlot", data: [{ x: "Information und Mitsprache", y: informationMitspracheStats }] },
+  ];
+  const informationMitspracheOptions = {
+    chart: {
+      type: "boxPlot",
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "50%",
+      },
+    },
+    xaxis: {
+      tickAmount:5, 
+      min: 0,
+      max: 5,
+      labels:{
+        style:{
+          fontSize: "16px"
+        }
+
+      }
+    },
+    yaxis:{
+      labels:{
+        show: false,
+      }
+    },
+    title: {
+      text: "Information und Mitsprache",
+      align: "center",
+      style: {
+        fontSize: "30px",
+      },
+    },
+  };
+
+  //Betriebliche Leistungen 
+  const betrieblicheLeistungenSeries = [
+    { type: "boxPlot", data: [{ x: "Betriebliche Leistungen", y: betrieblicheLeistungenStats }] },
+  ];
+  const betrieblicheLeistungenOptions = {
+    chart: {
+      type: "boxPlot",
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "50%",
+      },
+    },
+    xaxis: {
+      tickAmount:5, 
+      min: 0,
+      max: 5,
+      labels:{
+        style:{
+          fontSize: "16px"
+        }
+
+      }
+    },
+    yaxis:{
+      labels:{
+        show: false,
+      }
+    },
+    title: {
+      text: "Betriebliche Leistungen",
+      align: "center",
+      style: {
+        fontSize: "30px",
+      },
+    },
+  };
+
 
   return (
     <div className="boxplot-chart">
       {/* <ApexCharts options={options} series={series} type="boxPlot" height={vh} /> */}
 
       <ApexCharts
-        options={stressorenOptions}
-        series={stressorenSeries}
+        options={vielseitigkeitOptions}
+        series={vielseitigkeitSeries}
         type="boxPlot"
         height={300}
       />
       
       <ApexCharts
-        options={arbeitsinhaltOptions}
-        series={arbeitsinhaltSeries}
+        options={ganzheitlichkeitOptions}
+        series={ganzheitlichkeitSeries}
         type="boxPlot"
         height={300}
       />
       
       <ApexCharts
-        options={ressourcenOptions}
-        series={ressourcenSeries}
+        options={handlungsspielraumOptions}
+        series={handlungsspielraumSeries}
         type="boxPlot"
         height={300}
       />
 
       <ApexCharts
-        options={organisationsklimaOptions}
-        series={organisationsklimaSeries}
+        options={sozialeRueckendeckungOptions}
+        series={sozialeRueckendeckungSeries}
         type="boxPlot"
         height={300}
       />
 
-
+      <ApexCharts
+        options={zusammenarbeitOptions}
+        series={zusammenarbeitSeries}
+        type="boxPlot"
+        height={300}
+      />
+      <ApexCharts
+        options={qualitativeArbeitsbelastungenOptions}
+        series={qualitativeArbeitsbelastungenSeries}
+        type="boxPlot"
+        height={300}
+      />
+      <ApexCharts
+        options={quantiativeArbeitsbelastungenOptions}
+        series={quantiativeArbeitsbelastungenSeries}
+        type="boxPlot"
+        height={300}
+      />
+      <ApexCharts
+        options={arbeitsunterbrechnugnenOptions}
+        series={arbeitsunterbrechnugnenSeries}
+        type="boxPlot"
+        height={300}
+      />
+      <ApexCharts
+        options={umgebungsbelastungenOptions}
+        series={umgebungsbelastungenSeries}
+        type="boxPlot"
+        height={300}
+      />
+      <ApexCharts
+        options={informationMitspracheOptions}
+        series={informationMitspracheSeries}
+        type="boxPlot"
+        height={300}
+      />
+      <ApexCharts
+        options={betrieblicheLeistungenOptions}
+        series={betrieblicheLeistungenSeries}
+        type="boxPlot"
+        height={300}
+      />
     </div>
   );
 }

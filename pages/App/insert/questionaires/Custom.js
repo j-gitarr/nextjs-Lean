@@ -76,7 +76,7 @@ export default function Borg() {
           <p className="centeredMax800  tcw">
             Hier haben Sie die Möglichkeit eigene Betriebswissenschaftliche
             Kennzahlen aufzunehmen. Je mehr Daten Sie beisteuern, desto eher
-            können Lean Potentiale ermittelt werden. Tragen Sie dafür in die
+            können Potentiale ermittelt werden. Tragen Sie dafür in die
             Felder unten die Arbeitsstation ein, von welcher die Kennzahl
             stammt, den Namen der Kennzahl und den Wert.
             <br />

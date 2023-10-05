@@ -42,7 +42,7 @@ export default function Home() {
 
         <div className="centeredMax800 spaceSideSM">
           <p>
-            <strong>Ganzheitliche Datenanalyse:</strong> LEA erfasst und
+            <strong>Umfassende Datenanalyse:</strong> LEA erfasst und
             analysiert umfassende Daten mithilfe der genannten
             Ergonomiebewertungswerkzeuge. Dadurch erhalten Sie detaillierte
             Einblicke in die physische und mentale Belastung Ihrer Mitarbeiter

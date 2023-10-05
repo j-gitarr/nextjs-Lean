@@ -8,6 +8,7 @@ import useKfza from "@components/dbOps/getKfza";
 import SummaryNasa from "@components/statistics/calculation/SummaryNASA";
 import getCustom from "@components/dbOps/getCustom";
 import Link from "next/link";
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 import dynamic from "next/dynamic"; // Import dynamic from next/dynamic
 import InfoExpandable from "@components/utility/InfoExpandable";
@@ -114,6 +115,7 @@ export default function Descriptive() {
       ) : (
         "Loading Data"
       )}
+      <div className="centeredContent"><HelpOutlineIcon fontSize="large" /></div>
 
       <Space Separator="true" />
 

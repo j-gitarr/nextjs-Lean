@@ -59,13 +59,20 @@ export default function EAWS() {
         <Space height="20px" />
 
         <p className="centeredMax800 SpaceSideSM tcw">
-          {
-            "Das Ergonomic Assessment Worksheet (EAWS) ist ein Experten Screeningverfahren, zur Bewertung von körperlicher Belastung. Dabei werden Punkte für Belastungsarten vergeben, welche aggregiert und nach einem Ampelschema bewertet werden (grün < 26p, gelb <51p, rot >50p). Die Bewertungsgrundlagen des EAWS entstammen internationalen (ISO), europäischen (CEN) und nationalen (DIN) Normen; (inter-)national anerkannten Bewertungsverfahren und einschlägigen Literaturquellen (z.B. Publikationen, Dissertationen). Das EAWS kann als „Papier- und Bleistiftmethode“ oder IT-gestützt über den kompletten Produktentstehungsprozess eingesetzt werden. -iad TU Darmstadt "
-          }
+          Das Ergonomic Assessment Worksheet (EAWS) ist ein Expertenverfahren,
+          zur Bewertung von körperlicher Belastung. Dabei werden Punkte für
+          Belastungsarten vergeben, welche aggregiert und nach einem Ampelschema
+          bewertet werden (grün &lt; 26p, gelb &lt; 51p, rot &gt; 50p). Die
+          Bewertungsgrundlagen des EAWS entstammen internationalen (ISO),
+          europäischen (CEN) und nationalen (DIN) Normen; (inter-)national
+          anerkannten Bewertungsverfahren und einschlägigen Literaturquellen
+          (z.B. Publikationen, Dissertationen). Das EAWS kann als „Papier- und
+          Bleistiftmethode“ oder IT-gestützt über den kompletten
+          Produktentstehungsprozess eingesetzt werden. -iad TU Darmstadt
           <br />
-          {
-            "Der von Ihnen oder einem Experten ermittelte EAWS-Wert wird in dem unteren Feld eingetragen und dient hilft bei der Verschlankung und Optimierung Ihrer Prozesse."
-          }
+          Der von Ihnen oder einem Experten ermittelte EAWS-Wert wird in dem
+          unteren Feld eingetragen und dient hilft bei der Verschlankung und
+          Optimierung Ihrer Prozesse.
         </p>
         <Space height="20px" />
       </div>
@@ -73,14 +80,14 @@ export default function EAWS() {
       <Space height="20vh" />
 
       <div>
-        <h5 className="text-center" style={{fontWeight:"normal"}}>
+        <h5 className="text-center" style={{ fontWeight: "normal" }}>
           Für welche <b>Arbeitsstation</b> wurde dieser Wert erhoben?
         </h5>
         <div className="d-flex justify-content-center">
           <WorkstationDropdown value={workplace} onValueChange={setWorkplace} />
         </div>
         <Space height="10vh" />
-        <h5 className="text-center" style={{fontWeight:"normal"}}>
+        <h5 className="text-center" style={{ fontWeight: "normal" }}>
           Bitte tragen Sie hier den ermittelten <b>EAWS Score </b>ein:
         </h5>
         <div className="d-flex justify-content-center">
@@ -89,7 +96,7 @@ export default function EAWS() {
             className="form-control form-control-lg"
             value={eawsScore}
             onChange={handleEawsScoreChange}
-            style={{width:"300px"}}
+            style={{ width: "300px" }}
           />
         </div>
         <br />
