@@ -12,6 +12,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 import dynamic from "next/dynamic"; // Import dynamic from next/dynamic
 import InfoExpandable from "@components/utility/InfoExpandable";
+import StatisticsDialog from "@components/statistics/StatisticsDialog";
 
 const BoxPlotChart = dynamic(
   () => import("@components/statistics/charts/BoxPlot"),
@@ -64,6 +65,13 @@ function HeaderWithInfo({ children }) {
 }
 
 export default function Descriptive() {
+  const [eawsInfo, setEawsInfo] = useState(false);
+  const [borgInfo, setBorgInfo] = useState(false);
+  const [nasaInfo, setNasaInfo] = useState(false);
+  const [kfzaInfo, setKfzaInfo] = useState(false);
+  const [customInfo, setCustomInfo] = useState(false);
+  
+  
   const transformedArray = PrepBorg();
   const transformedNasa = PrepNASA();
   const transformedEaws = PrepEaws();
@@ -115,7 +123,16 @@ export default function Descriptive() {
       ) : (
         "Loading Data"
       )}
-      <div className="centeredContent"><HelpOutlineIcon fontSize="large" /></div>
+      <div className="centeredContent">
+        <HelpOutlineIcon fontSize="large" onClick={()=>setEawsInfo(!eawsInfo)} className="helpIcon"/>
+      </div>
+      <StatisticsDialog title="EAWS Info" open={eawsInfo} onClick={()=>setEawsInfo(!eawsInfo)}>
+        <p><b>0-25 Punkte:</b> Keine oder nur geringes gesundheitliches Risiko (Empfohlen)<br/>Es besteht kein Handlungsbedarf</p>
+        <br/><br/>
+        <p><b>&gt;25-50 Punkte:</b> Mögliches Risiko (Nicht Empfohlen) <br/>Eine Umgestaltung des Arbeitsplatzes oder andere Maßnahmen werden empfohlen</p>
+        <br/><br/>
+        <p><b>&gt;50 Punkte:</b> Hohes Risiko (Muss Vermieden werden)<br/>Sofortige Maßnahmen zur werden Empfohlen.</p>
+      </StatisticsDialog>
 
       <Space Separator="true" />
 
@@ -134,7 +151,13 @@ export default function Descriptive() {
       ) : (
         "Loading Data"
       )}
-      <HeaderWithInfo></HeaderWithInfo>
+      <div className="centeredContent">
+        <HelpOutlineIcon fontSize="large" onClick={()=>setBorgInfo(!borgInfo)} className="helpIcon"/>
+      </div>
+      <StatisticsDialog title="Borg Info" open={borgInfo} onClick={()=>setBorgInfo(!borgInfo)}>
+        
+      </StatisticsDialog>
+
 
       <Space Separator="true" />
 
