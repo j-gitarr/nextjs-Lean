@@ -7,7 +7,6 @@ import style from "@styles/NASA-TLX.module.css";
 import Space from "@components/style/Space";
 import ShortTextInput from "@components/utility/ShortTextInput";
 import { toast } from "react-toastify";
-import GlobalToast from "@components/GlobalToast";
 import WorkstationDropdown from "@components/utility/WorkstationDropdown";
 
 export default function () {
@@ -103,7 +102,21 @@ export default function () {
 
         <div className="backgroundJean">
           <Space height="20px" />
-          <p className="centeredMax800  tcw">{content.introduction}</p>
+          <p className="centeredMax800  tcw">
+            Der NASA-TLX dient zur Bewertung der wahrgenommenen kognitiven
+            Belastung.
+            <br />
+            <br />
+            Sie können für jede der Dimensionen einen Wert zwischen 0 und 100
+            wählen, wobei 0 für gar keine Belastung und 100 für die höchste
+            Belastung steht.
+            <br />
+            <br />
+            Tragen Sie zunächst bitte Ihre <b>PID</b> (persönliche
+            Identifikationsnummer) und Ihre derzeitige <b>Arbeitsstation</b>{" "}
+            ein. Wählen Sie anschließend mit den Schiebereglern die Belastung
+            hinsichtlich der verschiedenen Aspekte aus.
+          </p>
           <Space height="20px" />
         </div>
 

@@ -62,13 +62,15 @@ export default function EAWS() {
           Das Ergonomic Assessment Worksheet (EAWS) ist ein Expertenverfahren,
           zur Bewertung von körperlicher Belastung. Dabei werden Punkte für
           Belastungsarten vergeben, welche aggregiert und nach einem Ampelschema
-          bewertet werden (grün &lt; 26p, gelb &lt; 51p, rot &gt; 50p). Die
+          bewertet werden (grün &lt; 26p, gelb &lt; 51p, rot &gt; 50p).<br/> <br/>
+          Die
           Bewertungsgrundlagen des EAWS entstammen internationalen (ISO),
           europäischen (CEN) und nationalen (DIN) Normen; (inter-)national
           anerkannten Bewertungsverfahren und einschlägigen Literaturquellen
           (z.B. Publikationen, Dissertationen). Das EAWS kann als „Papier- und
           Bleistiftmethode“ oder IT-gestützt über den kompletten
           Produktentstehungsprozess eingesetzt werden. -iad TU Darmstadt
+          <br />
           <br />
           Der von Ihnen oder einem Experten ermittelte EAWS-Wert wird in dem
           unteren Feld eingetragen und dient hilft bei der Verschlankung und
@@ -102,7 +104,7 @@ export default function EAWS() {
         <br />
       </div>
 
-      <Space Separator="true" />
+<Space height="5vh"/>
 
       <div>
         <div className="d-flex justify-content-center">
@@ -111,16 +113,8 @@ export default function EAWS() {
             className="btn btn-primary btn-lg"
             onClick={handleFormSubmit}
           >
-            Bestätigen
+            Übermitteln
           </button>
-          <Link href="Borg">
-            <button
-              className="btn btn-secondary btn-lg"
-              style={{ marginLeft: "10px" }}
-            >
-              überspringen
-            </button>
-          </Link>
         </div>
       </div>
 

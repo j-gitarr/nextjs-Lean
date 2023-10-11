@@ -45,7 +45,7 @@ function Navbar(){
                     `${styles.NavText} 
                     ${styles.borderRight} 
                     ${router.pathname ==="/App/insert/questionaires/KFZA"? styles.NavTextCurrent:""}`}>
-                KFZA
+                KFzA
             </Link>
             <Link
                 href="/App/insert/questionaires/Custom"

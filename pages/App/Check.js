@@ -49,7 +49,7 @@ export default function ShowData() {
       </div>
       <div
         className="centeredMax1000"
-        style={{ display: "flex", justifyContent: "space-between" }}
+        style={{ display: "flex", justifyContent: "space-around", flexWrap:"wrap"}}
       >
         <Link className="inPageLink" href="#eaws">
           EAWS
@@ -78,7 +78,7 @@ export default function ShowData() {
       <div className="centeredMax1000">
         <EawsTable />
       </div>
-      <Space height="30vh" />
+      <Space height="10vh" />
 
       <a id="borg"></a>
       <h2>BORG</h2>
@@ -86,7 +86,7 @@ export default function ShowData() {
         <BorgTable />
       </div>
 
-      <Space height="30vh" />
+      <Space height="10vh" />
 
       <a id="nasa"></a>
       <h2>NASA-TLX</h2>
@@ -94,7 +94,7 @@ export default function ShowData() {
         <NasaTable />
       </div>
 
-      <Space height="30vh" />
+      <Space height="10vh" />
 
       <a id="kfza"></a>
       <h2>KFZA</h2>
@@ -102,14 +102,14 @@ export default function ShowData() {
         <KfzaTable />
       </div>
 
-      <Space height="30vh" />
+      <Space height="10vh" />
 
       <a id="custom"></a>
       <h2>Eigene Prozessdaten</h2>
       <div className="centeredMax1000">
         <CustomTable />
       </div>
-      <Space height="30vh" />
+      <Space height="10vh" />
     </PageContainer>
   );
 }

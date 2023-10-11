@@ -8,9 +8,9 @@ export default function CheckCompanyName() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const companyName = localStorage.getItem("companyName");
-      if ((!companyName || companyName === "") && (router.pathname !== "/App/Insert")) {
+      if ((!companyName || companyName === "") && (router.pathname !== "/App")) {
         // Redirect the user to "/App/Erhebung#company"
-        router.push('/App/Insert#company');
+        router.push('/App#company');
         toast.warn("Bitte Füllen Sie erst Ihre Firmen ID aus!");
       }
     }

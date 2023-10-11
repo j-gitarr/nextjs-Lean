@@ -8,7 +8,7 @@ import CustomValueDropdown from "@components/utility/CustomValueDropdown";
 import Link from "next/link";
 
 export default function Borg() {
-  const [selectedValue, setSelectedValue] = useState(0); // State to store the selected value
+  const [selectedValue, setSelectedValue] = useState(null); // State to store the selected value
   const [valueName, setValueName] = useState("Kennwertname wählen...");
   const [workplace, setWorkplace] = useState("Arbeitsstation wählen...");
 
@@ -74,11 +74,11 @@ export default function Borg() {
         <div className="backgroundJean">
           <Space height="20px" />
           <p className="centeredMax800  tcw">
-            Hier haben Sie die Möglichkeit eigene Betriebswissenschaftliche
-            Kennzahlen aufzunehmen. Je mehr Daten Sie beisteuern, desto eher
-            können Potentiale ermittelt werden. Tragen Sie dafür in die
-            Felder unten die Arbeitsstation ein, von welcher die Kennzahl
-            stammt, den Namen der Kennzahl und den Wert.
+            Hier haben Sie die Möglichkeit eigene betriebswissenschaftliche
+            Kennzahlen aufzunehmen. Je mehr Daten Sie mit LEA sammeln, desto
+            eher können Potentiale ermittelt werden. Tragen Sie dafür in die
+            Felder unten die <b>Arbeitsstation</b> ein, von welcher die Kennzahl
+            stammt, den <b>Namen der Kennzahl</b> und den <b>Wert</b>.
             <br />
             <br />
             Im Schritt Analysieren werden Ihre Daten statistisch analysiert und
@@ -92,7 +92,7 @@ export default function Borg() {
         <Space height="10vh" />
 
         <div className="centeredContent">
-          <p style={{ margin: "0", fontSize: "1.25rem", maxWidth:"800px"}}>
+          <p style={{ margin: "0", fontSize: "1.25rem", maxWidth: "800px" }}>
             Wählen Sie hier die aktuelle <b>Arbeitsstation</b> aus, oder
             definieren Sie eine neue Arbeitsstation
           </p>
@@ -104,7 +104,7 @@ export default function Borg() {
         <Space height="10vh" />
 
         <div className="centeredContent">
-          <p style={{ margin: "0", fontSize: "1.25rem", maxWidth:"800px"}}>
+          <p style={{ margin: "0", fontSize: "1.25rem", maxWidth: "800px" }}>
             Wählen Sie den <b>Namen der Kennzahl</b> aus, oder definieren Sie
             eine neue Kennzahl
           </p>
@@ -117,7 +117,7 @@ export default function Borg() {
         <Space height="10vh" />
 
         <div className="centeredContent">
-          <p style={{ margin: "0", fontSize: "1.25rem", maxWidth:"800px"}}>
+          <p style={{ margin: "0", fontSize: "1.25rem", maxWidth: "800px" }}>
             Geben Sie hier bitte den <b>Wert</b> der Kennzahl ein
           </p>
         </div>
@@ -135,18 +135,14 @@ export default function Borg() {
 
         <Space height="8vh" />
 
-        <div style={{ display: "flex", justifyContent: "center", gap:"20px"}}>
-          <button
-            type="submit"
-            className="btn btn-primary btn-lg"
-          >
+        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+          <button type="submit" className="btn btn-primary btn-lg">
             Übermitteln
           </button>
         </div>
       </form>
 
-      <div style={{display: "flex", justifyContent: "center"}}>
-      </div>
+      <div style={{ display: "flex", justifyContent: "center" }}></div>
 
       <Space height="20vh" />
     </PageContainer>

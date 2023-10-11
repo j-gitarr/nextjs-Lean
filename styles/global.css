@@ -53,6 +53,11 @@ p{
   /* max-width: 800px; */
 }
 
+Link{
+  text-decoration: none;
+  color: black;
+}
+
 
 
 .PageTitel{
@@ -246,7 +251,13 @@ main{
   color: white;
   background-color: #5e7783;
   border-radius: 10px;
-  padding: 0 10px;
+  width:190px;
+  padding: 20px;
+  margin: 20px 20px 0 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 .inPageLink:hover{
   background-color: #4d1635;
@@ -257,4 +268,22 @@ main{
 
 .helpIcon:hover{
   background-color: #d0d1d3;
+}
+
+
+
+
+
+@keyframes blink {
+  0%, 100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(255, 251, 0, 0.384); /* Change this to your desired border color */
+  }
+}
+
+.blinking-border {
+  /* border: 1px solid transparent; Initial border style (transparent) */
+  animation: blink 500ms 3; /* Apply the "blink" animation for 2 seconds, three times */
 }

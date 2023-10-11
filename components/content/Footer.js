@@ -11,6 +11,8 @@ const StylishLink = ({ href, children, className }) => (
   </Link>
 );
 
+const isLocalStorageAvailable = typeof window !== "undefined" && window.localStorage;
+
 export default function Footer() {
   return (
     <div className="backgroundSoftGrey" style={{ position: "sticky" }}>
@@ -45,6 +47,7 @@ export default function Footer() {
             <h3>App</h3>
             <hr />
           </Link>
+          {isLocalStorageAvailable && localStorage.getItem("companyName")?(
           <div className={style.flexContainerInner}>
             <div className={style.flexItems}>
               <StylishLink href="/App/Insert" className={style.singleIndent}>
@@ -124,6 +127,8 @@ export default function Footer() {
               <br />
             </div>
           </div>
+
+          ):(null)}
         </div>
         <div className={`${style.flexItems}`}>
           <div className={`${style.verticallyCenter}`}>

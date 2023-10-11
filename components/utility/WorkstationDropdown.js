@@ -158,7 +158,7 @@ export default function WorkstationDropdown({ value, onValueChange }) {
           <Form.Control
             autoFocus
             className="mx-3 my-2 w-auto"
-            placeholder="Search..."
+            placeholder="Suche..."
             onChange={(e) => setSearchValue(e.target.value)}
             value={searchValue}
           />

@@ -102,7 +102,7 @@ export default function Borg(){
                     }
                 />
 
-                <Space height="20vh"/>
+                <Space height="10vh"/>
 
                 <div className={` ${style.gradientDiv}`} style={{margin:"auto", maxWidth:"1000px"}}>
                     <FormCheck id="b6" value="6" onChange={(value) => setSelectedValue(value)} selectedValue={selectedValue}>

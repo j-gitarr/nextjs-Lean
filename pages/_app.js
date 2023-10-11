@@ -11,6 +11,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import FloatingCTAButton from '@components/utility/FloatingCallToActionButton'
 
 
+
 library.add(fas)
 
 export default function App ({Component, pageProps}){

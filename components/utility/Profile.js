@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import Space from "@components/style/Space";
 import { redirectTo } from "./redirectTo";
 import Link from "next/link";
+import { CompanyProvider } from "@components/context/CompanyContext";
 
 export default function Profile(props) {
   // State, um den eingegebenen Firmennamen zu speichern
@@ -68,9 +69,9 @@ export default function Profile(props) {
         style={{ display: `${weiter ? "" : "none"}`, width: "100%" }}
         className="centerContent"
       >
-        <Space Separator="true" />
+        <Space height="5vh" />
         <div className="d-flex justify-content-center">
-          <Link href="/App/insert/questionaires/EAWS">
+          <Link href="/App/Insert">
             <button className="btn btn-primary btn-lg">Erhebung starten</button>
           </Link>
         </div>

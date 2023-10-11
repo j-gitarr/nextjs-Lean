@@ -55,7 +55,7 @@ export default function SidePanel() {
                 ${router.pathname === linkKFZA ? styles.NavTextCurrent : ""}
             `}
       >
-        <div className={styles.textVertical}>KFZA</div>
+        <div className={styles.textVertical}>KFzA</div>
       </Link>
       <Link
         href={linkCustom}
