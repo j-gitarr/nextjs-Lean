@@ -4,6 +4,7 @@ import style from "@styles/Footer.module.css";
 import Link from "next/link";
 import FireworksShow from "@components/utility/Fireworks";
 import ConfettiButton from "@components/playground/ConfettiChild";
+import { useCompany } from "@components/context/CompanyContext";
 
 const StylishLink = ({ href, children, className }) => (
   <Link href={href} className={`${style.customLink} ${className}`}>
@@ -14,6 +15,8 @@ const StylishLink = ({ href, children, className }) => (
 const isLocalStorageAvailable = typeof window !== "undefined" && window.localStorage;
 
 export default function Footer() {
+  const {companyName, setCompanyName} = useCompany();
+  
   return (
     <div className="backgroundSoftGrey" style={{ position: "sticky" }}>
       <Space height="20px" />
@@ -47,7 +50,7 @@ export default function Footer() {
             <h3>App</h3>
             <hr />
           </Link>
-          {isLocalStorageAvailable && localStorage.getItem("companyName")?(
+          {companyName?(
           <div className={style.flexContainerInner}>
             <div className={style.flexItems}>
               <StylishLink href="/App/Insert" className={style.singleIndent}>
