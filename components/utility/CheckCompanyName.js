@@ -11,7 +11,7 @@ export default function CheckCompanyName() {
       if ((!companyName || companyName === "") && (router.pathname !== "/App")) {
         // Redirect the user to "/App/Erhebung#company"
         router.push('/App#company');
-        toast.warn("Bitte Füllen Sie erst Ihre Firmen ID aus!");
+        toast.warn("Bitte füllen Sie erst Ihre Firmen ID aus!");
       }
     }
   }, [router]); // Include router as a dependency

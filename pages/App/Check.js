@@ -44,7 +44,7 @@ export default function ShowData() {
       <div className="centeredMax1000">
         <p>
           Wenn Sie bereits Daten erhoben haben, können Sie hier Ihre Eingaben{" "}
-          <b>Prüfen</b>, <b>Korrigieren</b> oder <b>Exportieren</b>.
+          <b>prüfen</b>, <b>korrigieren</b> oder <b>exportieren</b>.
         </p>
       </div>
       <div

@@ -76,14 +76,14 @@ export default function Borg() {
           <p className="centeredMax800  tcw">
             Hier haben Sie die Möglichkeit eigene betriebswissenschaftliche
             Kennzahlen aufzunehmen. Je mehr Daten Sie mit LEA sammeln, desto
-            eher können Potentiale ermittelt werden. Tragen Sie dafür in die
+            wahrscheinlicher können Potentiale identifiziert werden. Tragen Sie dafür in die
             Felder unten die <b>Arbeitsstation</b> ein, von welcher die Kennzahl
-            stammt, den <b>Namen der Kennzahl</b> und den <b>Wert</b>.
+            stammt, den <b>Namen der Kennzahl</b> und den zugehörigen <b>Wert</b>.
             <br />
             <br />
             Im Schritt Analysieren werden Ihre Daten statistisch analysiert und
-            mit anderen Werten korreliert, um Zusammenhänge zu identifizieren
-            und ihnen mögliche Handlungsempfehlungen zu präsentieren.
+            miteinander korreliert, um Zusammenhänge zu identifizieren
+            und Ihnen mögliche Handlungsempfehlungen zu präsentieren.
           </p>
           <a id="choose"></a>
           <Space height="20px" />

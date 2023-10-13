@@ -59,7 +59,7 @@ export default function EAWS() {
         <Space height="20px" />
 
         <p className="centeredMax800 SpaceSideSM tcw">
-          Das Ergonomic Assessment Worksheet (EAWS) ist ein Expertenverfahren,
+          Das Ergonomic Assessment Worksheet (EAWS) ist ein Expertenverfahren
           zur Bewertung von körperlicher Belastung. Dabei werden Punkte für
           Belastungsarten vergeben, welche aggregiert und nach einem Ampelschema
           bewertet werden (grün &lt; 26p, gelb &lt; 51p, rot &gt; 50p).<br/> <br/>
@@ -72,8 +72,8 @@ export default function EAWS() {
           Produktentstehungsprozess eingesetzt werden. -iad TU Darmstadt
           <br />
           <br />
-          Der von Ihnen oder einem Experten ermittelte EAWS-Wert wird in dem
-          unteren Feld eingetragen und dient hilft bei der Verschlankung und
+          Der von Ihnen oder einem Experten ermittelte EAWS-Wert wird im
+          unteren Feld eingetragen und hilft bei der Verschlankung und
           Optimierung Ihrer Prozesse.
         </p>
         <Space height="20px" />

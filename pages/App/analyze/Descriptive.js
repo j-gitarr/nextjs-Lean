@@ -110,9 +110,9 @@ export default function Descriptive() {
         <Space height="20px" />
         <div className="centeredMax800">
           <p>
-            Hier finden Sie eine aktuelle quantitative Analyse all Ihrer
+            Hier finden Sie eine aktuelle quantitative Analyse Ihrer
             erhobenen Daten und können daraus erste Erkenntnisse gewinnen. Ziel
-            dieser Analyse ist es Ihre derzeitigen Prozesse, Arbeitsabläufe und
+            dieser Analyse ist es, Ihre derzeitigen Prozesse, Arbeitsabläufe und
             -umgebungen quantitativ aus einer LE-Perspektive zu beschreiben.
             <br />
             <br />

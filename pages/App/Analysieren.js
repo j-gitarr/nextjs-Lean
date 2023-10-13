@@ -12,11 +12,11 @@ export default function Analyze() {
       <Space Separator="true" />
       <main className="centeredMax800">
         <p>
-          Wenn Sie bereits Daten erhoben haben, können Sie hier ihre Daten
+          Wenn Sie bereits Daten erhoben haben, können Sie hier Ihre Daten
           analysieren. Ihnen stehen dafür verschiedene Mittel bereit:
         </p>
         <p>
-          <b>Deskriptive Analyse: </b>wie sind Ihre Daten verteilt? Wo ist der
+          <b>Deskriptive Analyse: </b>Wie sind Ihre Daten verteilt? Wo ist der
           Mittelwert? Wie streuen die Daten? Z.B. empfinden alle Mitarbeiter die
           Belastung gleich oder gibt es starke Unterschiede von Mitarbeiter zu
           Mitarbeiter?
@@ -33,7 +33,7 @@ export default function Analyze() {
           über die Ergonomie in Ihrem Unternehmen gesagt werden? Was kann/muss
           geändert werden, um einerseits eine bessere Gesamtsystemleistung und
           andererseits eine bessere Mitarbeiterzufriedenheit zu erzielen? Wie
-          hoch fällt das potentielle Return of Interest aus?
+          hoch fällt das potenzielle Return of Interest aus?
         </p>
 
         <Space height="40px" />

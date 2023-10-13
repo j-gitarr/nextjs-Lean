@@ -26,13 +26,13 @@ export default function Erhebung() {
           <br />
           <br />
           Erfasst werden der EAWS-Score, die körperliche Anstrengung Ihrer
-          Mitarbeiter durch die Borg-Skala, die erfahrenen Arbeitsbelastung
+          Mitarbeiter durch die Borg-Skala, die erfahrene Arbeitsbelastung
           Ihrer Mitarbeiter durch den "NASA Task Load Index" (NASA-TLX) und die
           psychische Belastung durch den Kurz-Fragebogen zur Arbeitsanalyse
           (KFZA) Ihrer Mitarbeiter.
           <br />
           <br />
-          Jeder dieser Fragebogen ist wissenschaftlich evaluiert und erprobt.
+          Jeder dieser Fragebögen ist wissenschaftlich evaluiert und erprobt.
         </p>
       </main>
       <Space className="backgroundJean" height="10px" margin="20vh 0 10vh 0" />
@@ -40,32 +40,32 @@ export default function Erhebung() {
         <h3>Ablauf</h3>
         <Space height="10vh" />
         <p>
-          Um ein bestmögliches Ergebnis zu erzielen ist es sinnvoll das vorgehen
+          Um das bestmögliche Ergebnis zu erzielen, ist es sinnvoll, das Vorgehen
           zunächst mit einem unserer Lean Ergonomics Experten abzusprechen (
           <b><Link href="/contact" style={{color:"black", textDecoration:"none"}}>Kontakt</Link></b>).
           <br />
           <br />
           <b>Erheben: </b>Anschließend beginnt das Sammeln von Prozess-
-          und Ergonomiedaten. Ein Teil der Daten müssen durch das
-          Unternehmen selbst (z.b. Zykluszeiten) und ein anderer Teil durch die
+          und Ergonomiedaten. Ein Teil der Daten muss durch das
+          Unternehmen (z.B. Zykluszeiten) und ein anderer Teil durch die
           Mitarbeiter erhoben werden (z.B. subjektive Belastung).
           <br />
           <br />
           <b>Prüfen: </b>Ist die Datensammlung abgeschlossen, haben Sie
-          anschließend die Möglichkeit die gesammelten Daten zu Prüfen, zu
-          korrigieren, oder auch zu exportieren um diese anderweitig zu
+          anschließend die Möglichkeit, die gesammelten Daten zu prüfen, zu
+          korrigieren, oder auch zu exportieren, um diese anderweitig zu
           verarbeiten.
           <br />
           <br />
           <b>Analysieren:</b> Sobald Sie alle benötigten Daten erfasst haben,
           werden diese automatisch ausgewertet. Durch die Auswertung erhalten
           Sie nicht nur Einblick in die Stärken und Schwächen Ihres
-          Produktionsprozesses, sondern auch in Ihre Mitarbeiter. Hier erfahren
+          Produktionsprozesses, sondern auch in die Ihrer Mitarbeiter. Hier erfahren
           Sie, was Sie für Ihre Mitarbeiter ändern müssten, damit diese
           optimierte Arbeitsbedingungen erfahren und dadurch eine bessere
           Leistung erzielen. Durch eine optimale Steuerung der Belastung erhöht
           sich nicht nur die Mitarbeiterzufriedenheit, sondern auch die Güte
-          betriebswirtschaftlicher Prozesse
+          betriebswirtschaftlicher Prozesse.
         </p>
       </main>
 
@@ -93,7 +93,7 @@ export default function Erhebung() {
         <a id="company"></a>
         <p className={blink}>
           Um direkt loszulegen, tragen Sie hier bitte den eindeutigen{" "}
-          <b>Identifizierungscode</b> für Ihr Unternhemen ein:
+          <b>Identifizierungscode</b> für Ihr Unternehmen ein:
         </p>
       </main>
       <Profile />

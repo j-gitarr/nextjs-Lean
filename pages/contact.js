@@ -75,7 +75,7 @@ export default function Services() {
                 <br />
                 Boltzmannstr. 15
                 <br />
-                85747 Garching b. München
+                85748 Garching b. München
                 <br />
                 Tel.: +49 162 2016635
                 <br />

@@ -42,13 +42,14 @@ export default function Home() {
 
         <div className="centeredMax800 spaceSideSM">
           <p>
-            <strong>Umfassende Datenanalyse:</strong> LEA erfasst und
-            analysiert umfassende Daten mithilfe der genannten
+            <strong>Umfassende Datenanalyse:</strong> LEA erfasst und analysiert
+            umfassende Daten mithilfe der genannten
             Ergonomiebewertungswerkzeuge. Dadurch erhalten Sie detaillierte
             Einblicke in die physische und mentale Belastung Ihrer Mitarbeiter
             während ihrer Arbeitsabläufe. Gleichzeitig können Sie eigene
-            Kennzahlen definieren, erfassen und Auswerten. Dies ermöglicht ihnen
-            Auswirkung der Ergonomie auf die Arbeitsleistung zu quantifizieren.
+            Kennzahlen definieren, erfassen und Auswerten. Dies ermöglicht
+            Ihnen, Auswirkung der Ergonomie auf die Arbeitsleistung zu
+            quantifizieren.
           </p>
           <br />
           <br />
@@ -71,11 +72,11 @@ export default function Home() {
           <br />
           <br />
           <p>
-            <strong>Ganzheitlicher Ansatz:</strong> Bei LEA verstehen wir, dass
-            ergonomische Aspekte nicht isoliert betrachtet werden können. Unsere
-            Webapplikation berücksichtigt sämtliche Facetten und hilft Ihnen
-            dabei, eine Maximierung von Mitarbeiterwohlbefinden und
-            betrieblicher Produktivität zu erreichen.
+            <strong>Ganzheitlicher Ansatz:</strong> Ein Arbeitssystem besteht
+            aus Interaktion und Wechselwirkungen, deshalb sollten Ergonomische
+            Aspekte nicht isoliert betrachtet werden. LEA berücksichtigt
+            sämtliche Facetten und hilft Ihnen dabei, einen Umfänglichen
+            Einblick in die Systemdynamik Ihrer Prozesse zu gewinnen.
           </p>
         </div>
 
@@ -85,7 +86,7 @@ export default function Home() {
 
         <div className="centeredMax800 spaceSideSM">
           <p>
-            <b>Erleben Sie</b> wie LEA die Gesundheit, Zufriedenheit und
+            <b>Erleben Sie</b>, wie LEA die Gesundheit, Zufriedenheit und
             Produktivität Ihrer Mitarbeiter steigert. Wir laden Sie herzlich
             dazu ein, sich näher umzusehen und gemeinsam mit uns die Zukunft
             Ihrer Arbeitsprozesse zu gestalten.

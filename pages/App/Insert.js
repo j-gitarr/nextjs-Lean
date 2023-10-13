@@ -28,12 +28,12 @@ export default function Erhebung() {
           <Link href="/App/insert/questionaires/Borg">
             <b>BORG:</b> Mit der Erfassung des Borg-Wertes können Sie
             mitarbeiter- und arbeitsstationsspezifisch die empfundene
-            Körperliche Belastung erfassen.
+            körperliche Belastung erfassen.
           </Link>
           <br />
           <br />
           <Link href="/App/insert/questionaires/NASA-TLX">
-            <b>NASA-TLX:</b> Die Erfassung des NASA-TLX erlaubt Ihnen die
+            <b>NASA-TLX:</b> Die Erfassung des NASA-TLX erlaubt Ihnen, die
             subjektiv erfahrene Arbeitsbeanspruchung Ihrer Mitarbeiter nach
             Arbeitsstation zu analysieren.
           </Link>
@@ -41,19 +41,19 @@ export default function Erhebung() {
           <br />
           <Link href="/App/insert/questionaires/KFZA">
             <b>KFzA:</b> Mit dem KFzA können Sie die psychische Belastung auf
-            ihre Mitarbeiter für den gesamten Arbeitsplatz erfassen.
+            Ihre Mitarbeiter für den gesamten Arbeitsplatz erfassen.
           </Link>
           <br />
           <br />
           <Link href="/App/insert/questionaires/Custom">
-            <b>Custom:</b> Weiterhin haben Sie die Möglichkeit eigene Kennwerte
+            <b>Custom:</b> Weiterhin haben Sie die Möglichkeit, eigene Kennwerte
             zu definieren und zu erfassen.
           </Link>
           <br />
           <br />
           <br />
-          Beachten Sie, je mehr Daten Sie sammeln, desto aussagekräftigere
-          Erkenntnisse erlangen Sie aus der Analyse der Daten und desto eher
+          Beachten Sie: Je mehr Daten Sie sammeln, desto aussagekräftigere
+          Erkenntnisse erlangen Sie aus der Analyse der Daten und desto wahrscheinlicher
           können Verbesserungs- und Einsparpotentiale erkannt werden.
         </p>
       </main>

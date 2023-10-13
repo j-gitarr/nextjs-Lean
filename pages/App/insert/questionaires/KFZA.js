@@ -100,9 +100,9 @@ export default function () {
           Informationen über die Arbeitsanforderungen, Belastungen und
           Bedingungen in bestimmten Berufsumgebungen.
           Durch den Fragebogen soll die Wahrnehmung der Mitarbeiter über ihre
-          Arbeit erfasst werden und Arbeitsbedingungen bewertet. <br />
+          Arbeit erfasst und deren Arbeitsbedingungen bewertet werden. <br />
           <br />
-          Für jede Frage haben sie die Möglichkeit eines von fünf Feldern zu
+          Für jede Frage haben Sie die Möglichkeit, eines von fünf Feldern zu
           markieren. Bitte geben Sie zunächst Ihre <b>PID</b> (persönliche
           Identifikationsnummer) ein. Antworten Sie anschließend auf jede Frage
           und klicken Sie dann weiter unten auf <b>übermitteln</b>.

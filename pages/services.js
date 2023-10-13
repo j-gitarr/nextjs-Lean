@@ -30,19 +30,19 @@ export default function Services() {
             Einbindung von Lean Ergonomics in die Unternehmenskultur aussehen?
             Diese und weitere Fragen klären wir zusammen mit Ihnen in der
             Beratung. Zusammen legen wir fest, wie viel Unterstützung Sie bei
-            der Anwendung von Lean Ergonomics benötigen und wie viel Expertise
+            der Anwendung von Lean Ergonomics benötigen und wie viel Expertise bereits
             in Ihrem Unternehmen vorhanden ist, bzw. vorhanden sein soll.
           </p>
 
           <p>
-            <strong>Coaching:</strong> Wir schulen Sie und Ihr personal über
-            Lean Ergonomics und dessen Anwendung. Wir bilden Lean Ergonomics
+            <strong>Coaching:</strong> Wir schulen Sie und Ihr Personal über
+            Lean Ergonomics und dessen Anwendung. Zudem bilden wir Lean Ergonomics
             Experten aus, um die Expertise in Ihr eigenes Unternehmen zu
             verlagern.{" "}
           </p>
           <p>
             <strong>Integration:</strong> Wir helfen Ihnen bei der Integration
-            von Lean Ergonomics Methoden und Prozessen in Ihr Unternehmen.
+            von Lean Ergonomics-Methoden und -Prozessen in Ihr Unternehmen.
           </p>
 
           <p>
@@ -54,16 +54,16 @@ export default function Services() {
           <p>
             <strong>Optimierung:</strong> Das Ziel von Lean Ergonomics stellt
             immer die Optimierung Ihrer Prozesse und Arbeitsumgebung dar. Wir
-            helfen Ihnen die gewonnenen Erkenntnisse aus der Durchführung von
-            Lean Ergonomics zielgerichtet anzuwenden und somit Ihre
-            Gesamtsystemleistung zu steigern und das Wohlbefinden und die
+            helfen Ihnen, die gewonnenen Erkenntnisse aus der Durchführung von
+            Lean Ergonomics zielgerichtet anzuwenden und dadurch Ihre
+            Gesamtsystemleistung zu verbessern, als auch das Wohlbefinden und die
             Gesundheit Ihrer Mitarbeiter nachhaltig zu steigern.{" "}
           </p>
 
           <p>
-            <strong>Kontinuierliche Verbesserung:</strong>Wir wissen, dass es
+            <strong>Kontinuierliche Verbesserung:</strong> Wir wissen, dass es
             nicht auf eine einmalige Verbesserung, sondern auf einen Prozess der
-            kontinuierlichen Verbesserung ankommt. Wir helfen Ihnen dabei Lean
+            kontinuierlichen Verbesserung ankommt. Wir helfen Ihnen dabei, Lean
             Ergonomics nachhaltig zu etablieren und somit nicht nur
             kurzfristige, sondern auch langfristige und nachhaltige
             Veränderungen zu gestalten.
